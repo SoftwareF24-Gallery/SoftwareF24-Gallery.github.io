@@ -3,8 +3,6 @@ import { useState } from "react";
 import SettingsIcon from '@mui/icons-material/Settings';
 import CloseIcon from '@mui/icons-material/Close';
 
-
-
 const Navbar = () => {
     const [open, setOpen] = useState(false)
 
@@ -50,7 +48,6 @@ const Navbar = () => {
                     </IconButton>Settings</DialogTitle>
                     <DialogActions>
                         <FormGroup>
-                            <FormControlLabel control={<Switch />} label="Mute Music"></FormControlLabel>
                             <FormControlLabel control={<Switch />} label="Dark Mode"></FormControlLabel>
                         </FormGroup>
                     </DialogActions>
