@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <AppBar position="static" sx={{background: "#203c5c"}}>
             <Toolbar>
-                <Typography variant="h6" component="div" sx={{flexGrow: 1, textAlign: "left"}}>
+                <Typography variant="h6" sx={{flexGrow: 1, textAlign: "left"}}>
                     Art Gallery
                 </Typography>
                  {/*Displays components on the left side by side */}

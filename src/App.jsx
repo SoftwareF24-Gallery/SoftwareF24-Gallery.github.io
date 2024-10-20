@@ -6,6 +6,7 @@ function App() {
 
   return (
     <>
+      {/* Navigation bar implementation */}
       <Navbar />
       <div id="search" style={{display: "flex", justifyContent: "center", padding: "5%"}}>
       <TextField label="Search" variant="standard" sx={{width: "50%"}}/>
