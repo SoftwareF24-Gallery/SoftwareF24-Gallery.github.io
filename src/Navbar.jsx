@@ -1,23 +1,26 @@
+ {/*Imports various tools needed for the website */}
 import { AppBar, Toolbar, IconButton, Typography, Stack, Dialog, DialogTitle, DialogActions, Switch, FormControlLabel, FormGroup, InputLabel, Select, FormControl, MenuItem} from "@mui/material";
 import { useState } from "react";
 import SettingsIcon from '@mui/icons-material/Settings';
 import CloseIcon from '@mui/icons-material/Close';
 
+ {/*Makes dialog box open.  */}
 const Navbar = () => {
     const [open, setOpen] = useState(false)
-
+ {/*used for location dropdown */}
     const [location, setLocation] = useState("");
-
+ {/*used to keep the selected location displayed on the bar. */}
     const handleLocation = (event) => {
         setLocation(event.target.value);
     }
-
+ {/*Main navigation bar function */}
     return (
         <AppBar position="static" sx={{background: "#203c5c"}}>
             <Toolbar>
-                <Typography variant="h6" sx={{flexGrow: 1, textAlign: "left"}}>
+                <Typography variant="h6" component="div" sx={{flexGrow: 1, textAlign: "left"}}>
                     Art Gallery
                 </Typography>
+                 {/*Displays components on the left side by side */}
                 <Stack direction="row" spacing={2}>
 
                     {/* Location Select */}
@@ -44,7 +47,6 @@ const Navbar = () => {
                     <IconButton size="large" edge="end" color="inherit" onClick={() => setOpen(true)}>
                         <SettingsIcon />
                     </IconButton>
-                    {/* Dialog box */}
                     <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="dialog-title">
                     
                     {/* Title of dialog box */}
