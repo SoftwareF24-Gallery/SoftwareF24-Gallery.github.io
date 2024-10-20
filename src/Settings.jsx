@@ -13,6 +13,8 @@ const Settings = () => {
         <IconButton size="large" edge="end" color="inherit" onClick={() => setOpen(true)}>
             <SettingsIcon />
         </IconButton>
+
+        {/* Opens dialog box */}
         <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="dialog-title">
 
             {/* Title of dialog box */}
