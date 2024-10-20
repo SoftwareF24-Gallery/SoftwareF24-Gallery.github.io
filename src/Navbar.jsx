@@ -1,12 +1,10 @@
  {/*Imports various tools needed for the website */}
 import { AppBar, Toolbar, IconButton, Typography, Stack, Dialog, DialogTitle, DialogActions, Switch, FormControlLabel, FormGroup, InputLabel, Select, FormControl, MenuItem} from "@mui/material";
 import { useState } from "react";
-import SettingsIcon from '@mui/icons-material/Settings';
-import CloseIcon from '@mui/icons-material/Close';
+import Settings from "./Settings"
 
  {/*Makes dialog box open.  */}
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
  {/*used for location dropdown */}
     const [location, setLocation] = useState("");
  {/*used to keep the selected location displayed on the bar. */}
@@ -42,27 +40,7 @@ const Navbar = () => {
                             <MenuItem value={60}>Tomball</MenuItem>
                         </Select>
                     </FormControl>
-
-                    {/* Settings button */}
-                    <IconButton size="large" edge="end" color="inherit" onClick={() => setOpen(true)}>
-                        <SettingsIcon />
-                    </IconButton>
-                    <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="dialog-title">
-                    
-                    {/* Title of dialog box */}
-                    <DialogTitle id="dialog-title" sx={{textAlign: "center", marginLeft: "-1rem"}}>
-                    {/* Close button */}
-                    <IconButton onClick={() => setOpen(false)}>
-                        <CloseIcon />
-                    </IconButton>Settings</DialogTitle>
-                     {/* Options in the settings menu */}
-                    <DialogActions>
-                        <FormGroup>
-                            {/* Dark mode switch */}
-                            <FormControlLabel control={<Switch />} label="Dark Mode"></FormControlLabel>
-                        </FormGroup>
-                    </DialogActions>
-                    </Dialog>
+                    <Settings/>
                 </Stack>
             </Toolbar>
         </AppBar>
