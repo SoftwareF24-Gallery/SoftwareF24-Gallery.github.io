@@ -1,16 +1,23 @@
 import Navbar from "./Navbar"
-import { TextField, IconButton, CssBaseline } from '@mui/material'
+import Location from "./Location"
+import { IconButton, CssBaseline, Typography } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 
 function App() {
 
   return (
     <>
-      {/* Navigation bar implementation */}
       <CssBaseline />
+      {/* Navigation bar implementation */}
+      <div id="sticky" style={{position: "sticky", top: 12}}>
+      <Typography sx={{flexGrow: 1, textAlign: "left", margin: "12px"}}>
+      Art Gallery
+      </Typography>
       <Navbar />
-      <div id="search" style={{display: "flex", justifyContent: "center", padding: "5%"}}>
-      <TextField label="Search" variant="standard" sx={{width: "50%"}}/>
+      </div>
+
+      <div id="search" style={{display: "flex", justifyContent: "center", padding: "3%"}}>
+      <Location />
       <IconButton>
         <SearchIcon></SearchIcon>
       </IconButton>
