@@ -15,10 +15,10 @@ const Settings = () => {
         </IconButton>
 
         {/* Opens dialog box */}
-        <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="dialog-title">
+        <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="dialog-title" PaperProps={{sx: {width: "15rem", height: "10rem", justifyContent: "center"}}}>
 
             {/* Title of dialog box */}
-            <DialogTitle id="dialog-title" sx={{textAlign: "center", marginLeft: "-1rem"}}>
+            <DialogTitle id="dialog-title" sx={{textAlign: "center", marginLeft: "10px"}}>
                 Settings
                 {/* Close button */}
                 <IconButton onClick={() => setOpen(false)}>
@@ -29,7 +29,7 @@ const Settings = () => {
             <DialogActions>
                 <FormGroup>
                     {/* Dark mode switch */}
-                    <FormControlLabel control={<Switch />} label="Dark Mode"></FormControlLabel>
+                    <FormControlLabel control={<Switch />} label="- - - Dark Mode - - -"></FormControlLabel>
                 </FormGroup>
             </DialogActions>
         </Dialog>
