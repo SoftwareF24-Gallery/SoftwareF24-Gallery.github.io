@@ -1,12 +1,14 @@
 import Navbar from "./Navbar"
-import Location from "./Location"
-import { IconButton, CssBaseline, Typography } from '@mui/material'
-import SearchIcon from '@mui/icons-material/Search';
+import Home from "./Home"
+import Credits from "./Credits";
+import { CssBaseline, Typography } from '@mui/material'
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
 
   return (
     <>
+
       <CssBaseline />
       {/* Navigation bar implementation */}
       <div id="sticky" style={{position: "sticky", top: 12}}>
@@ -16,12 +18,16 @@ function App() {
       <Navbar />
       </div>
 
-      <div id="search" style={{display: "flex", justifyContent: "center", padding: "3%"}}>
-      <Location />
-      <IconButton>
-        <SearchIcon></SearchIcon>
-      </IconButton>
+      {/* Routing used to navigate the website */}
+      <BrowserRouter>
+      <div id="component">
+        <Routes>
+          <Route path="/softwaref24-gallery" element={<Home />} />
+          <Route path="/softwaref24-gallery/credits" element={<Credits />} />
+        </Routes>
       </div>
+      </BrowserRouter>
+      
     </>
   )
 }
