@@ -1,0 +1,14 @@
+{
+    "artists": [
+        {
+            "Name": "Steve",
+            "Bio" : "Sophmore art student at LSC-Kingwood",
+            "Picture" : "images/steve headshot.jpeg"
+        },
+        {
+            "Name": "Master Chief",
+            "Bio" : "Freshman art student at LSC-Montgomery",
+            "Picture" : "images/steve headshot.jpeg"
+        }
+    ]
+}
