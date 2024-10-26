@@ -1,15 +1,19 @@
 import Location from "./Location"
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from "@mui/material"
+import { SelectGallery } from "./locations-json"
 
 const Home = () => {
     return (
         <>
 
         <div id="search" style={{display: "flex", justifyContent: "center", padding: "3%"}}>
-        <Location />
+        {/* <Location /> */}
+        <SelectGallery/>
         <IconButton>
-        <SearchIcon></SearchIcon>
+        <span>
+            <SearchIcon></SearchIcon>
+        </span>
         </IconButton>
         </div>
 
