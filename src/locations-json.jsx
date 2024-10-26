@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, TextField, MenuItem } from "@mui/material"
 import { useState } from 'react'
 import locations from '../JSONS/locations.json';
@@ -10,7 +9,7 @@ export const SelectGallery = () => {
   
     console.log({ gallery });
   
-    //handles change on html element and updates gallery
+    //handles change on element and updates gallery
     const handleChange = (event) => {
       setGallery(event.target.value); 
     };
@@ -21,7 +20,7 @@ export const SelectGallery = () => {
         <TextField
           label="Select Gallery Location"
           //select dropdown from mui
-          select sx={{ width: '100%' }}
+          select sx={{ width: '100%' }} //make width take up 100% of box
           value={gallery}
           onChange={handleChange}
         >
