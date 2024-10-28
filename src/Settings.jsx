@@ -15,7 +15,7 @@ const Settings = () => {
         </IconButton>
 
         {/* Opens dialog box */}
-        <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="dialog-title" PaperProps={{sx: {width: "15rem", height: "10rem"}}}>
+        <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="dialog-title" PaperProps={{sx: {width: "100rem", height: "20rem"}}}>
 
             {/* Title of dialog box */}
             <DialogTitle id="dialog-title" sx={{}}>
