@@ -1,4 +1,3 @@
-
 [
     { "value": "BG", "label": "Bosque Gallery" },
     { "value": "KG", "label": "LSC-Kingwood Gallery" },
@@ -6,4 +5,4 @@
     { "value": "NH-G", "label": "LSC-North Harris Gallery" },
     { "value": "TG", "label": "LSC-Tomball Gallery" },
     { "value": "UP-G", "label": "LSC-University Park Gallery" }
-  ]
+]

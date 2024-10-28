@@ -2,31 +2,37 @@ import { Box, TextField, MenuItem } from "@mui/material"
 import { useState } from 'react'
 import locations from '../JSONS/locations.json';
 
-//setting up function to be used in other files
+// Setting up function to be used in other files
 export const SelectGallery = () => { 
 
-    const [gallery, setGallery] = useState('');
+    // Uses index 0 of locations.json as default, the Bosque Gallery
+    const [gallery, setGallery] = useState("");
   
     console.log({ gallery });
   
-    //handles change on element and updates gallery
+    // Handles change on element and updates gallery
+    // "event" is an object consisting of value and label, parsed from JSON file
     const handleChange = (event) => {
       setGallery(event.target.value); 
+      console.log({gallery})
+      document.title = event.target.value.label; 
     };
   
-    //dropdown menu
+    // Dropdown menu
     return (
       <Box sx={{ width: 400 }} className="select">
         <TextField
           label="Select Gallery Location"
-          //select dropdown from mui
-          select sx={{ width: '100%' }} //make width take up 100% of box
+          // Select dropdown from mui
+          select sx={{ width: '100%' }} // Make width take up 100% of box
           value={gallery}
           onChange={handleChange}
         >
           
-          {locations.map((location) => ( //map function to set key and values from JSON
-            <MenuItem key={location.value} value={location.value}> 
+          {locations.map((location) => ( // Map function to set key and values from JSON
+            // "value" receives whole location object, necessary to change
+            // Document title in handleChange
+            <MenuItem key={location.value} value={location}> 
               {location.label}
             </MenuItem>
           ))}
