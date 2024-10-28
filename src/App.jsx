@@ -13,7 +13,7 @@ function App() {
       {/* Navigation bar implementation */}
       <div id="sticky" style={{position: "sticky", top: 12}}>
       <Typography sx={{flexGrow: 1, textAlign: "left", margin: "12px"}}>
-      Art Gallery
+       Virtual Art Gallery
       </Typography>
       <Navbar />
       </div>
