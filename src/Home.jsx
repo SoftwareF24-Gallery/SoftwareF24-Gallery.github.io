@@ -1,7 +1,6 @@
-import Location from "./Location"
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from "@mui/material"
-import { SelectGallery } from "./locations-json"
+import { SelectGallery } from "./locations"
 
 const Home = () => {
     return (
