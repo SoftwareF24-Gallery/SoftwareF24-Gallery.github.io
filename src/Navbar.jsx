@@ -1,9 +1,9 @@
- {/*Imports various tools needed for the website */}
+ /*Imports various tools needed for the website */
 import { AppBar, Toolbar, Typography, Stack, Button, IconButton } from "@mui/material";
 import Settings from "./Settings"
 import HomeIcon from '@mui/icons-material/Home';
 
- {/*Makes dialog box open.  */}
+ /*Makes dialog box open.  */
 const Navbar = () => {
  {/*Main navigation bar function */}
     return (
