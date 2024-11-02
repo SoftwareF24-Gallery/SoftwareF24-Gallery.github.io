@@ -1,4 +1,4 @@
-import { IconButton, Dialog, DialogTitle, DialogActions, Switch, FormControlLabel, FormGroup, Typography} from "@mui/material";
+import { IconButton, Radio, RadioGroup, FormControl, FormControlLabel, FormLabel, Dialog, DialogTitle, DialogActions, Switch, FormGroup, Typography, useColorScheme} from "@mui/material";
 import { useState } from "react";
 import SettingsIcon from '@mui/icons-material/Settings';
 import CloseIcon from '@mui/icons-material/Close';
@@ -6,6 +6,12 @@ import CloseIcon from '@mui/icons-material/Close';
 const Settings = () => {
 
     const [open, setOpen] = useState(false)
+    const { mode, setMode } = useColorScheme() // Retrieves color scheme from above in the hierarchy
+
+    // Failsafe due to how theme rendering works
+    if(!mode) {
+        return null;
+    }
 
     return (
     <>
@@ -27,10 +33,22 @@ const Settings = () => {
             </DialogTitle>
             {/* Options in the settings menu */}
             <DialogActions sx={{justifyContent: "center"}}>
-                <FormGroup>
-                    {/* Dark mode switch */}
-                    <FormControlLabel control={<Switch />} label="Dark Mode"></FormControlLabel>
-                </FormGroup>
+                <FormControl>
+
+                    <FormLabel id="theme-toggle">Theme</FormLabel>
+                    <RadioGroup
+                    aria-labelledby="theme-toggle"
+                    name="theme-toggle"
+                    row
+                    value={mode}
+                    onChange={(event) => setMode(event.target.value)}
+                    >
+                        <FormControlLabel value="system" control={<Radio />} label="System" />
+                        <FormControlLabel value="light" control={<Radio />} label="Light" />
+                        <FormControlLabel value="dark" control={<Radio />} label="Dark" />
+                    </RadioGroup>
+
+                </FormControl>
             </DialogActions>
         </Dialog>
     </>
