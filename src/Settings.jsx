@@ -1,4 +1,4 @@
-import { IconButton, Radio, RadioGroup, FormControl, FormControlLabel, FormLabel, Dialog, DialogTitle, DialogActions, Switch, FormGroup, Typography, useColorScheme} from "@mui/material";
+import { IconButton, Radio, RadioGroup, FormControl, FormControlLabel, FormLabel, Dialog, DialogTitle, DialogActions, useColorScheme} from "@mui/material";
 import { useState } from "react";
 import SettingsIcon from '@mui/icons-material/Settings';
 import CloseIcon from '@mui/icons-material/Close';
@@ -33,6 +33,8 @@ const Settings = () => {
             </DialogTitle>
             {/* Options in the settings menu */}
             <DialogActions sx={{justifyContent: "center"}}>
+                
+                {/*Toggling light and dark mode*/}
                 <FormControl>
 
                     <FormLabel id="theme-toggle">Theme</FormLabel>
