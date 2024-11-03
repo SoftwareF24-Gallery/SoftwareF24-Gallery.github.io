@@ -8,19 +8,19 @@ const Credits = () => {
         <Grid container spacing={6}>
             
             <Grid size={10} sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                <img src="JSONS\images\Steve headshot.jpeg" width="5%"></img>
+                <img src="..\JSONS\images\Steve headshot.jpeg" width="5%"></img>
                 <p><b>This Guy</b>: Did cool stuff</p>
             </Grid>
             <Grid size={10} sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                <img src="JSONS\images\Steve headshot.jpeg" width="5%"></img>
+                <img src="..\JSONS\images\Steve headshot.jpeg" width="5%"></img>
                 <p><b>This Guy</b>: Did cool stuff</p>
             </Grid>
             <Grid size={10} sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                <img src="JSONS\images\Steve headshot.jpeg" width="5%"></img>
+                <img src="..\JSONS\images\Steve headshot.jpeg" width="5%"></img>
                 <p><b>This Guy</b>: Did cool stuff</p>
             </Grid>
             <Grid size={10} sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                <img src="JSONS\images\Steve headshot.jpeg" width="5%"></img>
+                <img src="..\JSONS\images\Steve headshot.jpeg" width="5%"></img>
                 <p><b>This Guy</b>: Did cool stuff</p>
             </Grid>
             
