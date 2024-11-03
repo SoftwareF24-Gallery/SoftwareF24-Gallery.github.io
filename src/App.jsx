@@ -2,7 +2,7 @@ import Navbar from "./Navbar"
 import Home from "./Home"
 import Credits from "./Credits";
 import { CssBaseline, ThemeProvider, createTheme, useColorScheme, Typography } from '@mui/material'
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 
 // Theme information, can be toggled between Dark and Light
 const theme = createTheme({
@@ -27,15 +27,14 @@ function App() {
         </div>
 
         {/* Routing used to navigate the website */}
-        {/* Replace BrowserRouter  */}
-        <BrowserRouter>
+        <HashRouter>
         <div id="component">
           <Routes>
-            <Route path="/softwaref24-gallery" element={<Home />} />
-            <Route path="/softwaref24-gallery/credits" element={<Credits />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/credits" element={<Credits />} />
           </Routes>
         </div>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
     </>
   )
