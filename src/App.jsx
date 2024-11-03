@@ -11,7 +11,7 @@ const theme = createTheme({
   },
 });
 
-function App() {
+const App = () => {
 
   return (
     <>
