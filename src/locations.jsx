@@ -5,9 +5,8 @@ import locations from '../JSONS/locations.json';
 // Setting up function to be used in other files
 export const SelectGallery = () => { 
 
-    const defaultLocation = locations[0].label;
     // Uses index 0 of locations.json as default, the Bosque Gallery
-    const [gallery, setGallery] = useState(defaultLocation);
+    const [gallery, setGallery] = useState(locations[0]);
   
     // console.log({ gallery }); - i dont think this does
   
