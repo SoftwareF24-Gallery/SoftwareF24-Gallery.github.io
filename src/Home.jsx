@@ -1,19 +1,19 @@
-import SearchIcon from '@mui/icons-material/Search';
-import { IconButton } from "@mui/material"
+import { Button } from '@mui/material';
 import { SelectGallery } from "./locations"
+import { useTheme } from '@mui/material/styles';
 
 const Home = () => {
+    const theme = useTheme(); //access current theme
+
     return (
         <>
 
         <div id="search" style={{display: "flex", justifyContent: "center", padding: "3%"}}>
-        {/* <Location /> */}
-        <SelectGallery/>
-        <IconButton>
-        <span>
-            <SearchIcon></SearchIcon>
-        </span>
-        </IconButton>
+            <SelectGallery/>
+        
+            <Button variant="contained" sx={{ marginLeft: '5px', backgroundColor: theme.palette.mode === 'dark' ? 'grey.600' : 'blue.[500]' }}>
+                Select
+            </Button>
         </div>
 
         </>
