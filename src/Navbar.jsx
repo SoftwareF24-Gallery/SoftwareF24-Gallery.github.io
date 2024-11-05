@@ -12,9 +12,10 @@ const Navbar = () => {
             {/* 
                 Breakpoints determine height of header depending on the screen size 
                 51px for medium screen sizes
-                70pz for large screen sizes
+                70px for large screen sizes
             */}
-            <Paper sx={{[theme.breakpoints.down('md')]: { height: "51px"}, 
+            <Paper sx={{padding: "20px", display: "flex", alignItems: "center", justifyContent: "left",
+                        [theme.breakpoints.down('md')]: { height: "51px"}, 
                         [theme.breakpoints.up('md')]: { height: "70px" }}}> 
                 <Typography>
                     Virtual Art Gallery
