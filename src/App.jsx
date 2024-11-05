@@ -20,12 +20,8 @@ const App = () => {
         <CssBaseline />
         {/* Navigation bar implementation */}
         <div id="sticky" style={{position: "sticky", top: 12}}>
-          <Typography sx={{flexGrow: 1, textAlign: "left", margin: "12px"}}>
-          Virtual Art Gallery
-          </Typography>
           <Navbar />
         </div>
-
         {/* Routing used to navigate the website */}
         <HashRouter>
         <div id="component">
