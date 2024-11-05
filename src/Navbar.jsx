@@ -2,16 +2,24 @@
 import { AppBar, Paper, Toolbar, Typography, Stack, Button, IconButton } from "@mui/material";
 import Settings from "./Settings"
 import HomeIcon from '@mui/icons-material/Home';
+import { theme } from './App'
 
  /*Makes dialog box open.  */
 const Navbar = () => {
  {/*Main navigation bar function */}
     return (
-        <Paper sx={{alignItems: "stretch"}}> 
-            <Typography sx={{flexGrow: 1, textAlign: "left", margin: "12px"}}>
-            Virtual Art Gallery
-            </Typography>
-
+        <>
+            {/* 
+                Breakpoints determine height of header depending on the screen size 
+                51px for medium screen sizes
+                70pz for large screen sizes
+            */}
+            <Paper sx={{[theme.breakpoints.down('md')]: { height: "51px"}, 
+                        [theme.breakpoints.up('md')]: { height: "70px" }}}> 
+                <Typography>
+                    Virtual Art Gallery
+                </Typography>
+            </Paper>
             <AppBar position="sticky" sx={{background: "#203c5c"}}>
                 <Toolbar sx={{marginBottom: "-30px"}}>
                     <IconButton color="inherit" href="/#/" sx={{marginTop: "-30px"}}>
@@ -28,7 +36,7 @@ const Navbar = () => {
                     </Stack>
                 </Toolbar>
             </AppBar>
-        </Paper>
+        </>
     )
 }
 
