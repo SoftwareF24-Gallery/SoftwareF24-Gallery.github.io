@@ -1,8 +1,8 @@
 [
-    { "value": "BG", "label": "Bosque Gallery" },
-    { "value": "KG", "label": "LSC-Kingwood Gallery" },
-    { "value": "MG", "label": "LSC-Montgomery Gallery" },
-    { "value": "NH-G", "label": "LSC-North Harris Gallery" },
-    { "value": "TG", "label": "LSC-Tomball Gallery" },
-    { "value": "UP-G", "label": "LSC-University Park Gallery" }
+    { "value": "BG", "label": "Bosque Gallery", "default": true },
+    { "value": "KG", "label": "LSC-Kingwood Gallery", "default": false},
+    { "value": "MG", "label": "LSC-Montgomery Gallery", "default": false },
+    { "value": "NH-G", "label": "LSC-North Harris Gallery", "default": false },
+    { "value": "TG", "label": "LSC-Tomball Gallery", "default": false },
+    { "value": "UP-G", "label": "LSC-University Park Gallery", "default": false }
 ]
