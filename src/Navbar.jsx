@@ -2,10 +2,13 @@
 import { AppBar, Paper, Toolbar, Typography, Stack, Button, IconButton } from "@mui/material";
 import Settings from "./Settings"
 import HomeIcon from '@mui/icons-material/Home';
-import { theme } from './App'
+import { useTheme } from '@mui/material/styles';
 
  /*Makes dialog box open.  */
 const Navbar = () => {
+
+    const theme = useTheme(); // Access current theme
+
  {/*Main navigation bar function */}
     return (
         <>
@@ -16,7 +19,8 @@ const Navbar = () => {
             */}
             <Paper sx={{padding: "20px", display: "flex", alignItems: "center", justifyContent: "left",
                         [theme.breakpoints.down('md')]: { height: "51px"}, 
-                        [theme.breakpoints.up('md')]: { height: "70px" }}}> 
+                        [theme.breakpoints.up('md')]: { height: "70px" },
+                        backgroundColor: theme.palette.mode === 'dark' ? "red" : "blue"}}>
                 <Typography>
                     Virtual Art Gallery
                 </Typography>
