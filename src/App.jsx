@@ -1,7 +1,8 @@
-import Navbar from "./Navbar"
-import Home from "./Home"
+import Navbar from "./Navbar";
+import Home from "./Home";
 import Credits from "./Credits";
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
+import Gallery from "./Gallery";
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { Route, Routes, HashRouter } from "react-router-dom";
 
 // Theme information, can be toggled between Dark and Light
@@ -28,6 +29,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/credits" element={<Credits />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </div>
         </HashRouter>

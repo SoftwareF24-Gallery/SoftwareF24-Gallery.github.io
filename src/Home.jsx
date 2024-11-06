@@ -11,7 +11,7 @@ const Home = () => {
         <div id="search" style={{display: "flex", flexDirection: 'column', alignItems: "center", padding: "3%"}}>
             <SelectGallery/>
             
-            <Button className="select-button" //Button
+            <Button className="select-button" href="/#/gallery"//Button
                 variant="contained" 
                 sx={{ 
                     marginLeft: '5px', //in line css for button
