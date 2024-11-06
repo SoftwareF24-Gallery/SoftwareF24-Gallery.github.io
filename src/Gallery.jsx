@@ -1,6 +1,12 @@
+import FilterDrawer from "./FilterDrawer";
+import { ImageList } from "@mui/material";
+
 const Gallery = () => {
     return(
-        <p>I'm a piece of art</p>
+        <>
+            <FilterDrawer/>
+            <p>I'm a piece of art</p>
+        </>
     )
 }
 

@@ -6,7 +6,7 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { Route, Routes, HashRouter } from "react-router-dom";
 
 // Theme information, can be toggled between Dark and Light
-export const theme = createTheme({
+const theme = createTheme({
   colorSchemes: {
     dark: true,
   },
