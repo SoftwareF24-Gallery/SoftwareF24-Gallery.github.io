@@ -20,7 +20,7 @@ const Navbar = () => {
             <Paper sx={{padding: "20px", display: "flex", alignItems: "center", justifyContent: "left",
                         [theme.breakpoints.down('md')]: { height: "51px"}, 
                         [theme.breakpoints.up('md')]: { height: "70px" },
-                        background: theme.palette.mode === 'dark' ? "linear-gradient(to right, rgba(0,0,0,0), rgba(200,200,200,255), rgba(0,0,0,0)), black" 
+                        background: theme.palette.mode === 'dark' ? "linear-gradient(to right, rgba(0,0,0,0), rgba(200,200,200,0.1), rgba(0,0,0,0)), black" 
                         : "linear-gradient(to right, rgba(200,200,200,255), rgba(0,0,0,0), rgba(200,200,200,255)), white"}}>
                 <Typography>
                     Virtual Art Gallery
