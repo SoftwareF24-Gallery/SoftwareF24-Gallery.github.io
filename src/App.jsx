@@ -1,7 +1,7 @@
 import Navbar from "./Navbar"
 import Home from "./Home"
 import Credits from "./Credits";
-import { CssBaseline, ThemeProvider, createTheme, useColorScheme, Typography } from '@mui/material'
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
 import { Route, Routes, HashRouter } from "react-router-dom";
 
 // Theme information, can be toggled between Dark and Light
