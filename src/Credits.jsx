@@ -9,7 +9,7 @@ const Credits = () => {
     return (
         <>
         {/* Credits title */}
-        <h1 style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>Credits</h1>
+        <h1 style={{display: "flex", justifyContent: "center", alignItems: "center"}}>Credits</h1>
 
         {/* Grid holds cards */}
         <Grid container spacing={6} alignItems="center" sx={{display: "flex", flexDirection: "column"}}>

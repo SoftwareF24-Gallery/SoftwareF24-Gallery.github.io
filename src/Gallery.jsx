@@ -6,7 +6,7 @@ import artData from '../json/artData.json';
 
 const Gallery = () => {
     return(
-        <div style={{flexDirection: 'column', alignItems: "flex-start", padding: "3%"}}>
+        <div style={{alignItems: "flex-start", padding: "3%"}}>
           <FilterDrawer/>
           <Box style={{alignSelf: "stretch"}}>
               <ImageList variant="masonry" cols={4} gap={8}>
