@@ -19,7 +19,7 @@ const App = () => {
       {/* ThemeProvider allows children components to access theme information */}
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Paper square style={{alignSelf: "stretch", width: "90%", margin: "0 auto"}}>
+        <Paper square style={{minHeight: "100%", width: "90%", margin: "0 auto"}}>
           {/* Navigation bar implementation */}
           <div id="sticky" style={{position: "sticky", zIndex: 3, top: 0}}>
             <Navbar />
