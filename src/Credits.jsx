@@ -12,7 +12,7 @@ const Credits = () => {
         <h1 style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>Credits</h1>
 
         {/* Grid holds cards */}
-        <Grid container spacing={6} sx={{display: "flex", flexDirection: "column", maxWidth: "500px"}}>
+        <Grid container spacing={6} alignItems="center" sx={{display: "flex", flexDirection: "column"}}>
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
