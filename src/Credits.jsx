@@ -16,7 +16,7 @@ const Credits = () => {
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
-                    <CardMedia sx={{ height: 100, width: 100 }} image={"../JSONS/images/Steve headshot.jpeg"} />
+                    <CardMedia sx={{ height: 100, width: 100 }} image={"../img/Steve headshot.jpeg"} />
                     {/* Div groups the typographies in a column style */}
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>

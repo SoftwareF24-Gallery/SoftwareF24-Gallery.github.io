@@ -1,8 +1,0 @@
-[
-    { "value": "BG", "label": "Bosque Gallery", "default": true },
-    { "value": "KG", "label": "LSC-Kingwood Gallery", "default": false},
-    { "value": "MG", "label": "LSC-Montgomery Gallery", "default": false },
-    { "value": "NH-G", "label": "LSC-North Harris Gallery", "default": false },
-    { "value": "TG", "label": "LSC-Tomball Gallery", "default": false },
-    { "value": "UP-G", "label": "LSC-University Park Gallery", "default": false }
-]
