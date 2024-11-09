@@ -20,7 +20,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {/* Navigation bar implementation */}
-        <div id="sticky" style={{position: "sticky", top: 0}}>
+        <div id="sticky" style={{position: "sticky", zIndex: 3, top: 0}}>
           <Navbar />
         </div>
         {/* Routing used to navigate the website */}
