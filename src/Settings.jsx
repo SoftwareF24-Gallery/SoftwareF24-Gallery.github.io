@@ -16,7 +16,7 @@ const Settings = () => {
     return (
     <>
         {/* Settings button */}
-        <IconButton size="small" color="inherit" onClick={() => setOpen(true)} sx={{marginTop: "-30px"}}>
+        <IconButton size="small" color="inherit" onClick={() => setOpen(true)}>
             <SettingsIcon />
         </IconButton>
 

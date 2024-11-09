@@ -26,16 +26,16 @@ const Navbar = () => {
                     Virtual Art Gallery
                 </Typography>
             </Paper>
-            <AppBar position="sticky" sx={{background: "#203c5c"}}>
-                <Toolbar sx={{marginBottom: "-30px"}}>
-                    <IconButton color="inherit" href="/#/" sx={{marginTop: "-30px"}}>
+            <AppBar position="sticky" sx={{background: "#203c5c", height: "52px", justifyContent: "center"}}>
+                <Toolbar>
+                    <IconButton color="inherit" href="/#/">
                         <HomeIcon />
                     </IconButton>
                     <Typography variant="h6" sx={{flexGrow: 1, textAlign: "left"}}>
                     </Typography>
                     {/*Displays components on the left side by side */}
                     <Stack direction="row">
-                        <Button color="inherit" href="/#/credits" sx={{marginTop: "-25px"}}>
+                        <Button color="inherit" href="/#/credits">
                         Credits
                         </Button>
                         <Settings/>
