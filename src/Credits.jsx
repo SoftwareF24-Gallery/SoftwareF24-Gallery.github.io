@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Typography } from "@mui/material";
-
+import profilePhoto from "../img/Steve headshot.jpeg";
 
 const Credits = () => {
     return (
@@ -16,7 +16,7 @@ const Credits = () => {
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
-                    <CardMedia sx={{ height: 100, width: 100 }} image={"../img/Steve headshot.jpeg"} />
+                    <CardMedia sx={{ height: 100, width: 100 }} image={profilePhoto} />
                     {/* Div groups the typographies in a column style */}
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
@@ -31,7 +31,7 @@ const Credits = () => {
 
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                    <CardMedia sx={{ height: 100, width: 100 }} image={"../JSONS/images/Steve headshot.jpeg"} />
+                    <CardMedia sx={{ height: 100, width: 100 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         This Guy
@@ -45,7 +45,7 @@ const Credits = () => {
 
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                    <CardMedia sx={{ height: 100, width: 100 }} image={"../JSONS/images/Steve headshot.jpeg"} />
+                    <CardMedia sx={{ height: 100, width: 100 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         This Guy
@@ -59,7 +59,7 @@ const Credits = () => {
 
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                    <CardMedia sx={{ height: 100, width: 100 }} image={"../JSONS/images/Steve headshot.jpeg"} />
+                    <CardMedia sx={{ height: 100, width: 100 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         This Guy
