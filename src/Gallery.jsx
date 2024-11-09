@@ -5,26 +5,29 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 const Gallery = () => {
     return(
-        <>
-        <FilterDrawer/>
-        <Box sx={{ width: 500, height: 450, overflowY: 'scroll' }}>
-            <ImageList variant="masonry" cols={3} gap={8}>
+        <div style={{display: "flex", flexDirection: 'column', alignItems: "flex-start", padding: "3%"}}>
+          <FilterDrawer/>
+          <Box style={{alignSelf: "stretch"}}>
+              <ImageList variant="masonry" cols={4} gap={8}>
+                {/* Creating an array of img from objects in itemData */}
                 {itemData.map((item) => (
-                <ImageListItem key={item.img}>
-                    <img
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    alt={item.title}
-                    loading="lazy"
-                    />
-                </ImageListItem>
+                  <ImageListItem key={item.img}>
+                      <img
+                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      src={`${item.img}?w=248&fit=crop&auto=format`}
+                      alt={item.title}
+                      loading="lazy"
+                      href="#"
+                      />
+                  </ImageListItem>
                 ))}
-            </ImageList>
-        </Box>
-        </>
+              </ImageList>
+          </Box>
+        </div>
     )
 }
 
+// Placeholder list of images with URL and title
 const itemData = [
     {
       img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
