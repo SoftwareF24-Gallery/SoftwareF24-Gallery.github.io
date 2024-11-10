@@ -10,7 +10,7 @@ const Gallery = () => {
           <FilterDrawer/>
           <Box style={{alignSelf: "stretch"}}>
               <ImageList variant="masonry" cols={4} gap={8}>
-                {/* Creating an array of img from objects in itemData */}
+                {/* Creating an array of img from objects in artData */}
                 {artData.map((item) => (
                   <ImageListItem key={item.img}>
                       <img

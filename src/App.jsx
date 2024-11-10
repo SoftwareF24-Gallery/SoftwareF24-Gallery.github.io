@@ -26,7 +26,7 @@ const App = () => {
           </div>
           {/* Routing used to navigate the website */}
           <HashRouter>
-          <div id="component" style={{width: "100%", maxWidth: "1200px", margin: "0 auto"}}>
+          <div id="component" style={{width: "100%", maxWidth: "1200px", margin: "0 auto"}}> {/* Div styling prevents width from expanding after 1200px, to keep content at center of page */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/credits" element={<Credits />} />
