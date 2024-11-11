@@ -63,6 +63,7 @@ const FilterDrawer = () => {
                     <Typography variant="h6"
                     sx={{display: 'flex',
                         mt: '2px',
+                        ml: '5px',
                         fontWeight: 500, 
                         '&:hover' : {
                             textDecoration: 'underline'
