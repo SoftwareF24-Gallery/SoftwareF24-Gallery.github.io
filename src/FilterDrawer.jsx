@@ -27,8 +27,8 @@ const FilterDrawer = () => {
               color="inherit"
               aria-label="open drawer"
               onClick={(event) => {
-                handleDrawerOpen();
-                 {/* Propagation helps prevent click from traveling to parent elements */}
+                open ? handleDrawerClose() : handleDrawerOpen();
+                {/* Propagation helps prevent click from traveling to parent elements */}
                 event.stopPropagation();
               }}
               edge="start"
@@ -43,7 +43,7 @@ const FilterDrawer = () => {
           </Tooltip>
         
         {/* Allows user to click off drawer and it will close*/}
-        <ClickAwayListener onClickAway={() => setOpen(false)}>
+        <ClickAwayListener onClickAway={handleDrawerClose}>
             <Drawer 
                 sx={{
                 width: drawerWidth,
