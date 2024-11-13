@@ -12,10 +12,12 @@ const Credits = () => {
         <h1 style={{display: "flex", justifyContent: "center", alignItems: "center"}}>Credits</h1>
 
         {/* Grid holds cards */}
-        <Grid container spacing={6} alignItems="center" sx={{display: "flex", flexDirection: "column"}}>
+        {/* Yes, I know I hardcoded blank space using CardMedia */}
+        <Grid container spacing={4}>
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
+                    <CardMedia sx={{ height: 250, width: 100 }} />
                     <CardMedia sx={{ height: 100, width: 100 }} image={profilePhoto} />
                     {/* Div groups the typographies in a column style */}
                     <div>
@@ -26,11 +28,12 @@ const Credits = () => {
                         Did cool stuff
                     </Typography>
                     </div>
+                    <CardMedia sx={{ height: 250, width: 200 }} />
                 </CardContent>
             </Card>
-
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
+                    <CardMedia sx={{ height: 250, width: 100 }} />
                     <CardMedia sx={{ height: 100, width: 100 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
@@ -40,11 +43,12 @@ const Credits = () => {
                         Did cool stuff
                     </Typography>
                     </div>
+                    <CardMedia sx={{ height: 250, width: 200 }} />
                 </CardContent>
             </Card>
-
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
+                    <CardMedia sx={{ height: 250, width: 100 }} />
                     <CardMedia sx={{ height: 100, width: 100 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
@@ -54,11 +58,12 @@ const Credits = () => {
                         Did cool stuff
                     </Typography>
                     </div>
+                    <CardMedia sx={{ height: 250, width: 200 }} />
                 </CardContent>
             </Card>
-
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
+                    <CardMedia sx={{ height: 250, width: 100 }} />
                     <CardMedia sx={{ height: 100, width: 100 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
@@ -68,9 +73,9 @@ const Credits = () => {
                         Did cool stuff
                     </Typography>
                     </div>
+                    <CardMedia sx={{ height: 250, width: 200 }} />
                 </CardContent>
             </Card>
-            
         </Grid>
 
         </>
