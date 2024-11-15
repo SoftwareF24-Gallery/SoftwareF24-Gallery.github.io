@@ -1,13 +1,15 @@
-import { Drawer, IconButton, Typography, ClickAwayListener } from "@mui/material";
+import { Drawer, IconButton, Typography, ClickAwayListener} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import { useState } from "react";
+import { useTheme } from '@mui/material/styles';
 
 const drawerWidth = 240;
 
 const FilterDrawer = () => {
+  
 
     {/* Setting up variables and functions for opening and closing drawer */}
     const [open, setOpen] = useState(false);
@@ -19,7 +21,8 @@ const FilterDrawer = () => {
       const handleDrawerClose = () => {
         setOpen(false);
       };
-
+      
+    const theme = useTheme();
     return (
         <div>
          {/* Tooltip Adds alt text over hamburger menu, that says filters*/}
@@ -58,34 +61,53 @@ const FilterDrawer = () => {
                 anchor="left"
                 open={open}
             >
-                <Box display={'flex'}>
 
-            {/* Filter Text within drawer*/}
-                    <Typography variant="h6"
-                    sx={{display: 'flex',
-                        mt: '2px',
-                        ml: '7px',
-                        fontWeight: 500, 
-                        '&:hover' : {
-                            textDecoration: 'underline'
-                        }
-                    }}
-                    >Filters</Typography>
-            
-             {/* Hamburger menu within nav drawer*/}
-                <IconButton 
-                    sx={{
-                    marginLeft: '137px',
-                    color: 'black',
-                    '&:hover': { // Add a hover effect to the IconButton
-                        backgroundColor: 'rgba(0, 0, 0, 0.1)', // Slightly change background color on hover
-                    }
-                    }}
-                    onClick={handleDrawerClose}
-                >
-                    <CloseIcon/> 
-                </IconButton>
-                
+            {/* main box for drawer*/}
+                <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+
+            {/* Filter Text & button within drawer, 
+            box for button and "X" for alignent*/}
+                  <Box sx={{ display: 'flex', }}>
+                      <Typography variant="h6"
+                      sx={{display: 'flex',
+                          mt: '2px',
+                          ml: '7px',
+                          fontWeight: 500, 
+                          '&:hover' : {
+                              textDecoration: 'underline'
+                          }
+                      }}
+                      >Filters</Typography>
+              
+              {/* Hamburger menu within nav drawer*/}
+                  <IconButton 
+                      sx={{
+                      marginLeft: '137px',
+                      color: 'black',
+                      '&:hover': { // Add a hover effect to the IconButton
+                          backgroundColor: 'rgba(0, 0, 0, 0.1)', // Slightly change background color on hover
+                      }
+                      }}
+                      onClick={handleDrawerClose}
+                  >
+                      <CloseIcon sx={{ 
+                        color: theme.palette.mode === 'dark' ? '#951717' : 'black',
+                      }} /> 
+                  </IconButton>
+                </Box>    
+
+                {/* First filter*/}
+                <Box sx={{
+                  display: 'flex', 
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'flex-start',
+                  height: '100%',
+              
+                  }}>
+                  <Typography variant="h5" textAlign="center">Art Name</Typography>
+                </Box>
+                  
                 </Box>
             </Drawer>
         </ClickAwayListener>     
