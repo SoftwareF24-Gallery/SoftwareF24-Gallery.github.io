@@ -1,5 +1,6 @@
 import { Drawer, IconButton, Typography, ClickAwayListener } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import { useState } from "react";
@@ -63,7 +64,7 @@ const FilterDrawer = () => {
                     <Typography variant="h6"
                     sx={{display: 'flex',
                         mt: '2px',
-                        ml: '5px',
+                        ml: '7px',
                         fontWeight: 500, 
                         '&:hover' : {
                             textDecoration: 'underline'
@@ -74,14 +75,15 @@ const FilterDrawer = () => {
              {/* Hamburger menu within nav drawer*/}
                 <IconButton 
                     sx={{
-                    marginLeft: '140px',
+                    marginLeft: '137px',
+                    color: 'black',
                     '&:hover': { // Add a hover effect to the IconButton
                         backgroundColor: 'rgba(0, 0, 0, 0.1)', // Slightly change background color on hover
                     }
                     }}
                     onClick={handleDrawerClose}
                 >
-                    <MenuIcon /> 
+                    <CloseIcon/> 
                 </IconButton>
                 
                 </Box>
