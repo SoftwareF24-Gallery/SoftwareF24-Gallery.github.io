@@ -53,7 +53,7 @@ const Gallery = () => {
                   alt={item.title}
                   loading="lazy"
                   />
-                      <Typography >
+                      <Typography loading="lazy" sx={{fontSize: 30}}>
                         {item.title}
                       </Typography>
                   </Dialog>
