@@ -55,6 +55,8 @@ const FilterDrawer = () => {
                 '& .MuiDrawer-paper': {
                     width: drawerWidth,
                     boxSizing: 'border-box',
+                    height: '100%',
+                    overflow: 'hidden',
                 },
                 }}
                 variant="persistent"
