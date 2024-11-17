@@ -8,13 +8,12 @@ import InfoIcon from '@mui/icons-material/Info';
 import artData from '../json/artData.json';
 import { Dialog } from '@mui/material'
 import { useState } from "react";
+import { Typography } from "@mui/material";
 
 const Gallery = () => {
-
+  {/* handles opening and closing of image pop ups */}
     const [selectedImg, setSelectedImg] = useState(null);
-
     const handleClose = () => setSelectedImg(null);
-
 
     return(
         <div style={{alignItems: "flex-start", padding: "3%"}}>
@@ -45,6 +44,7 @@ const Gallery = () => {
                       }
                     />
 
+                  {/* Image Pop-up and title */}
                   <Dialog 
                   onClose={handleClose} 
                   open={item.img === selectedImg}>
@@ -53,7 +53,9 @@ const Gallery = () => {
                   alt={item.title}
                   loading="lazy"
                   />
-                      
+                      <Typography >
+                        {item.title}
+                      </Typography>
                   </Dialog>
 
                   </ImageListItem>
