@@ -6,13 +6,14 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import artData from '../json/artData.json';
-import { Dialog, Typography, Card, CardMedia, CardContent } from '@mui/material'
+import { Dialog } from '@mui/material'
 import { useState } from "react";
-import CloseIcon from '@mui/icons-material/Close';
 
 const Gallery = () => {
 
-    const [open, setOpen] = useState(false)
+    const [selectedImg, setSelectedImg] = useState(null);
+
+    const handleClose = () => setSelectedImg(null);
 
 
     return(
@@ -22,7 +23,7 @@ const Gallery = () => {
               <ImageList variant="masonry" cols={4} gap={8}>
                 {/* Creating an array of img from objects in artData */}
                 {artData.map((item) => (
-                  <ImageListItem key={item.img} onClick={() => setOpen(true)}>
+                  <ImageListItem key={item.img}>
                       <img
                       srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -37,32 +38,22 @@ const Gallery = () => {
                         <IconButton
                           sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                           aria-label={`info about ${item.title}`}
+                          onClick={() => {setSelectedImg(item.img);}}
                         >
                           <InfoIcon />
                         </IconButton>
                       }
                     />
 
-                  <Dialog open={open} onClose={() => setOpen(false)} sx={{background: 'rgba(0, 0, 0, 0.3)'}}>
-                    <Card sx={{ width: 450 }} elevation="10">
-                    <IconButton onClick={() => setOpen(false)} sx={{float: "right"}}>
-                      <CloseIcon />
-                    </IconButton>
-                      <CardMedia
-                        component="img"
-                        image={`${item.img}?w=248&fit=crop&auto=format`}
-                        title={item.title}
-                        loading="lazy"
-                      />
-                      <CardContent>
-                        <Typography>
-                          {item.title}
-                        </Typography>
-                        <Typography>
-                          {item.author}
-                        </Typography>
-                      </CardContent>
-                    </Card>
+                  <Dialog 
+                  onClose={handleClose} 
+                  open={item.img === selectedImg}>
+                  <img 
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                  />
+                      
                   </Dialog>
 
                   </ImageListItem>
