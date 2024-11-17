@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import { useState } from "react";
 import { useTheme } from '@mui/material/styles';
-
+import ArtFilters from './ArtFilters';
 const drawerWidth = 240;
 
 const FilterDrawer = () => {
@@ -81,7 +81,7 @@ const FilterDrawer = () => {
                       }}
                       >Filters</Typography>
               
-              {/* Hamburger menu within nav drawer*/}
+              {/* Close icon within nav drawer*/}
                   <IconButton 
                       sx={{
                       marginLeft: '137px',
@@ -98,17 +98,8 @@ const FilterDrawer = () => {
                   </IconButton>
                 </Box>    
 
-                {/* First filter*/}
-                <Box sx={{
-                  display: 'flex', 
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'flex-start',
-                  height: '100%',
-              
-                  }}>
-                  <Typography variant="h5" textAlign="center">Art Name</Typography>
-                </Box>
+                {/* Filter compononent*/}
+               <ArtFilters/>
                   
                 </Box>
             </Drawer>
