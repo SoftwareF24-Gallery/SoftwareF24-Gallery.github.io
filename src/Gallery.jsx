@@ -45,7 +45,7 @@ const Gallery = () => {
 
                   <Dialog open={open} onClose={() => setOpen(false)} sx={{background: 'rgba(0, 0, 0, 0.3)'}}>
                     <Card sx={{ width: 450 }} elevation="10">
-                    <IconButton onClick={() => setOpen(false)} sx={{float: "right", padding: "0.2em"}}> {/* The CSS used here is kinda hack-y, replace later */}
+                    <IconButton onClick={() => setOpen(false)} sx={{float: "right"}}>
                       <CloseIcon />
                     </IconButton>
                       <CardMedia
