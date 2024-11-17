@@ -2,6 +2,9 @@ import FilterDrawer from "./FilterDrawer";
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+import IconButton from '@mui/material/IconButton';
+import InfoIcon from '@mui/icons-material/Info';
 import artData from '../json/artData.json';
 import { Dialog, Typography, Card, CardMedia, CardContent } from '@mui/material'
 import { useState } from "react";
@@ -25,6 +28,18 @@ const Gallery = () => {
                       loading="lazy"
                       href="#"
                       />
+                    <ImageListItemBar
+                      title={item.title}
+                      subtitle={item.author}
+                      actionIcon={
+                        <IconButton
+                          sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                          aria-label={`info about ${item.title}`}
+                        >
+                          <InfoIcon />
+                        </IconButton>
+                      }
+                    />
 
                   <Dialog open={open} onClose={() => setOpen(false)} sx={{background: 'rgba(0, 0, 0, 0.3)'}}>
                     <Card sx={{ width: 450 }} elevation="10">
