@@ -15,3 +15,10 @@
 body, #root {
   height: 100%
 }
+
+@font-face {
+  font-family: "EPISODE1";
+  src: local("EPISODE1"),
+    url("./fonts/EPISODE1.TTF") format("opentype");
+  font-weight: normal;
+}
