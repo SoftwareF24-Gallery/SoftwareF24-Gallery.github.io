@@ -8,10 +8,12 @@ import InfoIcon from '@mui/icons-material/Info';
 import artData from '../json/artData.json';
 import { Dialog, Typography, Card, CardMedia, CardContent } from '@mui/material'
 import { useState } from "react";
+import CloseIcon from '@mui/icons-material/Close';
 
 const Gallery = () => {
 
     const [open, setOpen] = useState(false)
+
 
     return(
         <div style={{alignItems: "flex-start", padding: "3%"}}>
@@ -43,6 +45,9 @@ const Gallery = () => {
 
                   <Dialog open={open} onClose={() => setOpen(false)} sx={{background: 'rgba(0, 0, 0, 0.3)'}}>
                     <Card sx={{ width: 450 }} elevation="10">
+                    <IconButton onClick={() => setOpen(false)} sx={{float: "right", padding: "0.2em"}}> {/* The CSS used here is kinda hack-y, replace later */}
+                      <CloseIcon />
+                    </IconButton>
                       <CardMedia
                         component="img"
                         image={`${item.img}?w=248&fit=crop&auto=format`}
@@ -54,7 +59,7 @@ const Gallery = () => {
                           {item.title}
                         </Typography>
                         <Typography>
-                          Description
+                          {item.author}
                         </Typography>
                       </CardContent>
                     </Card>
