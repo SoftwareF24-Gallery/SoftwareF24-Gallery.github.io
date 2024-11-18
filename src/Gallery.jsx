@@ -9,20 +9,38 @@ import artData from '../json/artData.json';
 import { Dialog } from '@mui/material'
 import { useState } from "react";
 import { Typography } from "@mui/material";
+import { OtherHouses } from "@mui/icons-material";
 
 const Gallery = () => {
-  {/* handles opening and closing of image pop ups */}
+    // handles opening and closing of image pop ups
     const [selectedImg, setSelectedImg] = useState(null);
     const handleClose = () => setSelectedImg(null);
 
+    // Setting variables for the filters
+    const [artName, setArtName] = useState('');
+    // filters array will be sent down the hierarchy to ArtFilters
+    const filters = {setArtName};
+    console.log(artName)
+
     return(
         <div style={{alignItems: "flex-start", padding: "3%"}}>
-          <FilterDrawer/>
+
+          <FilterDrawer filters={filters}/>
+
           <Box style={{alignSelf: "stretch"}}>
+
               <ImageList variant="masonry" cols={4} gap={8}>
+
                 {/* Creating an array of img from objects in artData */}
-                {artData.map((item) => (
+                {artData.filter((item) => {
+                  return artName.toLowerCase() === '' 
+                  ? item 
+                  : item.title.toLowerCase().includes(artName.toLowerCase());
+                })
+                .map((item) => (
+
                   <ImageListItem key={item.img}>
+
                       <img
                       srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -30,6 +48,7 @@ const Gallery = () => {
                       loading="lazy"
                       href="#"
                       />
+
                     <ImageListItemBar
                       title={item.title}
                       subtitle={item.author}
@@ -44,24 +63,27 @@ const Gallery = () => {
                       }
                     />
 
-                  {/* Image Pop-up and title */}
-                  <Dialog 
-                  onClose={handleClose} 
-                  open={item.img === selectedImg}>
-                  <img 
-                  src={item.img}
-                  alt={item.title}
-                  loading="lazy"
-                  />
-                      <Typography loading="lazy" sx={{fontSize: 30}}>
-                        {item.title}
-                      </Typography>
-                  </Dialog>
+                    {/* Image Pop-up and title */}
+                    <Dialog 
+                    onClose={handleClose} 
+                    open={item.img === selectedImg}>
+                    <img 
+                    src={item.img}
+                    alt={item.title}
+                    loading="lazy"
+                    />
+                        <Typography loading="lazy" sx={{fontSize: 30}}>
+                          {item.title}
+                        </Typography>
+                    </Dialog>
 
                   </ImageListItem>
                 ))}
+
               </ImageList>
+
           </Box>
+
         </div>
     )
 }

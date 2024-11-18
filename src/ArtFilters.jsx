@@ -2,11 +2,11 @@ import { Typography, Autocomplete, TextField, Chip, Box } from "@mui/material";
 import { useState } from 'react';
 import jsonData from '../json/artData.json';
 
-
-
-const ArtFilters = () => {
+// filters array is sent down from Gallery.jsx, contains methods to modify 
+// filter variables declared in Gallery.jsx
+const ArtFilters = ({filters}) => {
    
-//selectedFilters will be used once art is implemented
+    //selectedFilters will be used once art is implemented
     const [selectedFilters, setSelectedFilters] = useState([]);
 
     const handleDelete = (chipToDelete) => () => {
@@ -14,10 +14,9 @@ const ArtFilters = () => {
             prevFilters.filter((filter) => filter !== chipToDelete)
         );
     };
+
     //flat map puts all keywords into 1 array 
     const keywords = jsonData.flatMap(item => item.keywords);
-
-    const [searchQuery, setSearchQuery] = useState('');
 
     const handleFilterClick = (newFilters) => {
         setSelectedFilters(newFilters)
@@ -25,9 +24,9 @@ const ArtFilters = () => {
 
     //handles search filter update
     const handleSearchChange = (event) => {
-
-        setSearchQuery(event.target.value);
+        filters.setArtName(event.target.value);
     };
+
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -35,13 +34,14 @@ const ArtFilters = () => {
             {/* Textfield searchbar for Artist/Art name*/}
             <TextField
                 label="Search"
-                value={searchQuery}
+                value={filters.artName}
                 onChange={handleSearchChange}
                 sx={{ marginBottom: 2, 
                     width: '220px', 
                     paddingLeft: '10px'
                 }}
             />
+
             {/* Art Types Filter*/}
             <Typography sx={{paddingLeft: '5px'}}>Art Types</Typography>
             <Box sx={{ marginBottom: 2 }}>

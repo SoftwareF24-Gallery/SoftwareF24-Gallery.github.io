@@ -6,11 +6,10 @@ import Tooltip from '@mui/material/Tooltip';
 import { useState } from "react";
 import { useTheme } from '@mui/material/styles';
 import ArtFilters from './ArtFilters';
-const drawerWidth = 240;
+const drawerWidth = 480;
 
-const FilterDrawer = () => {
+const FilterDrawer = ({filters}) => {
   
-
     {/* Setting up variables and functions for opening and closing drawer */}
     const [open, setOpen] = useState(false);
 
@@ -98,8 +97,8 @@ const FilterDrawer = () => {
                   </IconButton>
                 </Box>    
 
-                {/* Filter compononent*/}
-               <ArtFilters/>
+                {/* Filter component*/}
+               <ArtFilters filters={filters}/>
                   
                 </Box>
             </Drawer>
