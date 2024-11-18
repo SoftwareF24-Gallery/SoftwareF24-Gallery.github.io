@@ -18,6 +18,18 @@ const theme = createTheme({
 
     dark: true,
   },
+  
+  // Defines 
+  typography: {
+    h1: {
+      fontFamily: "EPISODE I",
+      fontSize: '1.5em',
+    },
+    h2: {
+      fontSize: '1em',
+      fontWeight: '500',
+    },
+  },
 });
 
 const App = () => {

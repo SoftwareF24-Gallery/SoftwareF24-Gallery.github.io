@@ -24,7 +24,7 @@ const Navbar = () => {
                         background: theme.palette.mode === 'dark' ? "linear-gradient(to right, rgba(0,0,0,0), rgba(200,200,200,0.1), rgba(0,0,0,0)), black" 
                         : "linear-gradient(to right, rgba(200,200,200,255), rgba(0,0,0,0), rgba(200,200,200,255)), white"}}>
                 <div id="top-navbar" style={{width: "100%", maxWidth: "1200px", margin: "0 auto", padding: "0 30px"}}>
-                    <Typography sx={{fontFamily: "EPISODE1"}}>
+                    <Typography variant="h1">
                         Virtual Art Gallery
                     </Typography>
                 </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
                     {/*Displays components on the left side by side */}
                     <Stack direction="row">
                         <Button color="inherit" href="/#/credits">
-                        Credits
+                            <Typography variant="h2">Credits</Typography>
                         </Button>
                         <Settings/>
                     </Stack>
