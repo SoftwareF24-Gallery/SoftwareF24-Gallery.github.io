@@ -25,7 +25,7 @@ const Navbar = () => {
                         : "linear-gradient(to right, rgba(200,200,200,255), rgba(0,0,0,0), rgba(200,200,200,255)), white"}}>
                 <div id="top-navbar" style={{width: "100%", maxWidth: "1200px", margin: "0 auto", padding: "0 30px"}}>
                     <Typography variant="h1">
-                        Virtual Art Gallery
+                        <a href="/#/" style={{color: "inherit", textDecoration: "inherit"}}>Virtual Art Gallery</a>
                     </Typography>
                 </div>
             </Paper>
