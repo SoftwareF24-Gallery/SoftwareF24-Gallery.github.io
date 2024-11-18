@@ -8,6 +8,14 @@ import { Route, Routes, HashRouter } from "react-router-dom";
 // Theme information, can be toggled between Dark and Light
 const theme = createTheme({
   colorSchemes: {
+    light: {
+      palette: {
+        primary: {
+          main: '#203c5c', // Lone Star's signature blue color
+        },
+      },
+    },
+
     dark: true,
   },
 });
