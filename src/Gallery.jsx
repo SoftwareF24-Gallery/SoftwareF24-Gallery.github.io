@@ -19,8 +19,7 @@ const Gallery = () => {
     // Setting variables for the filters
     const [artName, setArtName] = useState('');
     // filters array will be sent down the hierarchy to ArtFilters
-    const filters = {setArtName};
-    console.log(artName)
+    const filters = {artName, setArtName};
 
     return(
         <div style={{alignItems: "flex-start", padding: "3%"}}>

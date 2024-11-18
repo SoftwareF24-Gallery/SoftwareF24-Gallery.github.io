@@ -1,4 +1,4 @@
-import { Typography, Autocomplete, TextField, Chip, Box } from "@mui/material";
+import { Button, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import { useState } from 'react';
 import jsonData from '../json/artData.json';
 
@@ -22,34 +22,26 @@ const ArtFilters = ({filters}) => {
         setSelectedFilters(newFilters)
     };
 
-    //handles search filter update
-    const handleSearchChange = (event) => {
+    //handles art name filter update
+    const handleArtNameChange = (event) => {
         filters.setArtName(event.target.value);
     };
 
-
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-            <Typography sx={{paddingLeft: '5px'}}>Art Name</Typography>
+        <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%'}}>
+
             {/* Textfield searchbar for Artist/Art name*/}
             <TextField
-                label="Search"
+                label="Name"
+                sx={{m: 1}}
                 value={filters.artName}
-                onChange={handleSearchChange}
-                sx={{ marginBottom: 2, 
-                    width: '220px', 
-                    paddingLeft: '10px'
-                }}
+                onChange={handleArtNameChange}
             />
 
             {/* Art Types Filter*/}
-            <Typography sx={{paddingLeft: '5px'}}>Art Types</Typography>
-            <Box sx={{ marginBottom: 2 }}>
+            <Box sx={{m: 1}}>
                 {/* Autocomplete function for keywords*/}
-                <Autocomplete sx={{ 
-                    width: '220px',
-                    paddingLeft: '10px'
-                 }}
+                <Autocomplete
                     multiple
                     id="Arttype-keywords"
                     options={keywords}
@@ -72,14 +64,41 @@ const ArtFilters = ({filters}) => {
                     }
                     //place holder text
                     renderInput={(params) => (
-                        <TextField {...params} label="Art Type" placeholder="Select Art Type" />
+                        <TextField {...params} label="Keywords" placeholder="Select Art Type" />
                     )}
                     
                 />
             </Box>
-
-            <Typography sx={{paddingLeft: '5px'}}>Art Medium</Typography>
             
+            {/* Medium Filter */}
+            <FormControl sx={{m: 1}}>
+                <InputLabel id="medium-selection">Medium</InputLabel>
+                    <Select
+                    labelId="medium-selection"
+                    id="medium"
+                    label="Medium"
+                    >
+                        <MenuItem>
+                            <em>None</em>
+                        </MenuItem>
+                        <MenuItem>Traditional Painting</MenuItem>
+                        <MenuItem>Digital Painting</MenuItem>
+                        <MenuItem>Photograph</MenuItem>
+                    </Select>
+            </FormControl>
+
+            {/* Clear Filters Button
+                Clears all filter fields */}
+            <Button 
+                color="inherit" 
+                variant="outlined"
+                sx={{m: 1,}}
+
+                onClick={(event) => {
+                    filters.setArtName('');
+                }}>
+                Clear Filters
+            </Button>
         </Box>
     );
 }

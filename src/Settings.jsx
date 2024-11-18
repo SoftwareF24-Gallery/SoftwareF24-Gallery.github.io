@@ -24,13 +24,14 @@ const Settings = () => {
         <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="dialog-title" PaperProps={{sx: {width: "40rem", height: "10rem"}}}>
 
             {/* Title of dialog box */}
-            <DialogTitle id="dialog-title" sx={{}}>
+            <DialogTitle id="dialog-title">
                 Settings
                 {/* Close button */}
                 <IconButton onClick={() => setOpen(false)} sx={{float: "right", padding: "0.2em"}}> {/* The CSS used here is kinda hack-y, replace later */}
                     <CloseIcon />
                 </IconButton>
             </DialogTitle>
+            
             {/* Options in the settings menu */}
             <DialogActions sx={{justifyContent: "center"}}>
                 

@@ -1,12 +1,12 @@
-import { Drawer, IconButton, Typography, ClickAwayListener} from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+import { Drawer, IconButton, Button, Typography, ClickAwayListener} from "@mui/material";
+import TuneIcon from '@mui/icons-material/Tune';
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import { useState } from "react";
 import { useTheme } from '@mui/material/styles';
 import ArtFilters from './ArtFilters';
-const drawerWidth = 480;
+const drawerWidth = 320;
 
 const FilterDrawer = ({filters}) => {
   
@@ -22,12 +22,15 @@ const FilterDrawer = ({filters}) => {
       };
       
     const theme = useTheme();
+
     return (
         <div>
          {/* Tooltip Adds alt text over hamburger menu, that says filters*/}
           <Tooltip title="Filters">
-            <IconButton
+            <Button
               color="inherit"
+              variant="outlined"
+              startIcon={<TuneIcon />}
               aria-label="open drawer"
               onClick={(event) => {
                 open ? handleDrawerClose() : handleDrawerOpen();
@@ -39,10 +42,9 @@ const FilterDrawer = ({filters}) => {
                 { mr: 2 },
                 { mb: 2 },
                 open,
-              ]}
-            >
-              <MenuIcon />
-            </IconButton>
+              ]}>
+                Filters
+            </Button>
           </Tooltip>
         
         {/* Allows user to click off drawer and it will close*/}
@@ -63,42 +65,42 @@ const FilterDrawer = ({filters}) => {
                 open={open}
             >
 
-            {/* main box for drawer*/}
-                <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              {/* main box for drawer*/}
+              <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', padding: "1em"}}>
 
-            {/* Filter Text & button within drawer, 
-            box for button and "X" for alignent*/}
-                  <Box sx={{ display: 'flex', }}>
-                      <Typography variant="h6"
-                      sx={{display: 'flex',
-                          mt: '2px',
-                          ml: '7px',
-                          fontWeight: 500, 
-                          '&:hover' : {
-                              textDecoration: 'underline'
-                          }
-                      }}
-                      >Filters</Typography>
-              
-              {/* Close icon within nav drawer*/}
-                  <IconButton 
-                      sx={{
-                      marginLeft: '137px',
-                      color: 'black',
-                      '&:hover': { // Add a hover effect to the IconButton
-                          backgroundColor: 'rgba(0, 0, 0, 0.1)', // Slightly change background color on hover
-                      }
-                      }}
-                      onClick={handleDrawerClose}
-                  >
-                      <CloseIcon sx={{ 
-                        color: theme.palette.mode === 'dark' ? '#951717' : 'black',
-                      }} /> 
-                  </IconButton>
-                </Box>    
+                {/* Filter Text & button within drawer, 
+                box for button and "X" for alignent*/}
+                <Box sx={{ display: 'flex', m: 1, justifyContent: 'space-between'}}>
 
-                {/* Filter component*/}
-               <ArtFilters filters={filters}/>
+                    <Typography variant="h6"
+                    sx={{display: 'flex',
+                        mt: '2px',
+                        ml: '7px',
+                        fontWeight: 500,
+                    }}>
+                      Filters
+                    </Typography>
+                
+                    {/* Close icon within nav drawer*/}
+                    <IconButton 
+                        sx={{
+                        color: 'black',
+                        alignSelf: 'flex-start',
+                        padding: "0.3em",
+                        '&:hover': { // Add a hover effect to the IconButton
+                            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)', // Slightly change background color on hover
+                        }}}
+
+                        onClick={handleDrawerClose}>
+                        <CloseIcon sx={{ 
+                          color: theme.palette.mode === 'dark' ? 'white' : 'black',
+                        }} /> 
+                    </IconButton>
+
+                  </Box>    
+
+                  {/* Filter component*/}
+                  <ArtFilters filters={filters}/>
                   
                 </Box>
             </Drawer>

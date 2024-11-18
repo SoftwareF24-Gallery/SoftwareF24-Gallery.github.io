@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const theme = useTheme(); // Access current theme
 
- {/*Main navigation bar function */}
+    // Main navigation bar function
     return (
         <>
             {/* 
