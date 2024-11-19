@@ -5,8 +5,8 @@ import locations from '../json/locations.json';
 // Setting up function to be used in other files
 export const SelectGallery = () => { 
 
-    // makes location dynamic, i think needs double checking
-    const defaultLocation = locations.find(locations => locations.default);
+    const defaultLocation = locations.find((location) => location.default);
+    document.title = defaultLocation.label;
 
     // Uses default location variable to get location
     const [gallery, setGallery] = useState(defaultLocation);
