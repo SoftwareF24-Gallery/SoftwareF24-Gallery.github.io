@@ -2,7 +2,7 @@
     {
       "id": 0,
       "artist": 0,
-      "url": "img/gallery/19320920-Lunch-Skyscraper.jpg",
+      "url": "src/assets/img/gallery/19320920-Lunch-Skyscraper.jpg",
       "title": "Lunch atop a Skyscraper",
       "date": "1932-09-20",
       "medium": "photograph",
@@ -12,7 +12,7 @@
     {
       "id": 1,
       "artist": 1,
-      "url": "img/gallery/19411230-The-Roaring-Lion.jpg",
+      "url": "src/assets/img/gallery/19411230-The-Roaring-Lion.jpg",
       "title": "The Roaring Lion",
       "date": "1941-12-30",
       "medium": "photograph",

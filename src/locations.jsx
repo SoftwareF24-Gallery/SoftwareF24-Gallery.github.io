@@ -1,6 +1,6 @@
 import { Box, TextField, MenuItem } from "@mui/material"
 import { useState } from 'react'
-import locations from '../json/locations.json';
+import locations from './assets/json/locations.json';
 
 // Setting up function to be used in other files
 export const SelectGallery = () => { 

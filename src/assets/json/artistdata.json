@@ -10,7 +10,7 @@
         "id": 1,
         "name": "Yousuf Karsh",
         "bio" : "Armenian-Canadian photographer known for his portraits of notable individuals.",
-        "picture" : "img/artist/Yousuf_Karsh.jpg",
+        "picture" : "src/assets/img/artist/Yousuf_Karsh.jpg",
         "link": "https://en.wikipedia.org/wiki/Yousuf_Karsh"
     }
 ]
