@@ -38,11 +38,11 @@ const Gallery = () => {
                 })
                 .map((item) => (
 
-                  <ImageListItem key={item.img}>
+                  <ImageListItem key={item.url}>
 
                       <img
-                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                      src={`${item.img}?w=248&fit=crop&auto=format`}
+                      srcSet={`${item.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      src={`${item.url}?w=248&fit=crop&auto=format`}
                       alt={item.title}
                       loading="lazy"
                       href="#"
@@ -55,7 +55,7 @@ const Gallery = () => {
                         <IconButton
                           sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                           aria-label={`info about ${item.title}`}
-                          onClick={() => {setSelectedImg(item.img);}}
+                          onClick={() => {setSelectedImg(item.url);}}
                         >
                           <InfoIcon />
                         </IconButton>
@@ -65,9 +65,9 @@ const Gallery = () => {
                     {/* Image Pop-up and title */}
                     <Dialog 
                     onClose={handleClose} 
-                    open={item.img === selectedImg}>
+                    open={item.url === selectedImg}>
                     <img 
-                    src={item.img}
+                    src={item.url}
                     alt={item.title}
                     loading="lazy"
                     />

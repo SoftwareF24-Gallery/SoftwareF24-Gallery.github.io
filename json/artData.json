@@ -1,62 +1,22 @@
 [
     {
-      "img": "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-      "title": "Breakfast",
-      "keywords" : ["food", "breakfast"]
+      "id": 0,
+      "artist": 0,
+      "url": "img/gallery/19320920-Lunch-Skyscraper.jpg",
+      "title": "Lunch atop a Skyscraper",
+      "date": "1932-09-20",
+      "medium": "photograph",
+      "description": "While New York's thousands rush to crowded restaurants and congested lunch counters for their noon day lunch, these intrepid steel workers atop the 70 story RCA building in Rockefeller Center get all the air and freedom they want by lunching on a steel beam with a sheer drop of over 800 feet to the street level. The RCA building is the largest office building in terms of office space in the world.",
+      "keywords" : ["monochrome", "urban", "industrial", "people"]
     },
     {
-      "img": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-      "title": "Burger",
-      "keywords" : ["food", "breakfast"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-      "title": "Camera",
-      "keywords" : ["tech", "photography"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-      "title": "Coffee",
-      "keywords" : ["food", "breakfast"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-      "title": "Hats",
-      "keywords" : ["clothes", "fashion"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-      "title": "Honey",
-      "keywords" : ["food", "breakfast"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-      "title": "Basketball",
-      "keywords" : ["sports", "deportes"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-      "title": "Fern",
-      "keywords" : ["plants", "nature"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-      "title": "Mushrooms",
-      "keywords" : ["plants", "nature"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-      "title": "Tomato basil",
-      "keywords" : ["food", "breakfast"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-      "title": "Sea star",
-      "keywords" : ["animals", "patrick"]
-    },
-    {
-      "img": "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-      "title": "Bike",
-      "keywords" : ["bike", "biking"]
+      "id": 1,
+      "artist": 1,
+      "url": "img/gallery/19411230-The-Roaring-Lion.jpg",
+      "title": "The Roaring Lion",
+      "date": "1941-12-30",
+      "medium": "photograph",
+      "description": "Portrait of late United Kingdom Prime Minister, Winston Churchill.",
+      "keywords" : ["monochrome", "portrait", "people"]
     }
 ]
