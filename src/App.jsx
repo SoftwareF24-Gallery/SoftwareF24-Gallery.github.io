@@ -22,9 +22,10 @@ const theme = createTheme({
   // Defines 
   typography: {
     h1: {
-      fontFamily: "EPISODE I",
+      fontFamily: "EPISODE1",
       fontSize: '1.5em',
     },
+    
     h2: {
       fontSize: '1em',
       fontWeight: '500',
