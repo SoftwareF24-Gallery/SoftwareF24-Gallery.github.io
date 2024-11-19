@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
             </Paper>
 
-            <AppBar position="sticky" elevation={0} sx={{height: "52px", justifyContent: "center"}}>
+            <AppBar color="primary" enableColorOnDark position="sticky" elevation={0} sx={{height: "52px", justifyContent: "center"}}>
                 <Toolbar style={{width: "100%", maxWidth: "1200px", margin: "0 auto"}}> {/* Toolbar styling prevents width from expanding after 1200px, to keep content at center of page */}
                     <IconButton color="inherit" href="/#/">
                         <HomeIcon />
