@@ -5,11 +5,11 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
-import artData from './assets/json/artData.json';
-import artistData from './assets/json/artistData.json';
+import artData from '../json/artData.json';
 import { Dialog } from '@mui/material'
 import { useState } from "react";
 import { Typography } from "@mui/material";
+import { OtherHouses } from "@mui/icons-material";
 
 const Gallery = () => {
     // handles opening and closing of image pop ups

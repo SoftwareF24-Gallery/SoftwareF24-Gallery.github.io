@@ -1,6 +1,6 @@
 import { Button, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import { useState } from 'react';
-import jsonData from './assets/json/artData.json';
+import jsonData from '../json/artData.json';
 
 // filters array is sent down from Gallery.jsx, contains methods to modify 
 // filter variables declared in Gallery.jsx

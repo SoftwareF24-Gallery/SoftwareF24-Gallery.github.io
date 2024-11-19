@@ -19,6 +19,6 @@ body, #root {
 @font-face {
   font-family: "EPISODE1";
   src: local("EPISODE1"),
-    url("./EPISODE1.TTF") format("opentype");
+    url("./fonts/EPISODE1.TTF") format("opentype");
   font-weight: normal;
 }
