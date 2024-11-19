@@ -36,7 +36,7 @@ const Settings = () => {
             <DialogActions sx={{justifyContent: "center"}}>
                 
                 {/*Toggling light and dark mode*/}
-                <FormControl>
+                <FormControl color="primary.light">
 
                     <FormLabel id="theme-toggle">Theme</FormLabel>
                     <RadioGroup
