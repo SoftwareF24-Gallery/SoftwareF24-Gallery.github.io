@@ -91,8 +91,11 @@ const Gallery = () => {
                     loading="lazy"
                     style={{padding: 10}}
                     ></img>
-                        <Typography loading="lazy" sx={{fontSize: 30, padding: 1}}>
+                        <Typography loading="lazy" sx={{fontSize: 30, paddingLeft: 1}}>
                           {item.title}
+                        </Typography>
+                        <Typography loading="lazy" sx={{paddingLeft: 1, paddingBottom: 1}}>
+                        {"Artist: " + artistById(item.artist).name}
                         </Typography>
                     </Dialog>
 
