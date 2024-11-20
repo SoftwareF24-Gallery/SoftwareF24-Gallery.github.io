@@ -12,6 +12,14 @@ import { useState } from "react";
 import { Typography } from "@mui/material";
 import { OtherHouses } from "@mui/icons-material";
 
+// Receives the artist's ID number, which is contained in the artist property
+// within each item in artData. 
+// Returns a JSON object containing the artist's information
+const artistById = (artistID) => {
+  return artistData.filter((artistData) => {
+    return (artistData['id'] == artistID);})[0];
+}
+
 const Gallery = () => {
     // handles opening and closing of image pop ups
     const [selectedImg, setSelectedImg] = useState(null);
@@ -51,7 +59,7 @@ const Gallery = () => {
 
                     <ImageListItemBar
                       title={item.title}
-                      subtitle={"By " + artistData[item.artist].name} // Uses ID in each art object to pull the artist name from artistData.json
+                      subtitle={"By " + artistById(item.artist).name} // Uses ID in each art object to pull the artist name from artistData.json
                       actionIcon={
                         <IconButton
                           sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
