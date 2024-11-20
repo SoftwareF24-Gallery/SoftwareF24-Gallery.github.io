@@ -80,17 +80,18 @@ const Gallery = () => {
                     {/* Image Pop-up and title */}
                     <Dialog 
                     onClose={handleClose} 
-                    open={item.url === selectedImg}>
+                    open={item.url === selectedImg}
+                    >
+                    <IconButton onClick= {handleClose} sx={{padding: "0.2em", justifyContent: "right"}}>
+                    <CloseIcon />
+                    </IconButton>
                     <img 
                     src={item.url}
                     alt={item.title}
                     loading="lazy"
+                    style={{padding: 10}}
                     ></img>
-                    <IconButton onClick= {handleClose} sx={{padding: "0.2em"}}>
-                    <CloseIcon />
-                    </IconButton>
-
-                        <Typography loading="lazy" sx={{fontSize: 30}}>
+                        <Typography loading="lazy" sx={{fontSize: 30, padding: 1}}>
                           {item.title}
                         </Typography>
                     </Dialog>
