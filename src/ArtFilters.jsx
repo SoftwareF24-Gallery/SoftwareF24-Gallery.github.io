@@ -21,7 +21,7 @@ const ArtFilters = ({filters}) => {
     const handleDelete = (chipToDelete) => () => {
         filters.setSelectedFilters((prevFilters) => {
             console.log("Deleting Chip:", chipToDelete);
-            const updatedFilters = prevFilters.filter((filter) => filter.label !== chipToDelete.label);
+            const updatedFilters = prevFilters.filter((filter) => filter !== chipToDelete);
             console.log("Updated filters:", updatedFilters);
             return updatedFilters;
         });
