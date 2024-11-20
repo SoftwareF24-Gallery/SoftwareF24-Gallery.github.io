@@ -78,7 +78,7 @@ const Credits = () => {
                 </CardContent>
             </Card>
         </Grid>
-        <div style={{padding: "50px"}}></div>
+        <div style={{padding: "50px"}}></div> {/* Hacky fix. Find a better solution later */}
         </>
 
     )
