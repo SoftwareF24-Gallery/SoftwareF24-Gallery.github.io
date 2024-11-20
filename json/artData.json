@@ -18,5 +18,25 @@
       "medium": "photograph",
       "description": "Portrait of late United Kingdom Prime Minister, Winston Churchill.",
       "tags" : ["monochrome", "portrait", "people"]
+    },
+    {
+      "id": 2,
+      "artist": 2,
+      "url": "/img/gallery/1665-Girl-with-Pearl-Earring.jpg",
+      "title": "Girl with a Pearl Earring",
+      "date": "1665",
+      "medium": "traditional painting",
+      "description": "Painting from the Dutch Golden Age, portraying a woman looking at the viewer, wearing what looks like a pearl as an earring.",
+      "tags" : ["oil painting", "portrait", "people"]
+    },
+    {
+      "id": 3,
+      "artist": 3,
+      "url": "/img/gallery/1831-Great-Wave-Kanagawa.jpg",
+      "title": "The Great Wave off Kanagawa",
+      "date": "1831",
+      "medium": "traditional painting",
+      "description": "Hokusai's best-known painting. It depicts a tempestous sea with a giant wave to the left, three boats shaken by the waters, and Mount Fuji standing in the background.",
+      "tags" : ["woodblock print", "sea", "nature"]
     }
 ]
