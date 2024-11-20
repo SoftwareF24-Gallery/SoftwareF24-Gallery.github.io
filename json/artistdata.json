@@ -12,5 +12,19 @@
         "bio" : "Armenian-Canadian photographer known for his portraits of notable individuals.",
         "picture" : "img/artist/Yousuf_Karsh.jpg",
         "link": "https://en.wikipedia.org/wiki/Yousuf_Karsh"
+    },
+    {
+        "id": 2,
+        "name": "Johannes Vermeer",
+        "bio" : "Dutch painter considered to be one of the greatest artists of the Dutch Golden Age.",
+        "picture" : "img/artist/Johannes_Vermeer.jpg",
+        "link": "https://en.wikipedia.org/wiki/Johannes_Vermeer"
+    },
+    {
+        "id": 3,
+        "name": "Katsushika Hokusai",
+        "bio" : "An ukiyo-e artist of the Edo period. Hokusai evolved ukiyo-e into a style that focused on nature. He was an inspiration for Vincent van Gogh and Claude Monet.",
+        "picture" : "img/artist/Katsushika_Hokusai.jpg",
+        "link": "https://en.wikipedia.org/wiki/Hokusai"
     }
 ]

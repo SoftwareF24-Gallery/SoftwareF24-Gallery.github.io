@@ -6,6 +6,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import artData from '../json/artData.json';
+import artistData from '../json/artistdata.json';
 import { Dialog } from '@mui/material'
 import { useState } from "react";
 import { Typography } from "@mui/material";
@@ -50,7 +51,7 @@ const Gallery = () => {
 
                     <ImageListItemBar
                       title={item.title}
-                      subtitle={item.author}
+                      subtitle={"By " + artistData[item.artist].name} // Uses ID in each art object to pull the artist name from artistData.json
                       actionIcon={
                         <IconButton
                           sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
