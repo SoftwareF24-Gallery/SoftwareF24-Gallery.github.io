@@ -11,6 +11,8 @@ import { Dialog } from '@mui/material'
 import { useState } from "react";
 import { Typography } from "@mui/material";
 import { OtherHouses } from "@mui/icons-material";
+import CloseIcon from '@mui/icons-material/Close';
+
 
 // Receives the artist's ID number, which is contained in the artist property
 // within each item in artData. 
@@ -63,7 +65,7 @@ const Gallery = () => {
 
                     <ImageListItemBar
                       title={item.title}
-                      subtitle={"By " + artistById(item.artist).name} // Uses ID in each art object to pull the artist name from artistData.json
+                      subtitle={"Artist " + artistById(item.artist).name} // Uses ID in each art object to pull the artist name from artistData.json
                       actionIcon={
                         <IconButton
                           sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
@@ -83,7 +85,11 @@ const Gallery = () => {
                     src={item.url}
                     alt={item.title}
                     loading="lazy"
-                    />
+                    ></img>
+                    <IconButton onClick= {handleClose} sx={{padding: "0.2em"}}>
+                    <CloseIcon />
+                    </IconButton>
+
                         <Typography loading="lazy" sx={{fontSize: 30}}>
                           {item.title}
                         </Typography>
