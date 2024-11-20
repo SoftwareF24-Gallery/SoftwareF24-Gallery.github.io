@@ -14,7 +14,7 @@ const Credits = () => {
         {/* Grid holds cards */}
         {/* Yes, I know I hardcoded blank space using CardMedia.
             I wanna get that fixed soon.*/}
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{justifyContent: "center"}}>
             <Card>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
