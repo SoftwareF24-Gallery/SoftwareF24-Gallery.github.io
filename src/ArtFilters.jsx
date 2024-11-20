@@ -1,26 +1,30 @@
 import { Button, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import { useState } from 'react';
 import jsonData from '../json/artData.json';
+import keyword from '../json/keyword.json';
 
 // filters array is sent down from Gallery.jsx, contains methods to modify 
 // filter variables declared in Gallery.jsx
 const ArtFilters = ({filters}) => {
-   
-    //selectedFilters will be used once art is implemented
-    const [selectedFilters, setSelectedFilters] = useState([]);
-
-    const handleDelete = (chipToDelete) => () => {
-        setSelectedFilters((prevFilters) =>
-            prevFilters.filter((filter) => filter !== chipToDelete)
-        );
-    };
-
     //flat map puts all keywords into 1 array 
-    const keywords = jsonData.flatMap(item => item.keywords);
+    const keywords = keyword.keys.map((key) => ({ label: key }));
+   
+    // //selectedFilters will be used once art is implemented
+    // const [selectedFilters, setSelectedFilters] = useState([]);
 
     const handleFilterClick = (newFilters) => {
-        setSelectedFilters(newFilters)
+        filters.setSelectedFilters(newFilters);
     };
+
+    const handleDelete = (chipToDelete) => () => {
+        filters.setSelectedFilters((prevFilters) => {
+            console.log("Deleting Chip:", chipToDelete);
+            const updatedFilters = prevFilters.filter((filter) => filter.label !== chipToDelete.label);
+            console.log("Updated filters:", updatedFilters);
+            return updatedFilters;
+        });
+    };
+
 
     //handles art name filter update
     const handleArtNameChange = (event) => {
@@ -45,19 +49,19 @@ const ArtFilters = ({filters}) => {
                     multiple
                     id="Arttype-keywords"
                     options={keywords}
-                    getOptionLabel ={(option) => option}
+                    getOptionLabel ={(option) => option.label}
                     onChange={(event, newFilters) => handleFilterClick(newFilters)}
-
+                    value={filters.selectedFilters}
                     //renderTags display as chip for each keyword
                     renderTags={(value, getTagProps) => 
                         //maps over keyword array
                         value.map((option, index) => (
                             <Chip 
                                 variant="outlined"
-                                label={option}
+                                label={option.label}
                                 {...getTagProps({ index })}
                                 // use handleClickFitler again to delete chips
-                                onDelete={() => handleDelete(option)}
+                                onDelete={() => handleDelete(option)()}
                                 key={index}
                             />
                         ))

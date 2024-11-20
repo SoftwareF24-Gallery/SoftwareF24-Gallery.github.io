@@ -1,6 +1,6 @@
 {
-    "keys" : ["food","breakfast","sports","basketball",
-                  "vegetable","plants","active","bike","coffee",
-                  "camera","photography"]
+    "keys" : [  "camera","photography", "monochrome", "urban", 
+                "industrial", "people", "portrait"
+            ]
 
 }

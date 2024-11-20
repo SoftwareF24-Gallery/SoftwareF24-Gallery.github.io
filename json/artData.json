@@ -7,7 +7,7 @@
       "date": "1932-09-20",
       "medium": "photograph",
       "description": "While New York's thousands rush to crowded restaurants and congested lunch counters for their noon day lunch, these intrepid steel workers atop the 70 story RCA building in Rockefeller Center get all the air and freedom they want by lunching on a steel beam with a sheer drop of over 800 feet to the street level. The RCA building is the largest office building in terms of office space in the world.",
-      "keywords" : ["monochrome", "urban", "industrial", "people"]
+      "tags" : ["monochrome", "urban", "industrial", "people"]
     },
     {
       "id": 1,
@@ -17,6 +17,6 @@
       "date": "1941-12-30",
       "medium": "photograph",
       "description": "Portrait of late United Kingdom Prime Minister, Winston Churchill.",
-      "keywords" : ["monochrome", "portrait", "people"]
+      "tags" : ["monochrome", "portrait", "people"]
     }
 ]

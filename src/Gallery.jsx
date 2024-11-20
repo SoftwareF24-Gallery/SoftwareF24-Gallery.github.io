@@ -17,9 +17,11 @@ const Gallery = () => {
     const handleClose = () => setSelectedImg(null);
 
     // Setting variables for the filters
+    //selectedFilters will be used once art is implemented
+    const [selectedFilters, setSelectedFilters] = useState([]);
     const [artName, setArtName] = useState('');
     // filters array will be sent down the hierarchy to ArtFilters
-    const filters = {artName, setArtName};
+    const filters = {artName, setArtName, selectedFilters, setSelectedFilters};
 
     return(
         <div style={{alignItems: "flex-start", padding: "3%"}}>
@@ -29,12 +31,14 @@ const Gallery = () => {
           <Box style={{alignSelf: "stretch"}}>
 
               <ImageList variant="masonry" cols={4} gap={8}>
-
                 {/* Creating an array of img from objects in artData */}
                 {artData.filter((item) => {
-                  return artName.toLowerCase() === '' 
-                  ? item 
-                  : item.title.toLowerCase().includes(artName.toLowerCase());
+                  const matchesArtName = filters.artName.toLowerCase() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase());
+                  const matchesChips = filters.selectedFilters.length === 0 || item.tags.some(tag => filters.selectedFilters.includes(tag));
+                  return matchesArtName && matchesChips; 
+                  // return artName.toLowerCase() === '' 
+                  // ? item 
+                  // : item.title.toLowerCase().includes(artName.toLowerCase());
                 })
                 .map((item) => (
 
