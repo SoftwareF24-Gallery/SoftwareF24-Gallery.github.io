@@ -21,11 +21,11 @@ export const SelectGallery = () => {
   
     // Dropdown menu
     return (
-      <Box sx={{ width: 400 }} className="select">
+      <Box sx={{width: 400, padding: "0 3px"}} className="select">
         <TextField
           label="Select Gallery Location"
           // Select dropdown from mui
-          select sx={{ width: '100%' }} // Make width take up 100% of box
+          select sx={{width: '100%'}} // Make width take up 100% of box
           value={gallery}
           onChange={handleChange}
         >
