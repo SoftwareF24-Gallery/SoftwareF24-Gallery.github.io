@@ -12,6 +12,7 @@ import { useState } from "react";
 import { Typography } from "@mui/material";
 import { OtherHouses } from "@mui/icons-material";
 import CloseIcon from '@mui/icons-material/Close';
+import { Stack } from "@mui/material";
 
 
 // Receives the artist's ID number, which is contained in the artist property
@@ -82,9 +83,11 @@ const Gallery = () => {
                     onClose={handleClose} 
                     open={item.url === selectedImg}
                     >
-                    <IconButton onClick= {handleClose} sx={{padding: "0.2em", justifyContent: "right"}}>
+                    <Stack direction={"row"} sx={{justifyContent: "right"}}>
+                    <IconButton onClick={handleClose} sx={{padding: "0.2em"}}>
                     <CloseIcon />
                     </IconButton>
+                    </Stack>
                     <img 
                     src={item.url}
                     alt={item.title}
