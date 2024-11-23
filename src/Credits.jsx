@@ -23,11 +23,18 @@ const Credits = () => {
                     {/* Div groups the typographies in a column style */}
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
-                        This Guy
+                        Michael Santos
                     </Typography>
                     <Typography>
                         Did cool stuff
                     </Typography>
+                    <Typography>
+                        Github: Michaelmadeit2001
+                    </Typography>
+                    <Typography>
+                        LinkedIn:
+                    </Typography>
+
                     </div>
                     <CardMedia sx={{ height: 250, width: 100 }} />
                 </CardContent>
@@ -38,11 +45,19 @@ const Credits = () => {
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
-                        This Guy
+                        Guillermo Labarca
                     </Typography>
                     <Typography>
                         Did cool stuff
                     </Typography>
+                    <Typography>
+                        Github: Gcarlab
+                    </Typography>
+                    <Typography>
+                        LinkedIn:
+                    </Typography>
+
+
                     </div>
                     <CardMedia sx={{ height: 250, width: 100 }} />
                 </CardContent>
@@ -53,11 +68,18 @@ const Credits = () => {
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
-                        This Guy
+                        Drake Calhoun
                     </Typography>
                     <Typography>
                         Did cool stuff
                     </Typography>
+                    <Typography>
+                        Github: DrakeCal
+                    </Typography>
+                    <Typography>
+                        LinkedIn:
+                    </Typography>
+
                     </div>
                     <CardMedia sx={{ height: 250, width: 100 }} />
                 </CardContent>
@@ -68,11 +90,15 @@ const Credits = () => {
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
-                        This Guy
+                        Johan Rodriguez
                     </Typography>
                     <Typography>
                         Did cool stuff
                     </Typography>
+                    <Typography>
+                        Github: The-Jragon
+                    </Typography>
+
                     </div>
                     <CardMedia sx={{ height: 250, width: 100 }} />
                 </CardContent>
