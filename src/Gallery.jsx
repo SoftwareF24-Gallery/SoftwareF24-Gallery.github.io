@@ -46,7 +46,7 @@ const Gallery = () => {
                 {/* Creating an array of img from objects in artData */}
                 {artData.filter((item) => {
                   const matchesArtName = filters.artName.toLowerCase() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase());
-                  const matchesChips = filters.selectedFilters.length === 0 || item.tags.some(tag => filters.selectedFilters.includes(tag));
+                  const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));
                   return matchesArtName && matchesChips; 
                   // return artName.toLowerCase() === '' 
                   // ? item 
