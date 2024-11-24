@@ -2,8 +2,10 @@ import Grid from "@mui/material/Grid2"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import profilePhoto from "../public/img/Steve headshot.jpeg";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Credits = () => {
     return (
@@ -28,12 +30,20 @@ const Credits = () => {
                     <Typography>
                         Did cool stuff
                     </Typography>
+
+                    {/* Placeholder until we add links for href */}
                     <Typography>
                         Github: Michaelmadeit2001
                     </Typography>
-                    <Typography>
-                        LinkedIn:
-                    </Typography>
+
+                    {/* Icon buttons for Github and LinkedIn */}
+                    <IconButton href="">
+                        <GitHubIcon />
+                    </IconButton>
+
+                    <IconButton href="">
+                        <LinkedInIcon />
+                    </IconButton>
 
                     </div>
                     <CardMedia sx={{ height: 250, width: 100 }} />
@@ -50,12 +60,20 @@ const Credits = () => {
                     <Typography>
                         Did cool stuff
                     </Typography>
+
+                    {/* Placeholder until we add links for href */}
                     <Typography>
                         Github: Gcarlab
                     </Typography>
-                    <Typography>
-                        LinkedIn:
-                    </Typography>
+
+                    {/* Icon buttons for Github and LinkedIn */}
+                    <IconButton href="">
+                        <GitHubIcon />
+                    </IconButton>
+                    
+                    <IconButton href="">
+                        <LinkedInIcon />
+                    </IconButton>
 
 
                     </div>
@@ -73,12 +91,15 @@ const Credits = () => {
                     <Typography>
                         Did cool stuff
                     </Typography>
-                    <Typography>
-                        Github: DrakeCal
-                    </Typography>
-                    <Typography>
-                        LinkedIn:
-                    </Typography>
+
+                    {/* Icon buttons for Github and LinkedIn */}
+                    <IconButton href="https://github.com/DrakeCal">
+                        <GitHubIcon />
+                    </IconButton>
+
+                    <IconButton href="https://www.linkedin.com/in/drake-calhoun-285874296/">
+                        <LinkedInIcon />
+                    </IconButton>
 
                     </div>
                     <CardMedia sx={{ height: 250, width: 100 }} />
@@ -95,9 +116,20 @@ const Credits = () => {
                     <Typography>
                         Did cool stuff
                     </Typography>
+
+                    {/* Placeholder until we add links for href */}
                     <Typography>
                         Github: The-Jragon
                     </Typography>
+
+                    {/* Icon buttons for Github and LinkedIn */}
+                    <IconButton href="">
+                        <GitHubIcon />
+                    </IconButton>
+                    
+                    <IconButton href="">
+                        <LinkedInIcon />
+                    </IconButton>
 
                     </div>
                     <CardMedia sx={{ height: 250, width: 100 }} />
