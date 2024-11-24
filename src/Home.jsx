@@ -13,12 +13,7 @@ const Home = () => {
             <Button className="select-button" href="/#/gallery"//Button
                 variant="contained"
                 disableElevation
-                sx={{
-                    backgroundColor: '#951717', 
-                    ...theme.applyStyles('dark', {
-                    backgroundColor: 'blue.500',
-                    })    // Changes color depending on the current theme
-                    }}>
+                sx={{backgroundColor: '#951717'}}>
                 <Typography variant="h2">Go</Typography>
             </Button>
             
