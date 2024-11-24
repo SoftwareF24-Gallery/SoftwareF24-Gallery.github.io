@@ -16,7 +16,7 @@ const Home = () => {
                 sx={{
                     backgroundColor: theme.palette.mode === 'dark' ? 'blue.500' : '#951717', // Changes color depending on the current theme
                     }}>
-                Go
+                <Typography variant="h2">Go</Typography>
             </Button>
             
         </div>

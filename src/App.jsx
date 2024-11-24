@@ -29,16 +29,34 @@ const theme = createTheme({
     },
   },
   
+  // Overriding capitalization and other styles for Typography's h2 variant
+  components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          variants: [
+            {
+              props: { variant: 'h2' },
+              style: {
+                textTransform: 'capitalize',
+                fontSize: '1em',
+                fontWeight: '700',
+              },
+            },
+          ],
+        },
+      },
+    },
+  },
+
   // Defines 
   typography: {
+
+    fontFamily: "Roboto", 
+
     h1: {
       fontFamily: "EPISODE1",
       fontSize: '1.5em',
-    },
-    
-    h2: {
-      fontSize: '1em',
-      fontWeight: '500',
     },
   },
 });

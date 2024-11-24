@@ -23,7 +23,7 @@ export const SelectGallery = () => {
     return (
       <Box sx={{width: 400, padding: "0 3px"}} className="select">
         <TextField
-          label="Select Gallery Location"
+          label="Gallery Location"
           // Select dropdown from mui
           select sx={{width: '100%'}} // Make width take up 100% of box
           value={gallery}
