@@ -1,9 +1,9 @@
 import { Button, Typography } from '@mui/material';
 import { SelectGallery } from "./locations"
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material';
 
 const Home = () => {
-    const theme = useTheme(); //access current theme to apply button colors
+    const theme = useTheme(); // access current theme to apply button colors
 
     return (
         <>
@@ -14,7 +14,10 @@ const Home = () => {
                 variant="contained"
                 disableElevation
                 sx={{
-                    backgroundColor: theme.palette.mode === 'dark' ? 'blue.500' : '#951717', // Changes color depending on the current theme
+                    backgroundColor: '#951717', 
+                    ...theme.applyStyles('dark', {
+                    backgroundColor: 'blue.500',
+                    })    // Changes color depending on the current theme
                     }}>
                 <Typography variant="h2">Go</Typography>
             </Button>
