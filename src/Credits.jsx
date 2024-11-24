@@ -20,7 +20,6 @@ const Credits = () => {
             <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
-                    <CardMedia sx={{ height: 250, width: 100 }} />
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
                     {/* Div groups the typographies in a column style */}
                     <div>
@@ -46,12 +45,11 @@ const Credits = () => {
                     </IconButton>
 
                     </div>
-                    <CardMedia sx={{ height: 250, width: 100 }} />
                 </CardContent>
             </Card>
             <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                    <CardMedia sx={{ height: 250, width: 100 }} />
+
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
@@ -77,12 +75,12 @@ const Credits = () => {
 
 
                     </div>
-                    <CardMedia sx={{ height: 250, width: 100 }} />
+
                 </CardContent>
             </Card>
             <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                    <CardMedia sx={{ height: 250, width: 100 }} />
+
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
@@ -102,12 +100,12 @@ const Credits = () => {
                     </IconButton>
 
                     </div>
-                    <CardMedia sx={{ height: 250, width: 100 }} />
+
                 </CardContent>
             </Card>
             <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
-                    <CardMedia sx={{ height: 250, width: 100 }} />
+
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
@@ -126,13 +124,9 @@ const Credits = () => {
                     <IconButton href="">
                         <GitHubIcon />
                     </IconButton>
-                    
-                    <IconButton href="">
-                        <LinkedInIcon />
-                    </IconButton>
 
                     </div>
-                    <CardMedia sx={{ height: 250, width: 100 }} />
+
                 </CardContent>
             </Card>
         </Grid>
