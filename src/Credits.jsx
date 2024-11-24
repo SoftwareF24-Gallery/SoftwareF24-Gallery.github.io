@@ -15,7 +15,7 @@ const Credits = () => {
         {/* Yes, I know I hardcoded blank space using CardMedia.
             I wanna get that fixed soon.*/}
         <Grid container spacing={4} sx={{justifyContent: "center"}}>
-            <Card>
+            <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
                     <CardMedia sx={{ height: 250, width: 100 }} />
@@ -39,7 +39,7 @@ const Credits = () => {
                     <CardMedia sx={{ height: 250, width: 100 }} />
                 </CardContent>
             </Card>
-            <Card>
+            <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     <CardMedia sx={{ height: 250, width: 100 }} />
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
@@ -62,7 +62,7 @@ const Credits = () => {
                     <CardMedia sx={{ height: 250, width: 100 }} />
                 </CardContent>
             </Card>
-            <Card>
+            <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     <CardMedia sx={{ height: 250, width: 100 }} />
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
@@ -84,7 +84,7 @@ const Credits = () => {
                     <CardMedia sx={{ height: 250, width: 100 }} />
                 </CardContent>
             </Card>
-            <Card>
+            <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     <CardMedia sx={{ height: 250, width: 100 }} />
                     <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
