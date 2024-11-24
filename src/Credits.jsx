@@ -7,6 +7,7 @@ import profilePhoto from "../public/img/Steve headshot.jpeg";
 import DrakePhoto from "../public/img/Drake_Headshot.jpg";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import JohanPicture from "../public/img/Johan_Headshot.jpg"
 
 const Credits = () => {
     return (
@@ -107,7 +108,7 @@ const Credits = () => {
             <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
-                    <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
+                    <CardMedia sx={{ height: 200, width: 200 }} image={JohanPicture} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         Johan Rodriguez
