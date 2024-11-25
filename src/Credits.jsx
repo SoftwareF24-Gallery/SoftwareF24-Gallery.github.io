@@ -3,14 +3,20 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { IconButton, Typography } from "@mui/material";
-import profilePhoto from "../public/img/Steve headshot.jpeg";
-import DrakePhoto from "../public/img/Drake_Headshot.jpg";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import JohanPicture from "../public/img/Johan_Headshot.png"
-import MichaelPicture from "../public/img/Michael Picture.jpg";
+import JohanPicture from "../public/img/credits/Johan_Headshot.png"
+import MichaelPicture from "../public/img/credits/Michael_Headshot.jpg";
+import DrakePicture from "../public/img/credits/Drake_Headshot.jpg";
+import GuillermoPicture from "../public/img/credits/Guillermo_Headshot.jpg";
 
 const Credits = () => {
+
+    const cardStyle = {
+        height: "16rem",
+        width: "30rem",
+    }
+
     return (
         <>
         {/* Credits title */}
@@ -20,7 +26,7 @@ const Credits = () => {
         {/* Yes, I know I hardcoded blank space using CardMedia.
             I wanna get that fixed soon.*/}
         <Grid container spacing={4} sx={{justifyContent: "center"}}>
-            <Card elevation={5}>
+            <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
                     <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain' }} component="img" image={MichaelPicture}/>
@@ -30,53 +36,51 @@ const Credits = () => {
                         Michael Santos
                     </Typography>
 
-                    <CardMedia sx={{ height: 200, width: 200 }} image=""/>
                     <Typography>
                         Did cool stuff
                     </Typography>
 
                     {/* Icon buttons for Github and LinkedIn */}
-                    <IconButton href="https://github.com/Michaelmadeit2001">
+                    <IconButton href="https://github.com/Michaelmadeit2001" target="_blank">
                         <GitHubIcon />
                     </IconButton>
 
-                    <IconButton href="">
+                    <IconButton href="" target="_blank">
                         <LinkedInIcon />
                     </IconButton>
 
                     </div>
                 </CardContent>
             </Card>
-            <Card elevation={5}>
+            <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
-                    <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
+                    <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain' }} component="img" image={GuillermoPicture} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
-                        Guillermo Labarca
+                        Guillermo Carroz Labarca
                     </Typography>
                     <Typography>
                         Did cool stuff
                     </Typography>
 
                     {/* Icon buttons for Github and LinkedIn */}
-                    <IconButton href="https://github.com/Gcarlab">
+                    <IconButton href="https://github.com/gcarlab" target="_blank">
                         <GitHubIcon />
                     </IconButton>
                     
-                    <IconButton href="">
+                    <IconButton href="https://www.linkedin.com/in/guillermo-carroz-labarca" target="_blank">
                         <LinkedInIcon />
                     </IconButton>
-
 
                     </div>
 
                 </CardContent>
             </Card>
-            <Card elevation={5}>
+            <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
-                    <CardMedia sx={{ height: 200, width: 200 }} image={DrakePhoto} />
+                    <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain'  }} image={DrakePicture} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         Drake Calhoun
@@ -86,19 +90,18 @@ const Credits = () => {
                     </Typography>
 
                     {/* Icon buttons for Github and LinkedIn */}
-                    <IconButton href="https://github.com/DrakeCal">
+                    <IconButton href="https://github.com/DrakeCal" target="_blank">
                         <GitHubIcon />
                     </IconButton>
 
-                    <IconButton href="https://www.linkedin.com/in/drake-calhoun-285874296/">
+                    <IconButton href="https://www.linkedin.com/in/drake-calhoun-285874296/" target="_blank">
                         <LinkedInIcon />
                     </IconButton>
 
                     </div>
-
                 </CardContent>
             </Card>
-            <Card elevation={5}>
+            <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
                     <CardMedia sx={{ height: 200, width: 200, objectFit: "contain" }} component="img" image={JohanPicture} />
@@ -111,12 +114,11 @@ const Credits = () => {
                     </Typography>
 
                     {/* Icon buttons for Github and LinkedIn */}
-                    <IconButton href="https://github.com/The-Jragon">
+                    <IconButton href="https://github.com/The-Jragon" target="_blank">
                         <GitHubIcon />
                     </IconButton>
 
                     </div>
-
                 </CardContent>
             </Card>
         </Grid>
