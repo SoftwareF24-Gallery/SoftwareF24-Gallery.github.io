@@ -8,6 +8,7 @@ import DrakePhoto from "../public/img/Drake_Headshot.jpg";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import JohanPicture from "../public/img/Johan_Headshot.png"
+import MichaelPicture from "../public/img/Michael Picture.jpg";
 
 const Credits = () => {
     return (
@@ -22,12 +23,14 @@ const Credits = () => {
             <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
-                    <CardMedia sx={{ height: 200, width: 200 }} image={profilePhoto} />
+                    <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain' }} component="img" image={MichaelPicture}/>
                     {/* Div groups the typographies in a column style */}
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         Michael Santos
                     </Typography>
+
+                    <CardMedia sx={{ height: 200, width: 200 }} image=""/>
                     <Typography>
                         Did cool stuff
                     </Typography>
@@ -98,7 +101,7 @@ const Credits = () => {
             <Card elevation={5}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
-                    <CardMedia sx={{ height: 200, width: 200 }} image={JohanPicture} />
+                    <CardMedia sx={{ height: 200, width: 200, objectFit: "contain" }} component="img" image={JohanPicture} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         Johan Rodriguez
