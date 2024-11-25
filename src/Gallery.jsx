@@ -1,17 +1,11 @@
 import FilterDrawer from "./FilterDrawer";
 import Box from '@mui/material/Box';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
+import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import artData from '../json/artData.json';
 import artistData from '../json/artistdata.json';
-import { Dialog } from '@mui/material'
 import { useState } from "react";
-import { Typography } from "@mui/material";
-
-import { Stack } from "@mui/material";
 import ArtPopup from "./ArtPopup";
 
 // Receives the artist's ID number, which is contained in the artist property
@@ -83,7 +77,7 @@ const Gallery = () => {
                 })
                 .map((item) => (
 
-                  <ImageListItem key={item.url} sx={{cursor: 'pointer'}} onClick={() => {handleOpen(item)}}>
+                  <ImageListItem key={item.url} sx={{cursor: 'pointer', '&:hover': {filter: 'brightness(80%)'}}} onClick={() => {handleOpen(item)}}>
 
                       <img
                       srcSet={`${item.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
