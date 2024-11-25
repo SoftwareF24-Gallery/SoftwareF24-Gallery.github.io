@@ -48,7 +48,7 @@ const FilterDrawer = ({filters}) => {
           </Tooltip>
         
         {/* Allows user to click off drawer and it will close*/}
-        <ClickAwayListener onClickAway={handleDrawerClose}>
+        {/* <ClickAwayListener onClickAway={handleDrawerClose}> */}
             <Drawer 
                 sx={{
                 width: drawerWidth,
@@ -104,7 +104,7 @@ const FilterDrawer = ({filters}) => {
                   
                 </Box>
             </Drawer>
-        </ClickAwayListener>     
+        {/* </ClickAwayListener>      */}
         </div>       
     )
 }
