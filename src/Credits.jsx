@@ -32,13 +32,8 @@ const Credits = () => {
                         Did cool stuff
                     </Typography>
 
-                    {/* Placeholder until we add links for href */}
-                    <Typography>
-                        Github: Michaelmadeit2001
-                    </Typography>
-
                     {/* Icon buttons for Github and LinkedIn */}
-                    <IconButton href="">
+                    <IconButton href="https://github.com/Michaelmadeit2001">
                         <GitHubIcon />
                     </IconButton>
 
@@ -61,13 +56,8 @@ const Credits = () => {
                         Did cool stuff
                     </Typography>
 
-                    {/* Placeholder until we add links for href */}
-                    <Typography>
-                        Github: Gcarlab
-                    </Typography>
-
                     {/* Icon buttons for Github and LinkedIn */}
-                    <IconButton href="">
+                    <IconButton href="https://github.com/Gcarlab">
                         <GitHubIcon />
                     </IconButton>
                     
@@ -117,13 +107,8 @@ const Credits = () => {
                         Did cool stuff
                     </Typography>
 
-                    {/* Placeholder until we add links for href */}
-                    <Typography>
-                        Github: The-Jragon
-                    </Typography>
-
                     {/* Icon buttons for Github and LinkedIn */}
-                    <IconButton href="">
+                    <IconButton href="https://github.com/The-Jragon">
                         <GitHubIcon />
                     </IconButton>
 
