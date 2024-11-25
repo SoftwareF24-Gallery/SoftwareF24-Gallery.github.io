@@ -10,10 +10,9 @@ import artistData from '../json/artistdata.json';
 import { Dialog } from '@mui/material'
 import { useState } from "react";
 import { Typography } from "@mui/material";
-import { OtherHouses } from "@mui/icons-material";
-import CloseIcon from '@mui/icons-material/Close';
-import { Stack } from "@mui/material";
 
+import { Stack } from "@mui/material";
+import ArtPopup from "./ArtPopup";
 
 // Receives the artist's ID number, which is contained in the artist property
 // within each item in artData. 
@@ -24,15 +23,44 @@ const artistById = (artistID) => {
 }
 
 const Gallery = () => {
-    // handles opening and closing of image pop ups
-    const [selectedImg, setSelectedImg] = useState(null);
-    const handleClose = () => setSelectedImg(null);
+
+    // [Pop-Up]
+
+    // Dummy art object that prevents access error in ArtPopup.jsx
+    const artDummy = {
+      "id": 0,
+      "artist": 0,
+      "url": null,
+      "title": null,
+      "date": null,
+      "medium": null,
+      "description": null,
+      "tags" : null,
+    };
+
+    // Handles selection of image for popup, passing dummy object to avoid error in ArtPopup.jsx
+    const [selectedImg, setSelectedImg] = useState(artDummy);
+
+    // Whether ArtPopup is open
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = (img) => {
+      setSelectedImg(img);
+      setOpen(true);
+    };
+
+    const handleClose = () => {
+      setSelectedImg(artDummy);
+      setOpen(false);
+    };
+
+    // [Filters]
 
     // Setting variables for the filters
-    //selectedFilters will be used once art is implemented
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [artName, setArtName] = useState('');
-    // filters array will be sent down the hierarchy to ArtFilters
+
+    // "filters" array will be sent down the hierarchy to ArtFilters
     const filters = {artName, setArtName, selectedFilters, setSelectedFilters};
 
     return(
@@ -42,11 +70,12 @@ const Gallery = () => {
 
           <Box style={{alignSelf: "stretch"}}>
 
+              {/* Gallery logic */}
               <ImageList variant="masonry" cols={4} gap={8}>
                 {/* Creating an array of img from objects in artData */}
                 {artData.filter((item) => {
-                  const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim());
-                  const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));
+                  const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
+                  const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
                   return matchesArtName && matchesChips; 
                   // return artName.toLowerCase() === '' 
                   // ? item 
@@ -54,7 +83,7 @@ const Gallery = () => {
                 })
                 .map((item) => (
 
-                  <ImageListItem key={item.url}>
+                  <ImageListItem key={item.url} sx={{cursor: 'pointer'}} onClick={() => {handleOpen(item)}}>
 
                       <img
                       srcSet={`${item.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -66,20 +95,33 @@ const Gallery = () => {
 
                     <ImageListItemBar
                       title={item.title}
-                      subtitle={"Artist " + artistById(item.artist).name} // Uses ID in each art object to pull the artist name from artistData.json
+                      subtitle={artistById(item.artist).name} // Uses ID in each art object to pull the artist name from artistData.json
                       actionIcon={
                         <IconButton
                           sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                           aria-label={`info about ${item.title}`}
-                          onClick={() => {setSelectedImg(item.url);}}
                         >
                           <InfoIcon />
                         </IconButton>
                       }
                     />
 
-                    {/* Image Pop-up and title */}
-                    <Dialog 
+                  </ImageListItem>
+                ))}
+              </ImageList>
+
+          </Box>
+
+          <ArtPopup
+                    open={open}
+                    artistById={artistById}
+                    selectedImg={selectedImg}
+                    handleClose={handleClose}
+          />
+
+          {/* Image Pop-up logic*/}
+          {/*
+          <Dialog 
                     onClose={handleClose} 
                     open={item.url === selectedImg}
                     >
@@ -100,14 +142,8 @@ const Gallery = () => {
                         <Typography loading="lazy" sx={{paddingLeft: 1, paddingBottom: 1}}>
                         {"Artist: " + artistById(item.artist).name}
                         </Typography>
-                    </Dialog>
-
-                  </ImageListItem>
-                ))}
-
-              </ImageList>
-
-          </Box>
+            </Dialog>
+            */}
 
         </div>
     )
