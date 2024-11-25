@@ -26,5 +26,12 @@
         "bio" : "An ukiyo-e artist of the Edo period. Hokusai evolved ukiyo-e into a style that focused on nature. He was an inspiration for Vincent van Gogh and Claude Monet.",
         "picture" : "img/artist/Katsushika_Hokusai.jpg",
         "link": "https://en.wikipedia.org/wiki/Hokusai"
+    },
+    {
+        "id": 4,
+        "name": "Pieter Bruegel the Elder",
+        "bio" : "Important figure in the Dutch and Flemish Renaissance painting movement. His attribution as the artist of \"Landscape with the Fall of Icarus\" is being contested.",
+        "picture" : "img/artist/Pieter_Bruegel.jpg",
+        "link": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder"
     }
 ]

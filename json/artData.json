@@ -38,5 +38,15 @@
       "medium": "traditional painting",
       "description": "Hokusai's best-known painting. It depicts a tempestous sea with a giant wave to the left, three boats shaken by the waters, and Mount Fuji standing in the background.",
       "tags" : ["Woodblock print", "Sea", "Nature"]
+    },
+    {
+      "id": 4,
+      "artist": 4,
+      "url": "/img/gallery/1560-Landscape-Fall-Icarus.jpg",
+      "title": "Landscape with the Fall of Icarus",
+      "date": "1560",
+      "medium": "traditional painting",
+      "description": "Depiction of Icarus falling into the ocean after flying too close to the sun. The composition shows his troubles as a sidenote to the daily lives of others.",
+      "tags" : ["Oil painting", "Sea"]
     }
 ]
