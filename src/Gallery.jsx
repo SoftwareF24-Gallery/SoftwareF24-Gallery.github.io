@@ -1,6 +1,6 @@
 import FilterDrawer from "./FilterDrawer";
 import Box from '@mui/material/Box';
-import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
+import { ImageList, ImageListItem, ImageListItemBar, Typography } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import artData from '../json/artData.json';
@@ -56,6 +56,12 @@ const Gallery = () => {
     // "filters" array will be sent down the hierarchy to ArtFilters
     const filters = {artName, setArtName, selectedFilters, setSelectedFilters};
 
+    const searchArray = artData.filter((item) => {
+      const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
+      const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
+      return matchesArtName && matchesChips
+    })
+
     return(
         <div style={{alignItems: "flex-start", padding: "3%"}}>
 
@@ -63,18 +69,19 @@ const Gallery = () => {
 
           <Box style={{alignSelf: "stretch"}}>
 
+          <Typography variant="h2" sx={{textTransform: "none"}}>Found {searchArray.length} images</Typography>
+
               {/* Gallery logic */}
               <ImageList variant="masonry" cols={4} gap={8}>
                 {/* Creating an array of img from objects in artData */}
-                {artData.filter((item) => {
-                  const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
-                  const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
-                  return matchesArtName && matchesChips; 
+                {
                   // return artName.toLowerCase() === '' 
                   // ? item 
                   // : item.title.toLowerCase().includes(artName.toLowerCase());
-                })
-                .map((item) => (
+                }
+
+                {
+                  searchArray.map((item) => (
 
                   <ImageListItem key={item.url} sx={{cursor: 'pointer', '&:hover': {filter: 'brightness(80%)'}}} onClick={() => {handleOpen(item)}}>
 
@@ -111,33 +118,6 @@ const Gallery = () => {
                     selectedImg={selectedImg}
                     handleClose={handleClose}
           />
-
-          {/* Image Pop-up logic*/}
-          {/*
-          <Dialog 
-                    onClose={handleClose} 
-                    open={item.url === selectedImg}
-                    >
-                    <Stack direction={"row"} sx={{justifyContent: "right"}}>
-                    <IconButton onClick={handleClose} sx={{padding: "0.2em"}}>
-                    <CloseIcon />
-                    </IconButton>
-                    </Stack>
-                    <img 
-                    src={item.url}
-                    alt={item.title}
-                    loading="lazy"
-                    style={{padding: 10}}
-                    ></img>
-                        <Typography loading="lazy" sx={{fontSize: 30, paddingLeft: 1}}>
-                          {item.title}
-                        </Typography>
-                        <Typography loading="lazy" sx={{paddingLeft: 1, paddingBottom: 1}}>
-                        {"Artist: " + artistById(item.artist).name}
-                        </Typography>
-            </Dialog>
-            */}
-
         </div>
     )
 }
