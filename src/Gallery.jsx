@@ -45,7 +45,7 @@ const Gallery = () => {
               <ImageList variant="masonry" cols={4} gap={8}>
                 {/* Creating an array of img from objects in artData */}
                 {artData.filter((item) => {
-                  const matchesArtName = filters.artName.toLowerCase() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase());
+                  const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim());
                   const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));
                   return matchesArtName && matchesChips; 
                   // return artName.toLowerCase() === '' 
