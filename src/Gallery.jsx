@@ -44,7 +44,6 @@ const Gallery = () => {
     };
 
     const handleClose = () => {
-      setSelectedImg(artDummy);
       setOpen(false);
     };
 
