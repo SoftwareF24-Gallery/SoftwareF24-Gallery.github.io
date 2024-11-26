@@ -70,7 +70,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                 {selectedImg.description}
                             </Typography>
                             </Stack>
-                            <Stack direction={"column"} sx={{justifyContent: "right", width: "80%"}}>
+                            <Stack direction={"column"} sx={{justifyContent: "right", width: "80%", backgroundColor: "rgba(255, 255, 255, 0.1)"}}>
                                 <Typography loading="lazy" sx={{paddingLeft: 1, paddingBottom: 1}}>
                                     {"By " + artistById(selectedImg.artist).name}
                                 </Typography>
