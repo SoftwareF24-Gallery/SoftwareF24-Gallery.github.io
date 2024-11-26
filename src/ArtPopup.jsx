@@ -48,7 +48,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                         View Tags
                                     </Button>
 
-
+                                    {/* Tags popup */}
                                     <Dialog open={tags} onClose={() => setTags(false)} aria-labelledby="dialog-title">
 
                                         <DialogTitle id="dialog-title" sx={{display: "flex", justifyContent: "space-between"}}>
