@@ -58,6 +58,12 @@ const theme = createTheme({
       fontFamily: "EPISODE1",
       fontSize: '1.5em',
     },
+
+    settingsTitles: {
+      fontSize: '0.8em',
+      textTransform: 'uppercase',
+      fontWeight: '700',
+    },
   },
 });
 
