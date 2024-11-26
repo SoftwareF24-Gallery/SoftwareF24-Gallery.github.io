@@ -47,6 +47,116 @@
       "date": "1560",
       "medium": "traditional painting",
       "description": "Depiction of Icarus falling into the ocean after flying too close to the sun. The composition shows his troubles as a sidenote to the daily lives of others.",
-      "tags" : ["Oil painting", "Sea"]
+      "tags" : ["Oil painting", "Sea", "Painting"]
+    },
+    {
+      "id": 5,
+      "artist": 5,
+      "url": "/img/gallery/19681224-Earthrise.jpg",
+      "title": "Earthrise",
+      "date": "1968-12-24",
+      "medium": "photograph",
+      "description": "Photograph of the Earth and Moon from the Apollo 8 mission.",
+      "tags" : ["Space", "Nature"]
+    },
+    {
+      "id": 6,
+      "artist": 6,
+      "url": "/img/gallery/1941-Moonrise.jpg",
+      "title": "Moonrise",
+      "date": "1941",
+      "medium": "photograph",
+      "description": "Photograph of Hernandez, New Mexico. The moon is rising atop a group of buildings.",
+      "tags" : ["Nature", "Space", "Monochrome"]
+    },
+    {
+      "id": 7,
+      "artist": 7,
+      "url": "/img/gallery/1819-Village-Politicians.JPG",
+      "title": "The Village Politicians",
+      "date": "1819",
+      "medium": "traditional painting",
+      "description": "A depiction of people arguing inside a nineteenth century house.",
+      "tags" : ["People"]
+    },
+    {
+      "id": 8,
+      "artist": 8,
+      "url": "/img/gallery/1645-Eating-Grapes.jpg",
+      "title": "Children Eating Grapes and a Melon",
+      "date": "1645",
+      "medium": "traditional painting",
+      "description": "Murillo portrayed Seville's poverty through this painting of two kids sitting while eating.",
+      "tags" : ["People", "Oil painting"]
+    },
+    {
+      "id": 9,
+      "artist": 8,
+      "url": "/img/gallery/1670-Fruitseller.jpg",
+      "title": "The Little Fruitseller",
+      "date": "1670",
+      "medium": "traditional painting",
+      "description": "A person selling fruits and vegetables, Murillo's works usually show his time's daily life.",
+      "tags" : ["People", "Oil painting"]
+    },
+    {
+      "id": 10,
+      "artist": 6,
+      "url": "/img/gallery/1921-Tamarack-Pine.jpg",
+      "title": "A Grove of Tamarack Pine",
+      "date": "1921",
+      "medium": "photograph",
+      "description": "Alternatively known as \"Lodgepole Pines, Lyell Fork of the Merced River, Yosemite National Park,\" this photograph was taken by Adams near the beginning of his career at Yosemite National Park.",
+      "tags" : ["Nature", "Monochrome"]
+    },
+    {
+      "id": 11,
+      "artist": 2,
+      "url": "/img/gallery/1657-The-Milkmaid.jpg",
+      "title": "The Milkmaid",
+      "date": "1657",
+      "medium": "traditional painting",
+      "description": "A depiction of a Dutch milkmaid pouring milk into a bowl.",
+      "tags" : ["People", "Oil painting"]
+    },
+    {
+      "id": 12,
+      "artist": 9,
+      "url": "/img/gallery/1876-The-Swing.jpg",
+      "title": "The Swing",
+      "date": "1876",
+      "medium": "traditional painting",
+      "description": "This painting depicts Renoir's brother, Norbert Goeneutte, and model Jeanne Samary. Samary stands on a swing hanging from a tree, while Goeneutte looks at her.",
+      "tags" : ["People", "Oil painting"]
+    },
+    {
+      "id": 13,
+      "artist": 9,
+      "url": "/img/gallery/1881-Luncheon-Party.jpg",
+      "title": "Luncheon of the Boating Party",
+      "date": "1881",
+      "medium": "traditional painting",
+      "description": "A group of Renoir's friends converse on a balcony at the Maison Fournaise restaurant along the Seine river.",
+      "tags" : ["People", "Oil painting"]
+    },
+    {
+      "id": 14,
+      "artist": 10,
+      "url": "/img/gallery/1995-Pillars-Creation.jpg",
+      "title": "Pillars of Creation",
+      "date": "1995",
+      "medium": "photograph",
+      "description": "Photograph of elephant trunks of interstellar gas and dust in the Eagle Nebula, in the Serpens constellation.",
+      "tags" : ["Space"]
+    },
+    {
+      "id": 15,
+      "artist": 2,
+      "url": "/img/gallery/1668-The-Geographer.jpg",
+      "title": "The Geographer",
+      "date": "1668",
+      "medium": "traditional painting",
+      "description": "A geographer stands among papers, peering through a window. The model in this painting is the same as in another of Vermeer's works, \"The Astronomer\".",
+      "tags" : ["People", "Oil painting"]
     }
 ]

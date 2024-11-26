@@ -30,8 +30,50 @@
     {
         "id": 4,
         "name": "Pieter Bruegel the Elder",
-        "bio" : "Important figure in the Dutch and Flemish Renaissance painting movement. His attribution as the artist of \"Landscape with the Fall of Icarus\" is being contested.",
+        "bio" : "Important figure in the Dutch and Flemish Renaissance painting movement.",
         "picture" : "img/artist/Pieter_Bruegel.jpg",
         "link": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder"
+    },
+    {
+        "id": 5,
+        "name": "William Anders",
+        "bio" : "United States Air Force major general, electrical engineer, nuclear engineer, NASA astronaut, and businessman. He was part of the Apollo 8 mission, becoming one of the first people to leave Earth's orbit.",
+        "picture" : "img/artist/William_Anders.jpg",
+        "link": "https://en.wikipedia.org/wiki/William_Anders"
+    },
+    {
+        "id": 6,
+        "name": "Ansel Adams",
+        "bio" : "Landscape photographer and environmentalist known for his black-and-white images of the American West.",
+        "picture" : "img/artist/Ansel_Adams.jpg",
+        "link": "https://en.wikipedia.org/wiki/Ansel_Adams"
+    },
+    {
+        "id": 7,
+        "name": "John Lewis Krimmel",
+        "bio" : "Born in the Holy Roman Empire, Krimmel became America's first painter of genre scenes.",
+        "picture" : "img/artist/Leiws_Krimmel.jpg",
+        "link": "https://en.wikipedia.org/wiki/John_Lewis_Krimmel"
+    },
+    {
+        "id": 8,
+        "name": "Bartolomé Esteban Murillo",
+        "bio" : "Spanish painter known both for his religious paintings and his portraits of the good and the bad of everyday life.",
+        "picture" : "img/artist/Esteban_Murillo.jpg",
+        "link": "https://en.wikipedia.org/wiki/Bartolom%C3%A9_Esteban_Murillo"
+    },
+    {
+        "id": 9,
+        "name": "Pierre-Auguste Renoir",
+        "bio" : "French artist important in the development of Impressionism. His paintings highlight feminity and beauty.",
+        "picture" : "img/artist/Renoir.jpg",
+        "link": "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir"
+    },
+    {
+        "id": 10,
+        "name": "Hubble Space Telescope",
+        "bio" : "Space telescope launched by NASS in 1990. It's one of NASA's Great Observatories.",
+        "picture" : "img/artist/Hubble-Telescope.jpg",
+        "link": "https://en.wikipedia.org/wiki/Hubble_Space_Telescope"
     }
 ]
