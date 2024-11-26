@@ -22,7 +22,7 @@ const theme = createTheme({
     dark:  {
       palette: {
         primary: {
-          main: '#203c5c', // Lone Star's signature blue color
+          main: '#ffffff',
           light: '#ffffff',
         },
       },
