@@ -1,7 +1,16 @@
 {
     "keys" : [    
-                "Industrial", "Monochrome", "Nature", "Oil painting", "People", "Portrait", 
-                "Sea", "Space", "Urban", "Woodblock print"
+                "Industrial", 
+                "Landscape", 
+                "Monochrome", 
+                "Nature", 
+                "Oil painting", 
+                "People", 
+                "Portrait", 
+                "Sea", 
+                "Space", 
+                "Urban", 
+                "Woodblock print"
             ]
 
 }

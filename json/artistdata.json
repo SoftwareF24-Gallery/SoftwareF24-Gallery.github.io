@@ -75,5 +75,26 @@
         "bio" : "Space telescope launched by NASS in 1990. It's one of NASA's Great Observatories.",
         "picture" : "img/artist/Hubble-Telescope.jpg",
         "link": "https://en.wikipedia.org/wiki/Hubble_Space_Telescope"
+    },
+    {
+        "id": 11,
+        "name": "Themistokles von Eckenbrecher",
+        "bio" : "German landscape and marine artist, his paintings were influenced by the Romantic movement.",
+        "picture" : "img/artist/Eckenbrecher.jpg",
+        "link": "https://en.wikipedia.org/wiki/Themistokles_von_Eckenbrecher"
+    },
+    {
+        "id": 12,
+        "name": "Carlos de Haes",
+        "bio" : "Spanish painter born in Belgium, known for the realism in his landscape paintings",
+        "picture" : "img/artist/Carlos_Haes.jpg",
+        "link": "https://en.wikipedia.org/wiki/Carlos_de_Haes"
+    },
+    {
+        "id": 13,
+        "name": "Neil Armstrong",
+        "bio" : "The first person to walk on the Moon. Armstrong was an astronaut, naval aviator, test pilot, aeronautical engineer, and university professor.",
+        "picture" : "img/artist/Neil-Armstrong.jpg",
+        "link": "https://en.wikipedia.org/wiki/Neil_Armstrong"
     }
 ]

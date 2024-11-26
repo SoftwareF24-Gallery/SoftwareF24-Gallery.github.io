@@ -47,7 +47,7 @@
       "date": "1560",
       "medium": "traditional painting",
       "description": "Depiction of Icarus falling into the ocean after flying too close to the sun. The composition shows his troubles as a sidenote to the daily lives of others.",
-      "tags" : ["Oil painting", "Sea", "Painting"]
+      "tags" : ["Oil painting", "Sea", "Painting", "Landscape"]
     },
     {
       "id": 5,
@@ -67,7 +67,7 @@
       "date": "1941",
       "medium": "photograph",
       "description": "Photograph of Hernandez, New Mexico. The moon is rising atop a group of buildings.",
-      "tags" : ["Nature", "Space", "Monochrome"]
+      "tags" : ["Nature", "Space", "Monochrome", "Landscape"]
     },
     {
       "id": 7,
@@ -158,5 +158,45 @@
       "medium": "traditional painting",
       "description": "A geographer stands among papers, peering through a window. The model in this painting is the same as in another of Vermeer's works, \"The Astronomer\".",
       "tags" : ["People", "Oil painting"]
+    },
+    {
+      "id": 16,
+      "artist": 11,
+      "url": "/img/gallery/1901-Sognefjord.jpg",
+      "title": "View of Laerdalsoren, on the Sognefjord",
+      "date": "1901",
+      "medium": "traditional painting",
+      "description": "People walk at the shoreline of the Sognefjord, Norway. The painting's composition highlights the majestic mountainous landscape.",
+      "tags" : ["Landscape", "Nature", "Oil painting"]
+    },
+    {
+      "id": 17,
+      "artist": 12,
+      "url": "/img/gallery/1876-Picos-Europa.jpg",
+      "title": "La canal de Mancorbo en los Picos de Europa",
+      "date": "1876",
+      "medium": "traditional painting",
+      "description": "Oil painting of a mountainous path in the Realist style characteristic of de Haes' works",
+      "tags" : ["Landscape", "Nature", "Oil painting"]
+    },
+    {
+      "id": 18,
+      "artist": 6,
+      "url": "/img/gallery/1942-Snake-River.jpg",
+      "title": "The Tetons and the Snake River",
+      "date": "1942",
+      "medium": "photograph",
+      "description": "Photograph of the Snake River, Wyoming, taken from a high ground.",
+      "tags" : ["Nature", "Monochrome", "Landscape"]
+    },
+    {
+      "id": 18,
+      "artist": 13,
+      "url": "/img/gallery/19690721-Buzz-Aldrin-Moon.jpg",
+      "title": "Buzz Aldrin on the Moon",
+      "date": "1969-07-21",
+      "medium": "photograph",
+      "description": "Photograph taken of Buzz Aldrin during the Apollo 11 landing on the moon. The Earth and Armstrong, who took the photograph, can be seen in the visor reflection.",
+      "tags" : ["Space", "People"]
     }
 ]
