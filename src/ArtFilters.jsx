@@ -102,9 +102,8 @@ const ArtFilters = ({ filters }) => {
                 variant="outlined"
                 sx={{m: 1,}}
 
-                onClick={(event) => {
-                    filters.setArtName('');
-                }}>
+                onClick={filters.handleClearFilters}
+                >
                 Clear Filters
             </Button>
         </Box>
