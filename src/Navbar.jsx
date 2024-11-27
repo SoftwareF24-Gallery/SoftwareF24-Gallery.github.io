@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
             </Paper>
 
-            <AppBar color="main" enableColorOnDark position="sticky" elevation={0} sx={{backgroundColor: "#203c5c", height: "52px", justifyContent: "center"}}>
+            <AppBar enableColorOnDark position="sticky" elevation={0} sx={{textColor: "#ffffff", backgroundColor: "#203c5c", height: "52px", justifyContent: "center"}}>
                 <Toolbar style={{width: "100%", maxWidth: "1200px", margin: "0 auto"}}> {/* Toolbar styling prevents width from expanding after 1200px, to keep content at center of page */}
                     <IconButton color="inherit" href="/#/">
                         <HomeIcon />
@@ -40,7 +40,7 @@ const Navbar = () => {
                     {/*Displays components on the left side by side */}
                     <Stack direction="row">
                         <Button color="inherit" href="/#/credits">
-                            <Typography variant="h2">Credits</Typography>
+                            <Typography variant="h2" color="inherit">Credits</Typography>
                         </Button>
                         <Settings/>
                     </Stack>

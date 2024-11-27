@@ -2,8 +2,8 @@
     {
         "id": 0,
         "name": "Unknown",
-        "bio" : "Not Available",
-        "picture" : "#",
+        "bio" : "Not Available.",
+        "picture" : "img/artist/Unknown.jpg",
         "link": "#"
     },
     {
@@ -52,7 +52,7 @@
         "id": 7,
         "name": "John Lewis Krimmel",
         "bio" : "Born in the Holy Roman Empire, Krimmel became America's first painter of genre scenes.",
-        "picture" : "img/artist/Leiws_Krimmel.jpg",
+        "picture" : "img/artist/Lewis_Krimmel.jpg",
         "link": "https://en.wikipedia.org/wiki/John_Lewis_Krimmel"
     },
     {
