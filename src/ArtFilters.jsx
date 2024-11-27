@@ -87,7 +87,7 @@ const ArtFilters = ({ filters }) => {
                     onChange={(e) => filters.setSelectedMedium(e.target.value)}
                     >
                         <MenuItem value="">
-                            <em>None</em>
+                            <em>Any</em>
                         </MenuItem>
                         <MenuItem value="Traditional Painting">Traditional Painting</MenuItem>
                         <MenuItem value="Digital Painting">Digital Painting</MenuItem>

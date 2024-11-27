@@ -14,7 +14,7 @@ const Home = () => {
                 variant="contained"
                 disableElevation
                 sx={{backgroundColor: '#951717'}}>
-                <Typography variant="h2">Go</Typography>
+                <Typography variant="h2" color="primary.contrastText">Go</Typography>
             </Button>
             
         </div>

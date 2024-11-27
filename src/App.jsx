@@ -12,6 +12,7 @@ const theme = createTheme({
       palette: {
         primary: {
           main: '#203c5c', // Lone Star's signature blue color
+          contrastText: '#ffffff',
         },
         background: {
           default: '#121212',
@@ -23,7 +24,7 @@ const theme = createTheme({
       palette: {
         primary: {
           main: '#ffffff',
-          light: '#ffffff',
+          contrastText: '#ffffff',
         },
       },
     },
@@ -49,7 +50,6 @@ const theme = createTheme({
     },
   },
 
-  // Defines 
   typography: {
 
     fontFamily: "Roboto", 
