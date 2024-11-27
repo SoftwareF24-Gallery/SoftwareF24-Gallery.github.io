@@ -17,11 +17,13 @@ const FilterDrawer = ({filters}) => {
         setOpen(true);
       };
     
-      const handleDrawerClose = () => {
-        setOpen(false);
+    const handleDrawerClose = () => {
+          setOpen(false);
       };
+
       
     const theme = useTheme();
+
 
     return (
         <div>
@@ -48,8 +50,7 @@ const FilterDrawer = ({filters}) => {
           </Tooltip>
         
         {/* Allows user to click off drawer and it will close*/}
-        {/* <ClickAwayListener onClickAway={handleDrawerClose}> */}
-            <Drawer 
+            <Drawer
                 sx={{
                 width: drawerWidth,
                 flexShrink: 0,
@@ -64,6 +65,8 @@ const FilterDrawer = ({filters}) => {
                 anchor="left"
                 open={open}
             >
+              <ClickAwayListener onClickAway={handleDrawerClose} mouseEvent={'onMouseUp'}>
+
 
               {/* main box for drawer*/}
               <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', padding: "1em"}}>
@@ -82,6 +85,7 @@ const FilterDrawer = ({filters}) => {
                     </Typography>
                 
                     {/* Close icon within nav drawer*/}
+
                     <IconButton 
                         sx={{
                         color: 'black',
@@ -96,15 +100,14 @@ const FilterDrawer = ({filters}) => {
                           color: theme.palette.mode === 'dark' ? 'white' : 'black',
                         }} /> 
                     </IconButton>
-
                   </Box>    
 
                   {/* Filter component*/}
                   <ArtFilters filters={filters}/>
                   
                 </Box>
-            </Drawer>
-        {/* </ClickAwayListener>      */}
+              </ClickAwayListener>  
+            </Drawer>  
         </div>       
     )
 }

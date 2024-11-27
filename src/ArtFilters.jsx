@@ -1,4 +1,4 @@
-import { Button, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { Button, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem, ClickAwayListener } from "@mui/material";
 import { useState } from 'react';
 import jsonData from '../json/artData.json';
 import keywordData from '../json/keywordData.json';
@@ -10,9 +10,8 @@ console.log(keywords);
 
 // filters array is sent down from Gallery.jsx, contains methods to modify 
 // filter variables declared in Gallery.jsx
-const ArtFilters = ({filters}) => {   
-    // //selectedFilters will be used once art is implemented
-    // const [selectedFilters, setSelectedFilters] = useState([]);
+const ArtFilters = ({ filters }) => {   
+
 
     const handleFilterClick = (newFilters) => {
         filters.setSelectedFilters(newFilters);
@@ -77,19 +76,22 @@ const ArtFilters = ({filters}) => {
             </Box>
             
             {/* Medium Filter */}
-            <FormControl sx={{m: 1}}>
+            <FormControl sx={{m: 1}} id="medium-filter">
                 <InputLabel id="medium-selection">Medium</InputLabel>
-                    <Select
+                 
+                    <Select 
                     labelId="medium-selection"
                     id="medium"
                     label="Medium"
+                    value={filters.selectedMedium}
+                    onChange={(e) => filters.setSelectedMedium(e.target.value)}
                     >
-                        <MenuItem>
+                        <MenuItem value="">
                             <em>None</em>
                         </MenuItem>
-                        <MenuItem>Traditional Painting</MenuItem>
-                        <MenuItem>Digital Painting</MenuItem>
-                        <MenuItem>Photograph</MenuItem>
+                        <MenuItem value="Traditional Painting">Traditional Painting</MenuItem>
+                        <MenuItem value="Digital Painting">Digital Painting</MenuItem>
+                        <MenuItem value="Photograph">Photograph</MenuItem>
                     </Select>
             </FormControl>
 

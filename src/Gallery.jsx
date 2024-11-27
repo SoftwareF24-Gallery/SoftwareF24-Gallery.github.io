@@ -52,14 +52,16 @@ const Gallery = () => {
     // Setting variables for the filters
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [artName, setArtName] = useState('');
-
+    const [selectedMedium, setSelectedMedium] = useState('')
     // "filters" array will be sent down the hierarchy to ArtFilters
-    const filters = {artName, setArtName, selectedFilters, setSelectedFilters};
+    const filters = {artName, setArtName, selectedFilters, setSelectedFilters, selectedMedium, setSelectedMedium};
 
     const searchArray = artData.filter((item) => {
       const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
       const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
-      return matchesArtName && matchesChips
+      const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;
+      
+      return matchesArtName && matchesChips && matchesMedium
     })
 
     return(
