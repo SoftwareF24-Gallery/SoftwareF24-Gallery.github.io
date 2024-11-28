@@ -59,6 +59,8 @@ const FilterDrawer = ({filters}) => {
                     boxSizing: 'border-box',
                     height: '100%',
                     overflow: 'hidden',
+                    background: theme.palette.mode === 'dark' ? "linear-gradient(to right, rgba(0,0,0,0), rgba(200,200,200,0.1), rgba(0,0,0,0)), black" 
+                    : "linear-gradient(to right, rgba(200,200,200,255), rgba(0,0,0,0), rgba(200,200,200,255)), white"
                 },
                 }}
                 variant="persistent"
