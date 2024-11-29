@@ -4,6 +4,7 @@ import Credits from "./Credits";
 import Gallery from "./Gallery";
 import { CssBaseline, ThemeProvider, createTheme, Paper } from '@mui/material';
 import { Route, Routes, HashRouter } from "react-router-dom";
+import { useState } from "react";
 
 // Theme information, can be toggled between Dark and Light
 const theme = createTheme({
@@ -69,6 +70,8 @@ const theme = createTheme({
 
 const App = () => {
 
+  const [location, setLocation] = useState("");
+
   return (
     <>
       {/* ThemeProvider allows children components to access theme information */}
@@ -83,9 +86,9 @@ const App = () => {
           <HashRouter>
           <div id="component" style={{width: "100%", maxWidth: "1200px", margin: "0 auto"}}> {/* Div styling prevents width from expanding after 1200px, to keep content at center of page */}
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home location={{location, setLocation}}/>} />
               <Route path="/credits" element={<Credits />} />
-              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/gallery" element={<Gallery location={location}/>} />
             </Routes>
           </div>
           </HashRouter>

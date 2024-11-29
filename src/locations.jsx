@@ -3,7 +3,7 @@ import { useState } from 'react'
 import locations from '../json/locations.json';
 
 // Setting up function to be used in other files
-export const SelectGallery = () => { 
+export const SelectGallery = ({location}) => { 
 
     const defaultLocation = locations.find((location) => location.default);
     document.title = defaultLocation.label;
@@ -15,7 +15,8 @@ export const SelectGallery = () => {
     // "event" is an object consisting of value and label, parsed from JSON file
     const handleChange = (event) => {
       setGallery(event.target.value); 
-      console.log({gallery})
+      location.setLocation(event.target.value.value);
+      console.log({gallery});
       document.title = event.target.value.label; 
     };
   

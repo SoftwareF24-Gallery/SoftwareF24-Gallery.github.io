@@ -16,7 +16,7 @@ const artistById = (artistID) => {
     return (artistData['id'] == artistID);})[0];
 }
 
-const Gallery = () => {
+const Gallery = (location) => {
 
     // [Pop-Up]
 
@@ -67,8 +67,10 @@ const Gallery = () => {
       const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
       const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
       const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;
+      const matchesLocation = item.gallery == location;
+      console.log(location);
 
-      return matchesArtName && matchesChips && matchesMedium
+      return matchesArtName && matchesChips && matchesMedium && matchesLocation;
     })
 
     return(
