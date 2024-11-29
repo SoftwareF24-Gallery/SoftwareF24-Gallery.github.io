@@ -9,6 +9,7 @@ import JohanPicture from "../public/img/credits/Johan_Headshot.png"
 import MichaelPicture from "../public/img/credits/Michael_Headshot.jpg";
 import DrakePicture from "../public/img/credits/Drake_Headshot.jpg";
 import GuillermoPicture from "../public/img/credits/Guillermo_Headshot.jpg";
+import DrakeBioPopup from "./DrakeBioPopup";
 
 const Credits = () => {
 
@@ -85,9 +86,8 @@ const Credits = () => {
                     <Typography variant="h5" fontWeight={"bold"}>
                         Drake Calhoun
                     </Typography>
-                    <Typography>
-                        Did cool stuff
-                    </Typography>
+                    
+                    <DrakeBioPopup/>
 
                     {/* Icon buttons for Github and LinkedIn */}
                     <IconButton href="https://github.com/DrakeCal" target="_blank">
