@@ -55,7 +55,8 @@ const Gallery = ({selectedGallery}) => {
       setSelectedMedium('');
     };
 
-    // Filtering first by selected gallery
+    // Filtering by selected gallery first
+    // This ensures it's only done once and not every time a filter is changed
     const galleryArt = artData.filter((item) => {
       return item.gallery === selectedGallery.value;
     });
@@ -64,13 +65,15 @@ const Gallery = ({selectedGallery}) => {
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [artName, setArtName] = useState('');
     const [selectedMedium, setSelectedMedium] = useState('')
+    // "selectedGallery" is received as prop from App.jsx
+
     // "filters" array will be sent down the hierarchy to ArtFilters
     const filters = {artName, setArtName, selectedFilters, setSelectedFilters, selectedMedium, setSelectedMedium, handleClearFilters};
 
     const searchArray = galleryArt.filter((item) => {
       const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
       const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
-      const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;
+      const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;                                   // Filter by Medium
 
       return matchesArtName && matchesChips && matchesMedium;
     })

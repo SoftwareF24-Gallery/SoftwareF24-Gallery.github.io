@@ -19,7 +19,7 @@
       "medium": "Photograph",
       "description": "Portrait of late United Kingdom Prime Minister, Winston Churchill.",
       "tags" : ["Monochrome", "Portrait", "People"],
-      "gallery": "BG"
+      "gallery": "KG"
     },
     {
       "id": 2,
@@ -162,7 +162,7 @@
       "medium": "Photograph",
       "description": "Photograph of elephant trunks of interstellar gas and dust in the Eagle Nebula, in the Serpens constellation.",
       "tags" : ["Space"],
-      "gallery": "BG"
+      "gallery": "MG"
     },
     {
       "id": 15,
@@ -217,6 +217,6 @@
       "medium": "Photograph",
       "description": "Photograph taken of Buzz Aldrin during the Apollo 11 landing on the moon. The Earth and Armstrong, who took the photograph, can be seen in the visor reflection.",
       "tags" : ["Space", "People"],
-      "gallery": "BG"
+      "gallery": "MG"
     }
 ]

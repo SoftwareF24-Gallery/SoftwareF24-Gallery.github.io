@@ -70,11 +70,13 @@ const theme = createTheme({
   },
 });
 
+// Getting default gallery
 const defaultLocation = locations.find((location) => location.default);
-    document.title = defaultLocation.label;
+document.title = defaultLocation.label;
 
 const App = () => {
 
+  // State used to filter by gallery
   const [selectedGallery, setSelectedGallery] = useState(defaultLocation);
 
   return (

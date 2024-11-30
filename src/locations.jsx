@@ -5,12 +5,8 @@ import { useEffect } from "react";
 // Setting up function to be used in other files
 export const SelectGallery = ({selectedGallery, setSelectedGallery}) => { 
 
-    useEffect(() => {
-      setSelectedGallery(selectedGallery);
-    }, [])
-    
     // Handles change on element and updates gallery
-    // "event" is an object consisting of value and label, parsed from JSON file
+    // "event" is an object consisting of value, label and default, parsed from JSON file
     const handleChange = (event) => {
       setSelectedGallery(event.target.value);
       document.title = event.target.value.label;
