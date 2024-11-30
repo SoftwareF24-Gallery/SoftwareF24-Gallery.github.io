@@ -1,23 +1,19 @@
 import { Box, TextField, MenuItem } from "@mui/material"
-import { useState } from 'react'
 import locations from '../json/locations.json';
+import { useEffect } from "react";
 
 // Setting up function to be used in other files
-export const SelectGallery = ({location}) => { 
+export const SelectGallery = ({selectedGallery, setSelectedGallery}) => { 
 
-    const defaultLocation = locations.find((location) => location.default);
-    document.title = defaultLocation.label;
-
-    // Uses default location variable to get location
-    const [gallery, setGallery] = useState(defaultLocation);
+    useEffect(() => {
+      setSelectedGallery(selectedGallery);
+    }, [])
     
     // Handles change on element and updates gallery
     // "event" is an object consisting of value and label, parsed from JSON file
     const handleChange = (event) => {
-      setGallery(event.target.value); 
-      location.setLocation(event.target.value.value);
-      console.log({gallery});
-      document.title = event.target.value.label; 
+      setSelectedGallery(event.target.value);
+      document.title = event.target.value.label;
     };
   
     // Dropdown menu
@@ -27,7 +23,7 @@ export const SelectGallery = ({location}) => {
           label="Gallery Location"
           // Select dropdown from mui
           select sx={{width: '100%'}} // Make width take up 100% of box
-          value={gallery}
+          value={selectedGallery}
           onChange={handleChange}
         >
           

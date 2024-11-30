@@ -16,8 +16,7 @@ const artistById = (artistID) => {
     return (artistData['id'] == artistID);})[0];
 }
 
-const Gallery = (location) => {
-
+const Gallery = ({selectedGallery}) => {
     // [Pop-Up]
 
     // Dummy art object that prevents access error in ArtPopup.jsx
@@ -56,6 +55,11 @@ const Gallery = (location) => {
       setSelectedMedium('');
     };
 
+    // Filtering first by selected gallery
+    const galleryArt = artData.filter((item) => {
+      return item.gallery === selectedGallery.value;
+    });
+
     // Setting variables for the filters
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [artName, setArtName] = useState('');
@@ -63,14 +67,12 @@ const Gallery = (location) => {
     // "filters" array will be sent down the hierarchy to ArtFilters
     const filters = {artName, setArtName, selectedFilters, setSelectedFilters, selectedMedium, setSelectedMedium, handleClearFilters};
 
-    const searchArray = artData.filter((item) => {
+    const searchArray = galleryArt.filter((item) => {
       const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
       const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
       const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;
-      const matchesLocation = item.gallery == location;
-      console.log(location);
 
-      return matchesArtName && matchesChips && matchesMedium && matchesLocation;
+      return matchesArtName && matchesChips && matchesMedium;
     })
 
     return(
