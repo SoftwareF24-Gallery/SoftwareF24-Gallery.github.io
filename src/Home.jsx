@@ -1,8 +1,6 @@
 import { Button, Typography } from '@mui/material';
-import { useTheme } from '@mui/material';
 
 const Home = (props) => {
-    const theme = useTheme(); // access current theme to apply button colors
 
     return (
         <>

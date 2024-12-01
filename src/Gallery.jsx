@@ -1,11 +1,11 @@
 import FilterDrawer from "./FilterDrawer";
 import Box from '@mui/material/Box';
-import { ImageList, ImageListItem, ImageListItemBar, Typography } from '@mui/material';
+import { ImageList, ImageListItem, ImageListItemBar, Typography, useMediaQuery, useTheme } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import artData from '../json/artData.json';
 import artistData from '../json/artistdata.json';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ArtPopup from "./ArtPopup";
 
 // Receives the artist's ID number, which is contained in the artist property
@@ -23,7 +23,26 @@ const Gallery = ({selectedGallery}) => {
       States used to modify layout in different screen sizes
     ************************************************************/
         // Amount of rows gallery has
-        const [galleryRows, setGalleryRows] = useState(0);
+        const [galleryCols, setGalleryCols] = useState(0);
+
+        const theme = useTheme();
+        const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
+
+        useEffect(() => {
+          
+          const handleResize = () => {
+            setGalleryCols( isScreenSmall ? 1 : 4);
+          };
+
+          console.log("effect")
+      
+          window.addEventListener('resize', handleResize);
+      
+          return () => {
+            console.log("return")
+            window.removeEventListener('resize', handleResize);
+          };
+        }, [isScreenSmall]);
 
     // [Image Popup States]
     /************************************************************
@@ -103,7 +122,7 @@ const Gallery = ({selectedGallery}) => {
           <Typography variant="h2" sx={{textTransform: "none"}}>Found {searchArray.length} images</Typography>
 
               {/* Gallery logic */}
-              <ImageList variant="masonry" cols={galleryRows} gap={8}>
+              <ImageList variant="masonry" cols={galleryCols} gap={8}>
                 {/* Creating an array of img from objects in artData */}
                 {
                   // return artName.toLowerCase() === '' 
