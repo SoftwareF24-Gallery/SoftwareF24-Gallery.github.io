@@ -47,7 +47,7 @@ const Credits = () => {
                         <GitHubIcon />
                     </IconButton>
 
-                    <IconButton href="" target="_blank">
+                    <IconButton href="https://www.linkedin.com/in/michael-santos-713714s/" target="_blank">
                         <LinkedInIcon />
                     </IconButton>
 
