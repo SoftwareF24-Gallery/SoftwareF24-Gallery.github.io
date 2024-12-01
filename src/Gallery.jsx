@@ -17,66 +17,81 @@ const artistById = (artistID) => {
 }
 
 const Gallery = ({selectedGallery}) => {
-    // [Pop-Up]
 
-    // Dummy art object that prevents access error in ArtPopup.jsx
-    const artDummy = {
-      "id": 0,
-      "artist": 0,
-      "url": null,
-      "title": null,
-      "date": null,
-      "medium": null,
-      "description": null,
-      "tags" : null,
-    };
+    // [Responsive States]
+    /************************************************************
+      States used to modify layout in different screen sizes
+    ************************************************************/
+        // Amount of rows gallery has
+        const [galleryRows, setGalleryRows] = useState(0);
 
-    // Handles selection of image for popup, passing dummy object to avoid error in ArtPopup.jsx
-    const [selectedImg, setSelectedImg] = useState(artDummy);
+    // [Image Popup States]
+    /************************************************************
+      States that control whether the image popup is open or not
+    ************************************************************/
+        // Dummy art object that prevents access error in ArtPopup.jsx
+        const artDummy = {
+          "id": 0,
+          "artist": 0,
+          "url": null,
+          "title": null,
+          "date": null,
+          "medium": null,
+          "description": null,
+          "tags" : null,
+        };
 
-    // Whether ArtPopup is open
-    const [open, setOpen] = useState(false);
+        // Handles selection of image for popup, passing dummy object to avoid error in ArtPopup.jsx
+        const [selectedImg, setSelectedImg] = useState(artDummy);
 
-    const handleOpen = (img) => {
-      setSelectedImg(img);
-      setOpen(true);
-    };
+        // Whether ArtPopup is open
+        const [open, setOpen] = useState(false);
 
-    const handleClose = () => {
-      setOpen(false);
-    };
+        const handleOpen = (img) => {
+          setSelectedImg(img);
+          setOpen(true);
+        };
 
-    // [Filters]
+        const handleClose = () => {
+          setOpen(false);
+        };
 
-    //clear filters function
-    const handleClearFilters = () => {
-      setSelectedFilters([]);
-      setArtName('');
-      setSelectedMedium('');
-    };
+    // [Image Popup States]
+    /************************************************************
+      States that control image filtering
+    ************************************************************/
 
-    // Filtering by selected gallery first
-    // This ensures it's only done once and not every time a filter is changed
-    const galleryArt = artData.filter((item) => {
-      return item.gallery === selectedGallery.value;
-    });
+        // Clear filters function
+        const handleClearFilters = () => {
+          setSelectedFilters([]);
+          setArtName('');
+          setSelectedMedium('');
+        };
 
-    // Setting variables for the filters
-    const [selectedFilters, setSelectedFilters] = useState([]);
-    const [artName, setArtName] = useState('');
-    const [selectedMedium, setSelectedMedium] = useState('')
-    // "selectedGallery" is received as prop from App.jsx
+        // Filtering by selected gallery first
+        // This ensures it's only done once and not every time a filter is changed
+        const galleryArt = artData.filter((item) => {
+          return item.gallery === selectedGallery.value;
+        });
 
-    // "filters" array will be sent down the hierarchy to ArtFilters
-    const filters = {artName, setArtName, selectedFilters, setSelectedFilters, selectedMedium, setSelectedMedium, handleClearFilters};
+        // Setting variables for the filters
+        const [selectedFilters, setSelectedFilters] = useState([]);
+        const [artName, setArtName] = useState('');
+        const [selectedMedium, setSelectedMedium] = useState('')
+        // "selectedGallery" is received as prop from App.jsx
 
-    const searchArray = galleryArt.filter((item) => {
-      const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
-      const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
-      const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;                                   // Filter by Medium
+        // "filters" array will be sent down the hierarchy to ArtFilters
+        const filters = {artName, setArtName, selectedFilters, setSelectedFilters, selectedMedium, setSelectedMedium, handleClearFilters};
 
-      return matchesArtName && matchesChips && matchesMedium;
-    })
+        const searchArray = galleryArt.filter((item) => {
+          const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
+          const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
+          const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;                                   // Filter by Medium
+
+          return matchesArtName && matchesChips && matchesMedium;
+        })
+
+    /*****************************************************************************************************************/
 
     return(
         <div style={{alignItems: "flex-start", padding: "3%"}}>
@@ -88,7 +103,7 @@ const Gallery = ({selectedGallery}) => {
           <Typography variant="h2" sx={{textTransform: "none"}}>Found {searchArray.length} images</Typography>
 
               {/* Gallery logic */}
-              <ImageList variant="masonry" cols={4} gap={8}>
+              <ImageList variant="masonry" cols={galleryRows} gap={8}>
                 {/* Creating an array of img from objects in artData */}
                 {
                   // return artName.toLowerCase() === '' 
