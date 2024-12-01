@@ -10,6 +10,9 @@ import MichaelPicture from "../public/img/credits/Michael_Headshot.jpg";
 import DrakePicture from "../public/img/credits/Drake_Headshot.jpg";
 import GuillermoPicture from "../public/img/credits/Guillermo_Headshot.jpg";
 import DrakeBioPopup from "./DrakeBioPopup";
+import JohanBioPopup from "./JohanBioPopup";
+import GuillermoBioPopup from "./GuillermoBioPopup";
+import MichaelBioPopup from "./MichaelBioPopup";
 
 const Credits = () => {
 
@@ -37,10 +40,8 @@ const Credits = () => {
                         Michael Santos
                     </Typography>
 
-                    <Typography>
-                        Did cool stuff
-                    </Typography>
-
+                    <MichaelBioPopup/>
+                    
                     {/* Icon buttons for Github and LinkedIn */}
                     <IconButton href="https://github.com/Michaelmadeit2001" target="_blank">
                         <GitHubIcon />
@@ -61,9 +62,8 @@ const Credits = () => {
                     <Typography variant="h5" fontWeight={"bold"}>
                         Guillermo Carroz Labarca
                     </Typography>
-                    <Typography>
-                        Did cool stuff
-                    </Typography>
+
+                    <GuillermoBioPopup/>
 
                     {/* Icon buttons for Github and LinkedIn */}
                     <IconButton href="https://github.com/gcarlab" target="_blank">
@@ -109,9 +109,8 @@ const Credits = () => {
                     <Typography variant="h5" fontWeight={"bold"}>
                         Johan Rodriguez
                     </Typography>
-                    <Typography>
-                        Did cool stuff
-                    </Typography>
+
+                    <JohanBioPopup/>
 
                     {/* Icon buttons for Github and LinkedIn */}
                     <IconButton href="https://github.com/The-Jragon" target="_blank">
