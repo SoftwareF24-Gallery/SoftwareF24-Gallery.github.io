@@ -38,7 +38,10 @@ const Credits = () => {
                     </Typography>
 
                     <CreditsPopup
-                        description="This is Michael's description"
+                        description="My name is Michael and I am a driven student and software programmer who enjoys 
+                        learning and is ready to apply my skills to solve real-world problems. 
+                        I am passionate about using technology to make the world a better place. 
+                        And I enjoy facing new challenges and opportunities to learn and grow."
                     />
 
                     
