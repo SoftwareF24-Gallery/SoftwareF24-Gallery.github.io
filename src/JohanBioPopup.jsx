@@ -24,10 +24,10 @@ const JohanBioPopup = () => {
         </DialogTitle>
 
         <Typography sx={{padding: 3}}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Hello, my name is Johan. I am an aspiring software developer on the last semester of my associates degree, 
+        finishing it up by helping build the website you are currently on. I loved working and making friends with
+        the team you see around me in this credits page, all talented and capable. I learned a lot from this project
+        and hope this to be one of the first of many endeavors in my software development career.
         </Typography>
 
         </Dialog>
