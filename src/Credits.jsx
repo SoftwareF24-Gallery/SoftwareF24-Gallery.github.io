@@ -91,8 +91,8 @@ const Credits = () => {
                     </Typography>
                     
                     <CreditsPopup
-                        description="Drake Calhoun is a Lone Star College graduate with an Associate's Degree as a Programming Specialist.
-                        When he's not looking for full time employment, he enjoys gaming, looking at keyboards/controllers to collect, and pet sitting.
+                        description="Drake Calhoun is a soon-to-be Lone Star College graduate with an Associate's Degree as a Programming Specialist.
+                        When he's not looking for full time employment, he enjoys gaming, looking for keyboards/controllers to collect, and pet sitting.
                         He tries to stay up to date with the latest information on technology in order to be the most knowledgable person he can possibly be in his field of expertise."
                     />
 
