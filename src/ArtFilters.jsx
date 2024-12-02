@@ -1,17 +1,18 @@
 import { Button, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem, ClickAwayListener } from "@mui/material";
-import { useState } from 'react';
-import jsonData from '../json/artData.json';
+import artistData from '../json/artistdata.json';
 import keywordData from '../json/keywordData.json';
 
 // Create keywords array, then push each keyword into it
 let keywords = [];
 keywordData.keys.map((key) => keywords.push(key));
-console.log(keywords);
+
+let artistNames = [];
+artistData.map((item) => artistNames.push(item.name));
+artistNames.sort();
 
 // filters array is sent down from Gallery.jsx, contains methods to modify 
 // filter variables declared in Gallery.jsx
 const ArtFilters = ({ filters }) => {   
-
 
     const handleFilterClick = (newFilters) => {
         filters.setSelectedFilters(newFilters);
@@ -26,16 +27,21 @@ const ArtFilters = ({ filters }) => {
         });
     };
 
-
-    //handles art name filter update
+    // Handles art name filter update
     const handleArtNameChange = (event) => {
         filters.setArtName(event.target.value);
+    };
+
+    // Handles artist filter update
+    const handleArtistChange = (newArtist) => {
+        console.log(newArtist);
+        filters.setArtistName(newArtist);
     };
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%'}}>
 
-            {/* Textfield searchbar for Artist/Art name*/}
+            {/* Textfield searchbar for Art name*/}
             <TextField
                 label="Name"
                 sx={{m: 1}}
@@ -43,7 +49,19 @@ const ArtFilters = ({ filters }) => {
                 onChange={handleArtNameChange}
             />
 
-            {/* Art Types Filter*/}
+            {/* Artist Name Filter*/}
+            <Box sx={{m: 1}}>
+                {/* Autocomplete function for keywords*/}
+                <Autocomplete
+                    disablePortal
+                    options={artistNames}
+                    value={filters.artistName}
+                    renderInput={(params) => <TextField {...params} label="Artist" />}
+                    onChange={(event, newArtist) => handleArtistChange(newArtist)}
+                />
+            </Box>
+
+            {/* Keywords Filter*/}
             <Box sx={{m: 1}}>
                 {/* Autocomplete function for keywords*/}
                 <Autocomplete

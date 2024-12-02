@@ -33,13 +33,10 @@ const Gallery = ({selectedGallery}) => {
           const handleResize = () => {
             setGalleryCols( isScreenSmall ? 1 : 4);
           };
-
-          console.log("effect")
       
           window.addEventListener('resize', handleResize);
       
           return () => {
-            console.log("return")
             window.removeEventListener('resize', handleResize);
           };
         }, [isScreenSmall]);
@@ -80,13 +77,6 @@ const Gallery = ({selectedGallery}) => {
       States that control image filtering
     ************************************************************/
 
-        // Clear filters function
-        const handleClearFilters = () => {
-          setSelectedFilters([]);
-          setArtName('');
-          setSelectedMedium('');
-        };
-
         // Filtering by selected gallery first
         // This ensures it's only done once and not every time a filter is changed
         const galleryArt = artData.filter((item) => {
@@ -96,18 +86,28 @@ const Gallery = ({selectedGallery}) => {
         // Setting variables for the filters
         const [selectedFilters, setSelectedFilters] = useState([]);
         const [artName, setArtName] = useState('');
+        const [artistName, setArtistName] = useState(null);
         const [selectedMedium, setSelectedMedium] = useState('')
         // "selectedGallery" is received as prop from App.jsx
 
+        // Clear filters function
+        const handleClearFilters = () => {
+          setSelectedFilters([]);
+          setArtName('');
+          setArtistName(null);
+          setSelectedMedium('');
+        };
+
         // "filters" array will be sent down the hierarchy to ArtFilters
-        const filters = {artName, setArtName, selectedFilters, setSelectedFilters, selectedMedium, setSelectedMedium, handleClearFilters};
+        const filters = {artName, setArtName, artistName, setArtistName, selectedFilters, setSelectedFilters, selectedMedium, setSelectedMedium, handleClearFilters};
 
         const searchArray = galleryArt.filter((item) => {
           const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
+          const matchesArtistName = filters.artistName === null || artistData[item.artist].name == artistName;                                           // Filter by artist name
           const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
           const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;                                   // Filter by Medium
 
-          return matchesArtName && matchesChips && matchesMedium;
+          return matchesArtName && matchesArtistName && matchesChips && matchesMedium;
         })
 
     /*****************************************************************************************************************/
