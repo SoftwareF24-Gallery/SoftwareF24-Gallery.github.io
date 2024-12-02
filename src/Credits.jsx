@@ -9,10 +9,7 @@ import JohanPicture from "../public/img/credits/Johan_Headshot.png"
 import MichaelPicture from "../public/img/credits/Michael_Headshot.jpg";
 import DrakePicture from "../public/img/credits/Drake_Headshot.jpg";
 import GuillermoPicture from "../public/img/credits/Guillermo_Headshot.jpg";
-import DrakeBioPopup from "./DrakeBioPopup";
-import JohanBioPopup from "./JohanBioPopup";
-import GuillermoBioPopup from "./GuillermoBioPopup";
-import MichaelBioPopup from "./MichaelBioPopup";
+import CreditsPopup from "./CreditsPopup";
 
 const Credits = () => {
 
@@ -40,7 +37,10 @@ const Credits = () => {
                         Michael Santos
                     </Typography>
 
-                    <MichaelBioPopup/>
+                    <CreditsPopup
+                        description="This is Michael's description"
+                    />
+
                     
                     {/* Icon buttons for Github and LinkedIn */}
                     <IconButton href="https://github.com/Michaelmadeit2001" target="_blank">
@@ -63,7 +63,10 @@ const Credits = () => {
                         Guillermo Carroz Labarca
                     </Typography>
 
-                    <GuillermoBioPopup/>
+                    <CreditsPopup
+                        description="This is Guillermo's description"
+                    />
+
 
                     {/* Icon buttons for Github and LinkedIn */}
                     <IconButton href="https://github.com/gcarlab" target="_blank">
@@ -87,7 +90,9 @@ const Credits = () => {
                         Drake Calhoun
                     </Typography>
                     
-                    <DrakeBioPopup/>
+                    <CreditsPopup
+                        description="This is Drake's description"
+                    />
 
                     {/* Icon buttons for Github and LinkedIn */}
                     <IconButton href="https://github.com/DrakeCal" target="_blank">
@@ -110,7 +115,10 @@ const Credits = () => {
                         Johan Rodriguez
                     </Typography>
 
-                    <JohanBioPopup/>
+                    <CreditsPopup
+                        description="This is Johan's description"
+                    />
+
 
                     {/* Icon buttons for Github and LinkedIn */}
                     <IconButton href="https://github.com/The-Jragon" target="_blank">
