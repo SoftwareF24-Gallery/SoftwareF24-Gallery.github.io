@@ -80,6 +80,7 @@ const Gallery = ({selectedGallery}) => {
         const [selectedFilters, setSelectedFilters] = useState([]);
         const [artName, setArtName] = useState('');
         const [artistName, setArtistName] = useState(null);
+        const [selectedYear, setSelectedYear] = useState(null);
         const [selectedMedium, setSelectedMedium] = useState('')
         // "selectedGallery" is received as prop from App.jsx
 
@@ -88,11 +89,12 @@ const Gallery = ({selectedGallery}) => {
           setSelectedFilters([]);
           setArtName('');
           setArtistName(null);
+          setSelectedYear(null);
           setSelectedMedium('');
         };
 
         // "filters" array will be sent down the hierarchy to ArtFilters
-        const filters = {artName, setArtName, artistName, setArtistName, selectedFilters, setSelectedFilters, selectedMedium, setSelectedMedium, handleClearFilters};
+        const filters = {artName, setArtName, artistName, setArtistName, selectedFilters, setSelectedFilters, selectedYear, setSelectedYear, selectedMedium, setSelectedMedium, handleClearFilters};
 
         const searchArray = galleryArt.filter((item) => {
           const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
@@ -100,7 +102,11 @@ const Gallery = ({selectedGallery}) => {
           const matchesChips = filters.selectedFilters.length === 0 || filters.selectedFilters.every(tag => item.tags.includes(tag));      // Filter by keywords
           const matchesMedium = filters.selectedMedium === '' || item.medium === filters.selectedMedium;                                   // Filter by Medium
 
-          return matchesArtName && matchesArtistName && matchesChips && matchesMedium;
+          // Filtering by Year
+          let artYear = new Date(item.date).getFullYear();
+          const matchesYear = filters.selectedYear === null || artYear === filters.selectedYear.$y;                                   // Filter by Medium
+
+          return matchesArtName && matchesArtistName && matchesChips && matchesYear && matchesMedium;
         })
 
     /*****************************************************************************************************************/

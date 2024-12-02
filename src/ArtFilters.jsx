@@ -1,6 +1,13 @@
 import { Button, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem, ClickAwayListener } from "@mui/material";
 import artistData from '../json/artistdata.json';
 import keywordData from '../json/keywordData.json';
+import dayjs from 'dayjs';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+
+const currentYear = dayjs();
+const earliestYear = dayjs("1500");
 
 // Create keywords array, then push each keyword into it
 let keywords = [];
@@ -34,8 +41,12 @@ const ArtFilters = ({ filters }) => {
 
     // Handles artist filter update
     const handleArtistChange = (newArtist) => {
-        console.log(newArtist);
         filters.setArtistName(newArtist);
+    };
+
+    // Handles artist filter update
+    const handleYearChange = (newYear) => {
+        filters.setSelectedYear(newYear);
     };
 
     return (
@@ -112,6 +123,19 @@ const ArtFilters = ({ filters }) => {
                         <MenuItem value="Photograph">Photograph</MenuItem>
                     </Select>
             </FormControl>
+
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DatePicker 
+                        value={filters.selectedYear}
+                        onChange={(newYear) => handleYearChange(newYear)}
+                        sx={{m: 1}} label={'Year'}
+                        minDate={earliestYear}
+                        maxDate={currentYear} 
+                        yearsOrder="desc" 
+                        views={['year']} 
+                    />
+
+            </LocalizationProvider>
 
             {/* Clear Filters Button
                 Clears all filter fields */}
