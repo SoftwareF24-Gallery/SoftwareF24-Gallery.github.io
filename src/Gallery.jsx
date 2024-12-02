@@ -23,22 +23,15 @@ const Gallery = ({selectedGallery}) => {
       States used to modify layout in different screen sizes
     ************************************************************/
         // Amount of rows gallery has
-        const [galleryCols, setGalleryCols] = useState(0);
+        const [galleryCols, setGalleryCols] = useState(4);
 
         const theme = useTheme();
         const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
         useEffect(() => {
+  
+          setGalleryCols( isScreenSmall ? 1 : 4);
           
-          const handleResize = () => {
-            setGalleryCols( isScreenSmall ? 1 : 4);
-          };
-      
-          window.addEventListener('resize', handleResize);
-      
-          return () => {
-            window.removeEventListener('resize', handleResize);
-          };
         }, [isScreenSmall]);
 
     // [Image Popup States]
