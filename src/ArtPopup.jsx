@@ -1,4 +1,4 @@
-import { Modal, Box, Typography, Stack, IconButton, Button, Dialog, DialogTitle} from "@mui/material";
+import { Avatar, Modal, Box, Typography, Stack, Paper, IconButton, Button, Dialog, DialogTitle} from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from "react";
 
@@ -9,7 +9,6 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 600,
         bgcolor: 'background.paper',
         border: '2px solid #000',
         boxShadow: 24,
@@ -28,20 +27,20 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
             >
                 <Box sx={style}>
                     <Stack direction={"row"} sx={{justifyContent: "right"}}>
-                        <IconButton onClick={handleClose} sx={{padding: "0.2em"}}>
+                        <IconButton onClick={handleClose}>
                             <CloseIcon />
                         </IconButton>
                     </Stack>
-                    <Stack direction={"row"}>
-                        <Stack direction={"column"} sx={{justifyContent: "left", width: "150%"}}>
+                    <Stack direction={{xs: "column", md: "row"}} sx={{display: "flex", width: "inherit", height: "inherit", margin: "0 auto"}}>
+                        <Stack direction="column">
                             <img 
                                 src={selectedImg.url}
                                 alt={selectedImg.title}
                                 loading="lazy"
-                                style={{padding: 10, width: "100%"}}
+                                style={{maxHeight: "100%", maxWidth: "100%", margin: "0 auto"}}
                             />
                                 <Stack direction={"row"}>
-                                    <Typography loading="lazy" sx={{fontSize: 30, paddingLeft: 1}}>
+                                    <Typography variant="h2" loading="lazy" sx={{fontSize: "2rem", lineHeight: "2.2rem"}}>
                                         {selectedImg.title}
                                     </Typography>
                                     <Button onClick={() => setTags(true)}>
@@ -51,7 +50,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                     {/* Tags popup */}
                                     <Dialog open={tags} onClose={() => setTags(false)} aria-labelledby="dialog-title">
 
-                                        <DialogTitle id="dialog-title" sx={{display: "flex", justifyContent: "space-between"}}>
+                                        <DialogTitle id="dialog-title" sx={{alignSelf: "center"}}>
                                             Tags
                                             <IconButton onClick={() => setTags(false)} sx={{padding: "0.2em"}}>
                                                 <CloseIcon />
@@ -66,23 +65,32 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
 
 
                                 </Stack>
-                            <Typography loading="lazy" sx={{paddingLeft: 1, paddingBottom: 1}}>
+                            {/* Image description */}
+                            <Typography loading="lazy" sx={{}}>
                                 {selectedImg.description}
                             </Typography>
                             </Stack>
-                            <Stack direction={"column"} sx={{justifyContent: "right", width: "80%"}}>
-                                <Typography loading="lazy" sx={{paddingLeft: 1, paddingBottom: 1, paddingTop: 1, paddingRight: 1, backgroundColor: "rgba(255, 255, 255, 0.1)"}}>
-                                    {"By " + artistById(selectedImg.artist).name}
-                                </Typography>
-                                <img 
+                            <Stack direction={{xs: "row", md: "column"}} sx={{}}>
+                                {/* Artist's picture */}
+                                <Avatar 
                                     src={artistById(selectedImg.artist).picture}
                                     alt={artistById(selectedImg.artist).name}
+                                    sx={{height: "8rem", width: "8rem", margin: "1rem auto",}}
                                     loading="lazy"
-                                    style={{padding: 10, width: "100%", backgroundColor: "rgba(255, 255, 255, 0.1)"}}
                                 />
-                                <Typography loading="lazy" sx={{paddingLeft: 1, paddingBottom: 1, paddingRight: 1, backgroundColor: "rgba(255, 255, 255, 0.1)"}}>
-                                    {artistById(selectedImg.artist).bio}
-                                </Typography>
+                                <Stack direction="column">
+                                    <Typography variant="h6" sx={{padding: 1}}>
+                                        Artist
+                                    </Typography>
+                                    <Paper elevation={4} sx={{padding: 1, m: 1}}>
+                                        <Typography variant="h6" loading="lazy">
+                                            {artistById(selectedImg.artist).name}
+                                        </Typography>
+                                        <Typography loading="lazy">
+                                            {artistById(selectedImg.artist).bio}
+                                        </Typography>
+                                    </Paper>
+                                </Stack>
                             
                         </Stack>
                     </Stack>
