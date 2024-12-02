@@ -40,7 +40,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                 style={{maxHeight: "100%", maxWidth: "100%", margin: "0 auto"}}
                             />
                                 <Stack direction={"row"}>
-                                    <Typography variant="h2" loading="lazy" sx={{fontSize: "2rem", lineHeight: "2.2rem"}}>
+                                    <Typography variant="h2" loading="lazy" sx={{fontSize: "2rem", lineHeight: "2.2rem", padding: 3}}>
                                         {selectedImg.title}
                                     </Typography>
                                     <Button onClick={() => setTags(true)}>
@@ -79,11 +79,11 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                     loading="lazy"
                                 />
                                 <Stack direction="column">
-                                    <Typography variant="h6" sx={{padding: 1}}>
+                                    <Typography variant="h6" sx={{padding: 3}}>
                                         Artist
                                     </Typography>
                                     <Paper elevation={4} sx={{padding: 1, m: 1}}>
-                                        <Typography variant="h6" loading="lazy">
+                                        <Typography variant="h6" loading="lazy" >
                                             {artistById(selectedImg.artist).name}
                                         </Typography>
                                         <Typography loading="lazy">
