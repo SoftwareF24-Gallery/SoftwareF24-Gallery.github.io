@@ -47,7 +47,7 @@ const Gallery = ({selectedGallery}) => {
           "date": null,
           "medium": null,
           "description": null,
-          "tags" : null,
+          "tags" : [],
         };
 
         // Handles selection of image for popup, passing dummy object to avoid error in ArtPopup.jsx

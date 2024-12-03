@@ -15,9 +15,9 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
         p: 4,
       };
     
-      //Manages tags popup opening and closing
+      // Manages tags popup opening and closing
       const [tags, setTags] = useState(false)
-
+    
     return(
         <>
             <Modal 
@@ -50,7 +50,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                     {/* Tags popup */}
                                     <Dialog open={tags} onClose={() => setTags(false)} aria-labelledby="dialog-title">
 
-                                        <DialogTitle id="dialog-title" sx={{alignSelf: "center"}}>
+                                        <DialogTitle id="dialog-title" sx={{display: "flex", justifyContent: "space-between"}}>
                                             Tags
                                             <IconButton onClick={() => setTags(false)} sx={{padding: "0.2em"}}>
                                                 <CloseIcon />
@@ -59,7 +59,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
 
                                         <Typography loading="lazy" sx={{fontSize: 30, padding: 3}}>
                                             {/* The quotes and plus sign make it so the comma shows up to separate each tag. Not completely sure why it yields that result but it does */}
-                                            {"" + selectedImg.tags}
+                                            {selectedImg.tags.join(", ")}
                                         </Typography>
                                     </Dialog>
 
