@@ -98,7 +98,7 @@ const ArtFilters = ({ filters }) => {
                     }
                     //place holder text
                     renderInput={(params) => (
-                        <TextField {...params} label="Keywords" placeholder="Select Keywords" />
+                        <TextField {...params} label="Keywords"/>
                     )}
                     
                 />
