@@ -1,4 +1,4 @@
-import { Button, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem, ClickAwayListener } from "@mui/material";
+import { Button, Stack, Autocomplete, TextField, Chip, Box, FormControl, InputLabel, Select, MenuItem, ClickAwayListener, Typography } from "@mui/material";
 import artistData from '../json/artistdata.json';
 import keywordData from '../json/keywordData.json';
 import dayjs from 'dayjs';
@@ -44,9 +44,13 @@ const ArtFilters = ({ filters }) => {
         filters.setArtistName(newArtist);
     };
 
-    // Handles artist filter update
-    const handleYearChange = (newYear) => {
-        filters.setSelectedYear(newYear);
+    // Handle year filter update
+    const handleStartYearChange = (newYear) => {
+        filters.setStartYear(newYear);
+    };
+
+    const handleEndYearChange = (newYear) => {
+        filters.setEndYear(newYear);
     };
 
     return (
@@ -124,18 +128,31 @@ const ArtFilters = ({ filters }) => {
                     </Select>
             </FormControl>
 
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DatePicker 
-                        value={filters.selectedYear}
-                        onChange={(newYear) => handleYearChange(newYear)}
-                        sx={{m: 1}} label={'Year'}
-                        minDate={earliestYear}
-                        maxDate={currentYear} 
-                        yearsOrder="desc" 
-                        views={['year']} 
-                    />
-
-            </LocalizationProvider>
+            <Box sx={{m: 1}}>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <Stack direction="row">
+                        <DatePicker 
+                            value={filters.startYear}
+                            onChange={(newYear) => handleStartYearChange(newYear)}
+                            label={'Start Year'}
+                            minDate={earliestYear}
+                            maxDate={currentYear} 
+                            yearsOrder="desc" 
+                            views={['year']} 
+                        />
+                        <Typography sx={{p: 1, alignSelf: "center"}}>to</Typography>
+                        <DatePicker 
+                            value={filters.endYear}
+                            onChange={(newYear) => handleEndYearChange(newYear)}
+                            label={'End Year'}
+                            minDate={earliestYear}
+                            maxDate={currentYear} 
+                            yearsOrder="desc" 
+                            views={['year']} 
+                        />
+                    </Stack>
+                </LocalizationProvider>
+            </Box>
 
             {/* Clear Filters Button
                 Clears all filter fields */}

@@ -80,7 +80,8 @@ const Gallery = ({selectedGallery}) => {
         const [selectedFilters, setSelectedFilters] = useState([]);
         const [artName, setArtName] = useState('');
         const [artistName, setArtistName] = useState(null);
-        const [selectedYear, setSelectedYear] = useState(null);
+        const [startYear, setStartYear] = useState(null);
+        const [endYear, setEndYear] = useState(null);
         const [selectedMedium, setSelectedMedium] = useState('')
         // "selectedGallery" is received as prop from App.jsx
 
@@ -94,7 +95,7 @@ const Gallery = ({selectedGallery}) => {
         };
 
         // "filters" array will be sent down the hierarchy to ArtFilters
-        const filters = {artName, setArtName, artistName, setArtistName, selectedFilters, setSelectedFilters, selectedYear, setSelectedYear, selectedMedium, setSelectedMedium, handleClearFilters};
+        const filters = {artName, setArtName, artistName, setArtistName, selectedFilters, setSelectedFilters, startYear, setStartYear, endYear, setEndYear, selectedMedium, setSelectedMedium, handleClearFilters};
 
         const searchArray = galleryArt.filter((item) => {
           const matchesArtName = filters.artName.trim() === '' || item.title.toLowerCase().includes(filters.artName.toLowerCase().trim()); // Filter by art piece name
@@ -104,7 +105,9 @@ const Gallery = ({selectedGallery}) => {
 
           // Filtering by Year
           let artYear = new Date(item.date).getFullYear();
-          const matchesYear = filters.selectedYear === null || artYear === filters.selectedYear.$y;                                   // Filter by Medium
+          const matchesYear =                                               // Filter by Year
+            (filters.startYear === null && filters.endYear === null) || 
+            (artYear >= startYear.$y && artYear <= endYear.$y);                                   
 
           return matchesArtName && matchesArtistName && matchesChips && matchesYear && matchesMedium;
         })
