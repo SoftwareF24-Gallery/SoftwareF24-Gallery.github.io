@@ -1,4 +1,4 @@
-import { Typography, Button, Dialog, DialogTitle, IconButton } from "@mui/material";
+import { Typography, Button, Dialog, DialogTitle, DialogContent, IconButton } from "@mui/material";
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -9,23 +9,25 @@ const GuillermoBioPopup = ({description}) => {
     return (
         <>
         
-        <Button onClick={() => setBio(true)}>
+        <Button variant="outlined" onClick={() => setBio(true)}>
         View Bio
         </Button>
 
         {/* Tags popup */}
         <Dialog open={bio} onClose={() => setBio(false)} aria-labelledby="dialog-title">
 
-        <DialogTitle id="dialog-title" sx={{display: "flex", justifyContent: "space-between"}}>
-            Bio
-            <IconButton onClick={() => setBio(false)} sx={{padding: "0.2em"}}>
-                <CloseIcon />
-            </IconButton>
-        </DialogTitle>
-
-        <Typography sx={{padding: 3}}>
-            {description}
-        </Typography>
+            <DialogTitle id="dialog-title" sx={{display: "flex", justifyContent: "space-between"}}>
+                Bio
+                <IconButton onClick={() => setBio(false)} sx={{padding: "0.2em"}}>
+                    <CloseIcon />
+                </IconButton>
+            </DialogTitle>
+            
+            <DialogContent>
+                <Typography>
+                    {description}
+                </Typography>
+            </DialogContent>
 
         </Dialog>
 

@@ -43,7 +43,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                     <Typography variant="h2" loading="lazy" sx={{fontSize: "2rem", lineHeight: "2.2rem"}}>
                                         {selectedImg.title}
                                     </Typography>
-                                    <Button onClick={() => setTags(true)}>
+                                    <Button variant="outlined" onClick={() => setTags(true)}>
                                         View Tags
                                     </Button>
 
