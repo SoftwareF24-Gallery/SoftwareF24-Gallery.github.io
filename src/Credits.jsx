@@ -121,10 +121,11 @@ const Credits = () => {
                     </Typography>
 
                     <CreditsPopup
-                        description="Hello, my name is Johan. I am an aspiring software developer on the last semester of my associates degree, 
-                        finishing it up by helping build the website you are currently on. I loved working and making friends with
-                        the team you see around me in this credits page, all talented and capable. I learned a lot from this project
-                        and hope this to be one of the first of many endeavors in my software development career."
+                        description="Hello, my name is Johan. I am an aspiring software developer with two levels of computer
+                        programming certifications, computer programming associate's degree, and a member of the
+                        team that created this art gallery website. I loved working and making friends with
+                        the team you see around me in this credits page, all talented and capable. I learned a lot from 
+                        this project and hope this to be one of the first of many endeavors in my software development career."
                     />
 
 
