@@ -87,16 +87,16 @@ const Credits = () => {
             <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
-                    <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain'  }} image={DrakePicture} />
+                    <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain'  }} component="img" image={DrakePicture} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         Drake Calhoun
                     </Typography>
                     
                     <CreditsPopup
-                        description="Drake Calhoun is a soon-to-be Lone Star College graduate with an Associate's Degree as a Programming Specialist.
-                        When he's not looking for full time employment, he enjoys gaming, looking for keyboards/controllers to collect, and pet sitting.
-                        He tries to stay up to date with the latest information on technology in order to be the most knowledgable person he can possibly be in his field of expertise."
+                        description="Drake Calhoun is a Lone Star College graduate with an Associate's Degree as a Programming Specialist.
+                        He enjoys gaming, looking for keyboards/controllers to collect, and pet sitting.
+                        He tries to stay up to date with the latest information on technology in order to be the most knowledgable person he can possibly be in his field."
                     />
 
                     {/* Icon buttons for Github and LinkedIn */}
