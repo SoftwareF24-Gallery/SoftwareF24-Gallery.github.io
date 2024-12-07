@@ -95,7 +95,7 @@ const Credits = () => {
                     
                     <CreditsPopup
                         description="Drake Calhoun is a Lone Star College graduate with an Associate's Degree as a Programming Specialist.
-                        Outside of work, He enjoys gaming, collecting unique keyboards and controllers, and pet sitting.
+                        Outside of work, he enjoys gaming, collecting unique keyboards and controllers, and pet sitting.
                         As enjoyable as working alone can be, he also loves to work in a team.
                         He tries to stay up to date with the latest information on technology in order to be the most knowledgable person he can possibly be in his field."
                     />
