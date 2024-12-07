@@ -30,7 +30,7 @@ const Credits = () => {
             <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
                     {/* Card image */}
-                    <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain' }} component="img" image={MichaelPicture}/>
+                    <CardMedia sx={{ height: 200, width: 180, objectFit: 'contain' }} component="img" image={MichaelPicture}/>
                     {/* Div groups the typographies in a column style */}
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
@@ -60,9 +60,9 @@ const Credits = () => {
             <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
-                    <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain' }} component="img" image={GuillermoPicture} />
+                    <CardMedia sx={{ height: 200, width: 180, objectFit: 'contain' }} component="img" image={GuillermoPicture} />
                     <div>
-                    <Typography variant="h5" fontWeight={"bold"}>
+                    <Typography variant="h5" fontWeight={"bold"} sx={{fontSize: "1.28rem"}}>
                         Guillermo Carroz Labarca
                     </Typography>
 
@@ -87,7 +87,7 @@ const Credits = () => {
             <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
-                    <CardMedia sx={{ height: 200, width: 200, objectFit: 'contain'  }} component="img" image={DrakePicture} />
+                    <CardMedia sx={{ height: 200, width: 180, objectFit: 'contain'  }} component="img" image={DrakePicture} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         Drake Calhoun
@@ -115,7 +115,7 @@ const Credits = () => {
             <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
 
-                    <CardMedia sx={{ height: 200, width: 200, objectFit: "contain" }} component="img" image={JohanPicture} />
+                    <CardMedia sx={{ height: 200, width: 180, objectFit: "contain" }} component="img" image={JohanPicture} />
                     <div>
                     <Typography variant="h5" fontWeight={"bold"}>
                         Johan Rodriguez
