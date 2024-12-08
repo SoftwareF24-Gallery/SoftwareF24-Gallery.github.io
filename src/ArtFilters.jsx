@@ -7,7 +7,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 const currentYear = dayjs();
-const earliestYear = dayjs("1500");
+const earliestYear = dayjs("100");
 
 // Create keywords array, then push each keyword into it
 let keywords = [];
