@@ -49,21 +49,22 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                         <Typography sx={{whiteSpace: "nowrap", fontSize: "100%", padding: "1rem"}}>View Tags</Typography>
                                     </Button>
 
-                                    {/* Tags popup */}
-                                    <Dialog open={tags} onClose={() => setTags(false)} aria-labelledby="dialog-title">
-
-                                        <DialogTitle id="dialog-title" sx={{justifyContent: "space-between"}}>
-                                            Tags
-                                            <IconButton onClick={() => setTags(false)} sx={{padding: "0.2em"}}>
-                                                <CloseIcon />
-                                            </IconButton>
-                                        </DialogTitle>
-
-                                        <Typography loading="lazy" sx={{fontSize: 30, padding: 3}}>
-                                            {selectedImg.tags.join(", ")}
-                                        </Typography>
-                                    </Dialog>
                                 </Stack>
+
+                                {/* Tags popup */}
+                                <Dialog open={tags} onClose={() => setTags(false)} aria-labelledby="dialog-title">
+
+                                    <DialogTitle id="dialog-title" sx={{display: 'flex', justifyContent: "space-between", alignItems: 'center'}}>
+                                        <Typography variant='h2'>Tags</Typography>
+                                        <IconButton onClick={() => setTags(false)} sx={{}}>
+                                            <CloseIcon />
+                                        </IconButton>
+                                    </DialogTitle>
+
+                                    <Typography loading="lazy" sx={{fontSize: 30, padding: 3}}>
+                                        {selectedImg.tags.join(", ")}
+                                    </Typography>
+                                </Dialog>
 
                                 {/* Image description */}
                                 <Typography loading="lazy">
