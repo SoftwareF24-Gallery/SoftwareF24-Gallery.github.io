@@ -38,10 +38,12 @@ const Credits = () => {
                     </Typography>
 
                     <CreditsPopup
-                        description="My name is Michael and I am a driven student and software programmer who enjoys 
-                        learning and is ready to apply my skills to solve real-world problems. 
-                        I am passionate about using technology to make the world a better place. 
-                        And I enjoy facing new challenges and opportunities to learn and grow."
+                        description="Hi, My name is Michael. I recently graduated from Lone Star College with an Associate Degree in Software Programming, 
+                        and I'm incredibly excited to dive headfirst into the world of tech. I'm a driven programmer with a passion for learning and building 
+                        innovative solutions that tackle real-world problems. I'm not just about code though – I love staying up to date with tech trends, 
+                        exploring new languages and frameworks, and pushing the boundaries of what's possible. When I'm not immersed in a project, 
+                        you'll find me producing music or coding up cool side projects that fuel my creativity. 
+                        I'm a firm believer that challenges are opportunities in disguise, and I'm always eager to learn and grow."
                     />
 
                     
