@@ -24,8 +24,6 @@ const Credits = () => {
         <h1 style={{display: "flex", justifyContent: "center", alignItems: "center"}}>Credits</h1>
 
         {/* Grid holds cards */}
-        {/* Yes, I know I hardcoded blank space using CardMedia.
-            I wanna get that fixed soon.*/}
         <Grid container spacing={4} sx={{justifyContent: "center"}}>
             <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
