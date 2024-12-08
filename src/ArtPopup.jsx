@@ -60,7 +60,6 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                         </DialogTitle>
 
                                         <Typography loading="lazy" sx={{fontSize: 30, padding: 3}}>
-                                            {/* The quotes and plus sign make it so the comma shows up to separate each tag. Not completely sure why it yields that result but it does */}
                                             {selectedImg.tags.join(", ")}
                                         </Typography>
                                     </Dialog>

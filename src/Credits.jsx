@@ -24,8 +24,6 @@ const Credits = () => {
         <h1 style={{display: "flex", justifyContent: "center", alignItems: "center"}}>Credits</h1>
 
         {/* Grid holds cards */}
-        {/* Yes, I know I hardcoded blank space using CardMedia.
-            I wanna get that fixed soon.*/}
         <Grid container spacing={4} sx={{justifyContent: "center"}}>
             <Card elevation={5} sx={cardStyle}>
                 <CardContent sx={{display: "flex", flexDirection: "row", alignItems: "center", gap: "1rem"}}>
@@ -97,7 +95,7 @@ const Credits = () => {
                         description="Drake Calhoun is a Lone Star College graduate with an Associate's Degree as a Programming Specialist.
                         Outside of work, he enjoys gaming, collecting unique keyboards and controllers, and pet sitting.
                         As enjoyable as working alone can be, he also loves to work in a team.
-                        He tries to stay up to date with the latest information on technology in order to be the most knowledgable person he can possibly be in his field."
+                        He tries to stay up to date with the latest information on technology in order to be as knowledgeable as possible in his field."
                     />
 
                     {/* Icon buttons for Github and LinkedIn */}
