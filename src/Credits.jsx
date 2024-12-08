@@ -65,7 +65,9 @@ const Credits = () => {
                     </Typography>
 
                     <CreditsPopup
-                        description="This is Guillermo's description"
+                        description="Guillermo Carroz Labarca is a Lone Star College graduate with an Associate's Degree as a Computer Programming Specialist.
+                        As he was introduced to computers at a younger age, he enjoys learning about the new trends in tech and applying his knowledge to solve everyday problems.
+                        He believes in the importance of graphic design, striving to create visually pleasing and accessible software."
                     />
 
 
