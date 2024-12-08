@@ -5,15 +5,11 @@ import { useState } from "react";
 const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
 
     const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
         bgcolor: 'background.paper',
-        border: '2px solid #000',
-        maxHeight: '100vh',
+        overflow: 'auto',
+        maxWidth: '700px',
+        m: 'auto',
         boxShadow: 24,
-        p: 4,
       };
     
       // Manages tags popup opening and closing
@@ -24,28 +20,31 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
             <Modal 
             onClose={handleClose} 
             open={open}
-            keepMounted
+            keepmounted
+            sx={{display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'}}
             >
                 <Card sx={style}>
-                    <Stack direction={"row"} sx={{justifyContent: "right"}}>
-                        <IconButton onClick={handleClose}>
-                            <CloseIcon />
-                        </IconButton>
-                    </Stack>
-                    <Stack direction={{xs: "column"}}>
-                        <Stack direction="column">
-                            <CardMedia
-                                sx={{objectFit: "contain"}}
-                                component="img"
-                                image={selectedImg.url}
-                                alt={selectedImg.title}
-                            />
-                                <Stack direction={"row"} sx={{display: "flex", justifyContent: "space-between"}}>
-                                    <CardContent>
-                                        <Typography variant="h2" loading="lazy" sx={{whiteSpace: "nowrap", fontSize: "1.5rem"}}>
-                                            {selectedImg.title}
-                                        </Typography>
-                                    </CardContent>
+                    <Stack direction="column">
+                        <Stack direction="row" sx={{justifyContent: "right"}}>
+                            <IconButton onClick={handleClose}>
+                                <CloseIcon />
+                            </IconButton>
+                        </Stack>
+                        <CardContent>
+                            <Stack direction="column">
+                                <CardMedia
+                                    sx={{objectFit: "contain", maxHeight: "60vh", margin: "0 auto"}}
+                                    component="img"
+                                    image={selectedImg.url}
+                                    alt={selectedImg.title}
+                                />
+                                <Stack direction={"row"} sx={{padding: "0.4rem 0", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                                    
+                                    <Typography variant="h2" loading="lazy" sx={{whiteSpace: "nowrap", fontSize: "1.5rem"}}>
+                                        {selectedImg.title}
+                                    </Typography>
                                     <Button sx={{height: "2.5rem", margin: "auto 0"}} variant="outlined" onClick={() => setTags(true)}>
                                         <Typography sx={{whiteSpace: "nowrap", fontSize: "100%", padding: "1rem"}}>View Tags</Typography>
                                     </Button>
@@ -53,7 +52,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                     {/* Tags popup */}
                                     <Dialog open={tags} onClose={() => setTags(false)} aria-labelledby="dialog-title">
 
-                                        <DialogTitle id="dialog-title" sx={{display: "flex", justifyContent: "space-between"}}>
+                                        <DialogTitle id="dialog-title" sx={{justifyContent: "space-between"}}>
                                             Tags
                                             <IconButton onClick={() => setTags(false)} sx={{padding: "0.2em"}}>
                                                 <CloseIcon />
@@ -67,28 +66,29 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
                                     </Dialog>
                                 </Stack>
 
-                            {/* Image description */}
-                            <Typography loading="lazy">
-                                {selectedImg.description}
-                            </Typography>
+                                {/* Image description */}
+                                <Typography loading="lazy">
+                                    {selectedImg.description}
+                                </Typography>
                             </Stack>
-                            <Stack direction={{xs: "row"}}>
+                            <Stack direction="row" sx={{justifyContent: 'center', marginTop: '0.6rem'}}>
                                 {/* Artist's picture */}
                                 <Avatar 
                                     src={artistById(selectedImg.artist).picture}
                                     alt={artistById(selectedImg.artist).name}
-                                    sx={{height: "8rem", width: "8rem", margin: "1rem auto",}}
+                                    sx={{height: "6rem", width: "6rem", margin: "1rem"}}
                                     loading="lazy"
                                 />
-                                <Paper elevation={4} sx={{padding: 1, m: 1, display: "flex", flexDirection: "column", justifyContent: "center"}}>
-                                        <Typography variant="h6" loading="lazy">
-                                            {artistById(selectedImg.artist).name}
-                                        </Typography>
-                                        <Typography loading="lazy">
-                                            {artistById(selectedImg.artist).bio}
-                                        </Typography>
+                                <Paper elevation={4} sx={{p: 1, display: "flex", flexDirection: "column", justifyContent: "center", width: '100%'}}>
+                                    <Typography variant="h6" loading="lazy">
+                                        {artistById(selectedImg.artist).name}
+                                    </Typography>
+                                    <Typography loading="lazy">
+                                        {artistById(selectedImg.artist).bio}
+                                    </Typography>
                                 </Paper>
-                        </Stack>
+                            </Stack>
+                        </CardContent>
                     </Stack>
                 </Card>
             </Modal>
