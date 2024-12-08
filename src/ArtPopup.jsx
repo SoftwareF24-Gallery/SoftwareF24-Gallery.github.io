@@ -6,7 +6,6 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
 
     const style = {
         bgcolor: 'background.paper',
-        overflow: 'auto',
         maxWidth: '700px',
         m: 'auto',
         boxShadow: 24,
@@ -22,6 +21,7 @@ const ArtPopup = ({open, artistById, selectedImg, handleClose}) => {
             open={open}
             keepmounted
             sx={{display: 'flex',
+                overflow: 'auto',
                 alignItems: 'center',
                 justifyContent: 'center'}}
             >
