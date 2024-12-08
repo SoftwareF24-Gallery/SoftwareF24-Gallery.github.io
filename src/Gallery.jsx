@@ -106,7 +106,7 @@ const Gallery = ({selectedGallery}) => {
           // Filtering by Year
           let artYear = new Date(item.date).getFullYear();
           const matchesYear =                                               // Filter by Year
-            (filters.startYear === null && filters.endYear === null) || 
+            ((filters.startYear === null || filters.endYear === null)) || 
             (artYear >= startYear.$y && artYear <= endYear.$y);                                   
 
           return matchesArtName && matchesArtistName && matchesChips && matchesYear && matchesMedium;
