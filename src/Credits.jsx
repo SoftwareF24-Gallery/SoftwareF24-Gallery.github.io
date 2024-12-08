@@ -38,10 +38,10 @@ const Credits = () => {
                     </Typography>
 
                     <CreditsPopup
-                        description="My name is Michael and I am a driven student and software programmer who enjoys 
-                        learning and is ready to apply my skills to solve real-world problems. 
-                        I am passionate about using technology to make the world a better place. 
-                        And I enjoy facing new challenges and opportunities to learn and grow."
+                        description="Hi, My name is Michael. I recently graduated from Lone Star College with an Associate Degree in Software Programming. 
+                        I'm a driven programmer with a passion for learning and building 
+                        innovative solutions that tackle real-world problems. Besides coding I like staying up to date with tech trends, 
+                        exploring new languages and frameworks. I'm a firm believer that challenges are opportunities in disguise, and I'm always eager to learn and grow."
                     />
 
                     
@@ -95,9 +95,9 @@ const Credits = () => {
                     
                     <CreditsPopup
                         description="Drake Calhoun is a Lone Star College graduate with an Associate's Degree as a Programming Specialist.
-                        He enjoys gaming, looking for keyboards/controllers to collect, and pet sitting.
-                        He tries to stay up to date with the latest information on technology in order to be the most knowledgable person he can possibly be in his field.
-                        As enjoyable as working alone can be, he also loves to work in a team."
+                        Outside of work, he enjoys gaming, collecting unique keyboards and controllers, and pet sitting.
+                        As enjoyable as working alone can be, he also loves to work in a team.
+                        He tries to stay up to date with the latest information on technology in order to be the most knowledgable person he can possibly be in his field."
                     />
 
                     {/* Icon buttons for Github and LinkedIn */}
