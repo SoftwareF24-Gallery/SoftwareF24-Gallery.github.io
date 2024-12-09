@@ -90,7 +90,8 @@ const Gallery = ({selectedGallery}) => {
           setSelectedFilters([]);
           setArtName('');
           setArtistName(null);
-          setSelectedYear(null);
+          setStartYear(null);
+          setEndYear(null);
           setSelectedMedium('');
         };
 
